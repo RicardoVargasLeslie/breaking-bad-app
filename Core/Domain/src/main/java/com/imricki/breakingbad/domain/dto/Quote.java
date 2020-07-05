@@ -1,7 +1,10 @@
 package com.imricki.breakingbad.domain.dto;
 
 import java.io.Serializable;
+import lombok.Data;
 
+
+@Data
 public class Quote implements Serializable {
 	/**
 	 *

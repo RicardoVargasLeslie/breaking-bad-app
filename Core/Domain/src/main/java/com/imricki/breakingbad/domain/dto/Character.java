@@ -3,6 +3,9 @@ package com.imricki.breakingbad.domain.dto;
 import java.io.Serializable;
 import java.util.List;
 
+import lombok.Data;
+
+@Data
 public class Character implements Serializable {
 
 	/**
