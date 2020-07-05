@@ -1,11 +1,15 @@
 package com.imricki.breakingbad.domain.dto;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Character implements Serializable {
 
 	/**
@@ -19,7 +23,7 @@ public class Character implements Serializable {
 
 	private String birthday;
 
-	private List<String> occupation;
+	private ArrayList<String> occupation;
 
 	private String img;
 
@@ -27,10 +31,10 @@ public class Character implements Serializable {
 
 	private String nickname;
 
-	private List<Integer> appearance;
+	private ArrayList<Integer> appearance;
 
 	private String portrayed;
 
-	private List<String> category;
+	private ArrayList<String> category;
 
 }
