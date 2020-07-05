@@ -14,19 +14,6 @@ public class TestController {
 
 	private final static Logger LOGGER = LoggerFactory.getLogger(TestController.class);
 
-//	@Bean
-//	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-//		return builder.build();
-//	}
-//
-//	@Bean
-//	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
-//		return args -> {
-//			Quote quote = restTemplate.getForObject("https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-//			LOGGER.info(quote.toString());
-//		};
-//	}
-
 	@GetMapping("/hola")
 	public String greeting() {
 		return "Hola";
