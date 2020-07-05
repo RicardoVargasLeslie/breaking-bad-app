@@ -7,9 +7,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Core Module</name>
+
 	<modules>
 		<module>Domain</module>
-		<module>UI</module>
 	</modules>
 	<properties>
 		<project.java.version>11</project.java.version>
