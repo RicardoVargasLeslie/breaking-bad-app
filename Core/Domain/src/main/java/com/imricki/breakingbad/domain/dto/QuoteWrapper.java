@@ -3,13 +3,11 @@ package com.imricki.breakingbad.domain.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class QuoteWrapper {
 
-	@JsonIgnore
 	private ArrayList<Quote> quotes = new ArrayList<>();
 
 	public QuoteWrapper() {

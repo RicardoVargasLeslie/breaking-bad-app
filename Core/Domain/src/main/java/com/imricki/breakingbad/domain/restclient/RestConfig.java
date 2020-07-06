@@ -1,3 +1,4 @@
+package com.imricki.breakingbad.domain.restclient;
 //package com.imricki.breakingbad.domain.rest;
 //
 //import org.springframework.boot.web.client.RestTemplateBuilder;
