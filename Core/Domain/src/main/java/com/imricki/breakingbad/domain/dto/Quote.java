@@ -1,17 +1,23 @@
 package com.imricki.breakingbad.domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Quote {
 
 	public Quote() {
 
 	}
 
+	@JsonProperty("quote_id")
 	private int quote_id;
 
+	@JsonProperty("quote")
 	private String quote;
 
+	@JsonProperty("author")
 	private String author;
 
+	@JsonProperty("series")
 	private String series;
 
 	public int getQuote_id() {
