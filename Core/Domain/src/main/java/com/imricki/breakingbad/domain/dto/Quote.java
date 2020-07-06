@@ -46,4 +46,10 @@ public class Quote {
 		this.series = series;
 	}
 
+	@Override
+	public String toString() {
+		return "Quote [quote_id=" + this.quote_id + ", quote=" + this.quote + ", author=" + this.author + ", series="
+				+ this.series + "]";
+	}
+
 }
