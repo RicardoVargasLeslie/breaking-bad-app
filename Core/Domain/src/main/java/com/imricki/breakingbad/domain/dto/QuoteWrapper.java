@@ -1,7 +1,6 @@
 package com.imricki.breakingbad.domain.dto;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -14,7 +13,7 @@ public class QuoteWrapper {
 		this.quotes = new ArrayList<>();
 	}
 
-	public List<Quote> getQuotes() {
+	public ArrayList<Quote> getQuotes() {
 		return this.quotes;
 	}
 
