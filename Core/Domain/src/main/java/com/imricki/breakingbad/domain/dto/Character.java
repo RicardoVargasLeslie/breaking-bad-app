@@ -23,7 +23,7 @@ public class Character implements Serializable {
 
 	private String birthday;
 
-	private ArrayList<String> occupation;
+	private List<String> occupation;
 
 	private String img;
 
@@ -31,10 +31,10 @@ public class Character implements Serializable {
 
 	private String nickname;
 
-	private ArrayList<Integer> appearance;
+	private List<Integer> appearance;
 
 	private String portrayed;
 
-	private ArrayList<String> category;
+	private List<String> category;
 
 }
