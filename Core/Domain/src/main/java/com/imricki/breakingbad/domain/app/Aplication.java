@@ -28,7 +28,7 @@ public class Aplication {
 		return args -> {
 
 			Quote q = this.service.getRandomQuote();
-
+// en realidad devuelves una lista de un elemento
 			System.err.println(q);
 //			List<Quote> list = this.service.getAllQuotes();
 //			list.forEach(System.out::println);

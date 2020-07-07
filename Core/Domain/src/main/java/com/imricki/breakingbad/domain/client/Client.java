@@ -28,7 +28,7 @@ public class Client {
 	public List<Character> getAllCharacters() {
 
 		Character[] characters = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.ALL_QUOTES).retrieve().bodyToMono(Character[].class).block();
+				.uri(ClientResorces.ALL_CHARACTERS).retrieve().bodyToMono(Character[].class).block();
 
 		return Arrays.asList(characters);
 
@@ -43,11 +43,10 @@ public class Client {
 
 	public Quote getRandomQuote() {
 
-		Quote q = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToMono(Quote.class).block();
+		Quote quote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
+				.uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
 
-		System.err.println(q);
-		return q;
+		return quote;
 
 	}
 

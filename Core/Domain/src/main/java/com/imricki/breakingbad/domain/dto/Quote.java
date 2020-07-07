@@ -20,16 +20,16 @@ public class Quote implements Serializable {
 	@Setter(value = AccessLevel.NONE)
 	private static final long serialVersionUID = 1L;
 
-
+	@JsonProperty("quote_id")
 	private int quote_id;
 
-	
+	@JsonProperty("quote")
 	private String quote;
 
-
+	@JsonProperty("author")
 	private String author;
 
-
+	@JsonProperty("series")
 	private String series;
 	
 }
