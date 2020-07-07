@@ -1,14 +1,15 @@
 package com.imricki.breakingbad.domain.client;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.imricki.breakingbad.domain.client.resorce.ClientResorces;
 import com.imricki.breakingbad.domain.dto.Character;
 import com.imricki.breakingbad.domain.dto.Quote;
-import com.imricki.breakingbad.domain.restclient.resorce.ClientResorces;
 
 @Service
 public class Client {
@@ -44,7 +45,8 @@ public class Client {
 	public Quote getRandomQuote() {
 
 		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToMono(Quote.class).block();
+				.uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToMono(Quote.class).timeout(Duration.ofMillis(10_000))
+				.block();
 
 	}
 

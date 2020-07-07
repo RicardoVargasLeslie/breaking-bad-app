@@ -1,4 +1,4 @@
-package com.imricki.breakingbad.domain.restclient.resorce;
+package com.imricki.breakingbad.domain.client.resorce;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
