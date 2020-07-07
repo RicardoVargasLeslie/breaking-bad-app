@@ -1,12 +1,24 @@
 package com.imricki.breakingbad.domain.dto;
 
+import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Quote {
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-	public Quote() {
+@Data
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Quote implements Serializable {
 
-	}
+	@Getter(value = AccessLevel.NONE)
+	@Setter(value = AccessLevel.NONE)
+	private static final long serialVersionUID = 1L;
 
 	@JsonProperty("quote_id")
 	private int quote_id;
@@ -19,43 +31,5 @@ public class Quote {
 
 	@JsonProperty("series")
 	private String series;
-
-	public int getQuote_id() {
-		return this.quote_id;
-	}
-
-	public void setQuote_id(int quote_id) {
-		this.quote_id = quote_id;
-	}
-
-	public String getQuote() {
-		return this.quote;
-	}
-
-	public void setQuote(String quote) {
-		this.quote = quote;
-	}
-
-	public String getAuthor() {
-		return this.author;
-	}
-
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-
-	public String getSeries() {
-		return this.series;
-	}
-
-	public void setSeries(String series) {
-		this.series = series;
-	}
-
-	@Override
-	public String toString() {
-		return "Quote [quote_id=" + this.quote_id + ", quote=" + this.quote + ", author=" + this.author + ", series="
-				+ this.series + "]";
-	}
 
 }

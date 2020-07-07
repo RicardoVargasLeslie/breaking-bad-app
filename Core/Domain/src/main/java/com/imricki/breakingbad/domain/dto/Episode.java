@@ -1,11 +1,24 @@
 package com.imricki.breakingbad.domain.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.AccessLevel;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Data
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Episode {
+public class Episode implements Serializable {
+
+	@Getter(value = AccessLevel.NONE)
+	@Setter(value = AccessLevel.NONE)
+	private static final long serialVersionUID = 1L;
 
 	private int id;
 
@@ -20,61 +33,5 @@ public class Episode {
 	private ArrayList<String> characters;
 
 	private String series;
-
-	public int getId() {
-		return this.id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return this.title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public int getSeason() {
-		return this.season;
-	}
-
-	public void setSeason(int season) {
-		this.season = season;
-	}
-
-	public int getEpisode() {
-		return this.episode;
-	}
-
-	public void setEpisode(int episode) {
-		this.episode = episode;
-	}
-
-	public String getAir_date() {
-		return this.air_date;
-	}
-
-	public void setAir_date(String air_date) {
-		this.air_date = air_date;
-	}
-
-	public ArrayList<String> getCharacters() {
-		return this.characters;
-	}
-
-	public void setCharacters(ArrayList<String> characters) {
-		this.characters = characters;
-	}
-
-	public String getSeries() {
-		return this.series;
-	}
-
-	public void setSeries(String series) {
-		this.series = series;
-	}
 
 }
