@@ -2,7 +2,9 @@ package com.imricki.breakingbad.domain.mapper;
 
 import org.modelmapper.ModelMapper;
 
-public final class MapperUtil {
+import com.imricki.breakingbad.domain.dto.Quote;
+
+public final class MapperUtil implements Mapper<Object, Object> {
 
 	private ModelMapper modelMapper;
 
@@ -11,12 +13,17 @@ public final class MapperUtil {
 		this.modelMapper = new ModelMapper();
 	}
 
-//	public static from() {
-//
-//	}
-//
-//    public static to() {
-//
-//	}
+	@Override
+	public Object from(Object source) {
+
+		return this.modelMapper.map(source, Quote.class);
+	}
+
+	@Override
+	public Object to(Object source) {
+
+		return this.modelMapper.map(source, Quote.class);
+
+	}
 
 }
