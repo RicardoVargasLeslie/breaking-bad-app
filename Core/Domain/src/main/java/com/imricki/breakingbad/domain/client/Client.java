@@ -1,6 +1,5 @@
 package com.imricki.breakingbad.domain.client;
 
-import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
@@ -44,9 +43,11 @@ public class Client {
 
 	public Quote getRandomQuote() {
 
-		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToMono(Quote.class).timeout(Duration.ofMillis(10_000))
-				.block();
+		Quote q = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
+				.uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToMono(Quote.class).block();
+
+		System.err.println(q);
+		return q;
 
 	}
 
