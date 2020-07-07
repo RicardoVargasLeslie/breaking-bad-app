@@ -1,4 +1,4 @@
-package com.imricki.breakingbad.domain.restclient;
+package com.imricki.breakingbad.domain.client;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Component
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class RestClient {
+public class ClientBuilder {
 
 	@Bean
 	public WebClient.Builder getWebClientBuilder() {

@@ -15,13 +15,13 @@ import lombok.Setter;
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote implements Serializable {
-
+	
 	@Getter(value = AccessLevel.NONE)
 	@Setter(value = AccessLevel.NONE)
 	private static final long serialVersionUID = 1L;
 
-	@JsonProperty("quote_id")
-	private int quote_id;
+	@JsonProperty("id")
+	private int id;
 
 	@JsonProperty("quote")
 	private String quote;
@@ -31,5 +31,5 @@ public class Quote implements Serializable {
 
 	@JsonProperty("series")
 	private String series;
-
+	
 }
