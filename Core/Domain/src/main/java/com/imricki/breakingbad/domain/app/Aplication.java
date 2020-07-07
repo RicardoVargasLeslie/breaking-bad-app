@@ -8,7 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.imricki.breakingbad.domain.client.Client;
+import com.imricki.breakingbad.domain.clientbuilder.Client;
 import com.imricki.breakingbad.domain.dto.Quote;
 
 @SpringBootApplication(scanBasePackages = { "com" })

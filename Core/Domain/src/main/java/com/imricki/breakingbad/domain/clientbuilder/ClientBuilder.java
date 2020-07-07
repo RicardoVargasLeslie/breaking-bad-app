@@ -1,4 +1,4 @@
-package com.imricki.breakingbad.domain.client;
+package com.imricki.breakingbad.domain.clientbuilder;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
