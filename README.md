@@ -35,19 +35,19 @@
 
 
 
-  <h2 align="center">YOUR_TITLE</h2>
-> Project name is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
+  <h2 align="center">Breaking Bad App</h2>
 
-One to two paragraph statement about your product and what it does.
+> Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes.
 
 ![](C:/Users/Ric/Desktop/header.png)
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Spring Boot](https://getbootstrap.com)
+* [Maven](https://jquery.com)
+* [JavaFX]()
+* [JSON]()
+* [Eclipse]()
 
 ## Getting Started
 
@@ -62,8 +62,6 @@ Before you begin, ensure you have met the following requirements:
 * You have installed the latest version of `<coding_language/dependency/requirement_1>`
 * You have a `<Windows/Linux/Mac>` machine. State which OS is supported/which is not.
 * You have read `<guide/link/documentation_related_to_project>`.
-
-
 
 ## Installing <project_name>
 
