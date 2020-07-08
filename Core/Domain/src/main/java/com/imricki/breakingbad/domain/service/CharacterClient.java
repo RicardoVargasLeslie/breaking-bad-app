@@ -32,4 +32,10 @@ public class CharacterClient implements CharacterService {
 		return null;
 	}
 
+	@Override
+	public Character getBy(Character criteria) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

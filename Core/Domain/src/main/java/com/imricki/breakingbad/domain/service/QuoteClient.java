@@ -24,12 +24,6 @@ public class QuoteClient implements QuoteService {
 	}
 
 	@Override
-	public Quote getBy(Object criteria) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Quote getRandom() {
 
 		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()

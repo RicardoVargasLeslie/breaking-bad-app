@@ -6,6 +6,6 @@ public interface BaseService<T> {
 
 	List<T> getAll();
 
-	T getBy(Object criteria);
+//	T getBy(Object criteria);
 
 }
