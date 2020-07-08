@@ -1,9 +1,9 @@
 package com.imricki.breakingbad.domain.dto;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -32,7 +32,8 @@ public class Character implements Serializable {
 	private String birthday;
 	
 	@JsonProperty("occupation")
-	private List<String> occupation=new ArrayList<String>();
+	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+	private List<String> occupation;
 	
 	@JsonProperty("img")
 	private String img;
@@ -44,12 +45,14 @@ public class Character implements Serializable {
 	private String nickname;
 	
 	@JsonProperty("appearance")
-	private List<Integer> appearance=new ArrayList<Integer>();
+	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+	private List<Integer> appearance;
 	
 	@JsonProperty("portrayed")
 	private String portrayed;
 	
 	@JsonProperty("category")
+	@JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
 	private List<String> category;
 
 }

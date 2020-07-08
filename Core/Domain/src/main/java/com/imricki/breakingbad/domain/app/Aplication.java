@@ -8,8 +8,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.imricki.breakingbad.domain.dto.Character;
 import com.imricki.breakingbad.domain.service.CharacterClient;
+import com.imricki.breakingbad.domain.service.QuoteClient;
 
 @SpringBootApplication(scanBasePackages = { "com" })
 public class Aplication {
@@ -17,7 +17,10 @@ public class Aplication {
 	private static final Logger log = LoggerFactory.getLogger(Aplication.class);
 
 	@Autowired
-	private CharacterClient service;
+	private CharacterClient character;
+
+	@Autowired
+	private QuoteClient quote;
 
 	public static void main(String[] args) {
 		SpringApplication.run(Aplication.class, args);
@@ -27,11 +30,14 @@ public class Aplication {
 	public CommandLineRunner run() throws Exception {
 		return args -> {
 
-			Character q = this.service.getRandomCharacter();
+			// Quote q = this.quote.getRandomQuote();
+			com.imricki.breakingbad.domain.dto.Character c = this.character.getRandomCharacter();
+
 // en realidad devuelves una lista de un elemento
-			System.err.println(q);
-//			List<Quote> list = this.service.getAllQuotes();
-//			list.forEach(System.out::println);
+			System.err.println(c);
+//			System.err.println(q);
+			// List<Character> list = this.character.getAllCharacters();
+			// list.forEach(System.out::println);
 
 		};
 	}

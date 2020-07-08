@@ -27,8 +27,9 @@ public class CharacterClient implements CharacterService {
 	public List<Character> getAllCharacters() {
 
 		Character[] deaths = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.ALL_DEATHS).retrieve().bodyToMono(Character[].class).block();
+				.uri(ClientResorces.ALL_CHARACTERS).retrieve().bodyToMono(Character[].class).block();
 
+		System.err.println(deaths[1]);
 		return Arrays.asList(deaths);
 	}
 }
