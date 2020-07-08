@@ -36,7 +36,6 @@
 
 
   <h2 align="center">Breaking Bad App</h2>
-
 > Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes.
 
 ![](C:/Users/Ric/Desktop/header.png)
@@ -103,8 +102,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 ## Contributing to <project_name>
-
-<!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
 To contribute to <project_name>, follow these steps:
 
 1. Fork this repository.
@@ -117,23 +114,13 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## Contact
 
-If you want to contact me you can reach me at <your_email@address.com>.
-
-
+If you want to contact me you can reach me at RicardoVargasLeslie@gmail.com.
 
 ## Acknowledgements
 
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
+* [Breaking Bad API](https://www.breakingbadapi.com/)
+* [Tim Biles](@timbiles)
 * [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
 
 ## License
 
