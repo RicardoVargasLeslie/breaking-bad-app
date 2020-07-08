@@ -1,7 +1,7 @@
 package com.imricki.breakingbad.domain.service.shared;
 
-public interface RandomService {
+public interface RandomService<T> {
 
-	Object getRandom();
+	T getRandom();
 
 }

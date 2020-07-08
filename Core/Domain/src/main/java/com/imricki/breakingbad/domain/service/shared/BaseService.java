@@ -2,10 +2,10 @@ package com.imricki.breakingbad.domain.service.shared;
 
 import java.util.List;
 
-public abstract interface BaseService {
+public interface BaseService<T> {
 
-	List<Object> getAll();
+	List<T> getAll();
 
-	Object getBy(Object criteria);
+	T getBy(Object criteria);
 
 }

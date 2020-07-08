@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
+import com.imricki.breakingbad.domain.dto.Character;
 
 @Service
 public class CharacterClient implements CharacterService {
@@ -14,13 +15,19 @@ public class CharacterClient implements CharacterService {
 	private ClientBuilder clientBuilder;
 
 	@Override
-	public List<Object> getAll() {
+	public List<Character> getAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Object getBy(Object criteria) {
+	public Character getBy(Object criteria) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Character getRandom() {
 		// TODO Auto-generated method stub
 		return null;
 	}
