@@ -21,19 +21,7 @@ public class CharacterClient implements CharacterService {
 	}
 
 	@Override
-	public Character getBy(Object criteria) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Character getRandom() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Character getBy(Character criteria) {
 		// TODO Auto-generated method stub
 		return null;
 	}

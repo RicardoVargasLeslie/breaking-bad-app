@@ -21,12 +21,6 @@ public class DeathClient implements DeathService {
 	}
 
 	@Override
-	public Death getBy(Object criteria) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Death getRandom() {
 		// TODO Auto-generated method stub
 		return null;

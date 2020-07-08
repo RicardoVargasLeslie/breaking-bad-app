@@ -20,10 +20,4 @@ public class EpisodeClient implements EpisodeService {
 		return null;
 	}
 
-	@Override
-	public Episode getBy(Object criteria) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
