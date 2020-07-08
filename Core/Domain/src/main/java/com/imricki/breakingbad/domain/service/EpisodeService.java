@@ -1,5 +1,7 @@
 package com.imricki.breakingbad.domain.service;
 
-public interface EpisodeService {
+import com.imricki.breakingbad.domain.service.shared.BaseService;
+
+public interface EpisodeService extends BaseService {
 
 }

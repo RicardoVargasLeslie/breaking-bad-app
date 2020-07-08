@@ -1,13 +1,8 @@
 package com.imricki.breakingbad.domain.service;
 
-import java.util.List;
+import com.imricki.breakingbad.domain.service.shared.BaseService;
+import com.imricki.breakingbad.domain.service.shared.RandomService;
 
-import com.imricki.breakingbad.domain.dto.Character;
-
-public interface CharacterService {
-
-	Character getRandomCharacter();
-
-	List<Character> getAllCharacters();
+public interface CharacterService extends BaseService, RandomService {
 
 }
