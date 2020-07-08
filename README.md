@@ -1,6 +1,6 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/badges/shields/master/frontend/images/logo.svg?sanitize=true"
-        height="130">
+    <img src="img/main.png"
+        height="400" height="400">
 </p>
 <p align="center">
     <a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
@@ -36,7 +36,6 @@
 
 
   <h2 align="center">YOUR_TITLE</h2>
-
 > Project name is a `<utility/tool/feature>` that allows `<insert_target_audience>` to do `<action/task_it_does>`.
 
 One to two paragraph statement about your product and what it does.
