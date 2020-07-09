@@ -4,6 +4,4 @@ public interface FindService<T> {
 
 	T findBy(int id);
 
-	T findBy(String name);
-
 }
