@@ -30,4 +30,19 @@ public class QuoteClient implements QuoteService {
 				.uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
 	}
 
+	@Override
+	public Quote findBy(int id) {
+
+		System.err.println("URL FULLL TIMEEEEE" + ClientResorces.BASE_URL + ClientResorces.ALL_QUOTES + "/" + id);
+		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
+				.uri(ClientResorces.ALL_QUOTES + "/" + id).retrieve().bodyToFlux(Quote.class).blockFirst();
+
+	}
+
+	@Override
+	public Quote findBy(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

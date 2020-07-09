@@ -12,6 +12,10 @@ public class ClientResorces {
 
 	public static final String RANDOM_CHARACTER = "/api/character/random";
 
+	public static final String RANDOM_DEATHS = "/api/deaths/random";
+
+	public static final String DEATHS_COUNT = "/api/death-count";
+
 	public static final String ALL_EPISODES = "/api/episodes";
 
 	public static final String ALL_QUOTES = "/api/quotes";
