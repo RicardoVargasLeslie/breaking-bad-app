@@ -36,11 +36,12 @@
 
 
   <h2 align="center">Breaking Bad App</h2>
-> Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes.
+
+> Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes. :speak_no_evil:
 
 ![](C:/Users/Ric/Desktop/header.png)
 
-### Built With
+### :hammer:Built With:wrench:
 
 * [Spring Boot](https://getbootstrap.com)
 * [Maven](https://jquery.com)
@@ -49,21 +50,21 @@
 * [Eclipse]()
 * [API Documentation](https://breakingbadapi.com/documentation)
 
-## Getting Started
+## :checkered_flag:Getting Started:checkered_flag:
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-## Prerequisites
+## Prerequisites:heavy_check_mark:
 
 Before you begin, ensure you have met the following requirements:
 
 
-* You have installed the latst version of `<coding_language/dependency/requirement_1>`
-* You have a `<Windows/Linux/Mac>` machine. State which OS is supported/which is not.
-* You have read `<guide/link/documentation_related_to_project>`.
+* You have installed the latst version of `<coding_language/dependency/requirement_1>` :white_check_mark:
+* You have a `<Windows/Linux/Mac>` machine. State which OS is supported/which is not.:white_check_mark:
+* You have read `<guide/link/documentation_related_to_project>`.:white_check_mark:
 
-## Installing <project_name>
+## Installing Breaking Bad App:computer:
 
 OS X & Linux:
 
@@ -77,13 +78,13 @@ Windows:
 edit autoexec.bat
 ```
 
-## Using <project_name>
+## Using Breaking Bad App:computer:
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
  please refer to the [Documentation](https://breakingbadapi.com/documentation)
 
-## Release History
+## :clipboard:Release History:clipboard:
 
 * 0.2.1
   
@@ -103,7 +104,7 @@ Use this space to show useful examples of how a project can be used. Additional 
   
     
 
-## Contributing to <project_name>
+## :pencil2:Contributing to Breaking Bad App:pencil2:
 To contribute to <project_name>, follow these steps:
 
 1. Fork this repository.
@@ -114,16 +115,16 @@ To contribute to <project_name>, follow these steps:
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## Contact
+## :email:Contact Me :email:
 
 If you want to contact me you can reach me at RicardoVargasLeslie@gmail.com.
 
-## Acknowledgements
+## Acknowledgements:open_hands:
 
-* [Breaking Bad API](https://www.breakingbadapi.com/)
-* [Tim Biles](@timbiles)
-* [Choose an Open Source License](https://choosealicense.com)
+* [Breaking Bad API](https://www.breakingbadapi.com/):thumbsup:
+* [Tim Biles](@timbiles):thumbsup:
+* [Choose an Open Source License](https://choosealicense.com):thumbsup:
 
-## License
+## License:scroll:
 
 This project uses the following license: [Apache License 2.0](<link>).
