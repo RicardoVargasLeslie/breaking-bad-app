@@ -81,26 +81,27 @@ edit autoexec.bat
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+ please refer to the [Documentation](https://breakingbadapi.com/documentation)
 
 ## Release History
 
 * 0.2.1
+  
   * CHANGE: Update docs (module code remains unchanged)
 * 0.2.0
   * CHANGE: Remove `setDefaultXYZ()`
   * ADD: Add `init()`
 * 0.1.1
+  
   * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
 * 0.1.0
   * The first proper release
   * CHANGE: Rename `foo()` to `bar()`
 * 0.0.1
+  
   * Work in progress
-
-
+  
+    
 
 ## Contributing to <project_name>
 To contribute to <project_name>, follow these steps:
@@ -125,6 +126,4 @@ If you want to contact me you can reach me at RicardoVargasLeslie@gmail.com.
 
 ## License
 
-<!--- If you're not sure which open license to use see https://choosealicense.com/--->
-
-This project uses the following license: [<license_name>](<link>).
+This project uses the following license: [Apache License 2.0](<link>).
