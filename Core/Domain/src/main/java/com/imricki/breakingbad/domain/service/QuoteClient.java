@@ -34,7 +34,7 @@ public class QuoteClient implements QuoteService {
 	public Quote findBy(int id) {
 
 		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.ALL_QUOTES + "/" + id).retrieve().bodyToFlux(Quote.class).blockFirst();
+				.uri(ClientResorces.QUOTES_BY_ID + id).retrieve().bodyToFlux(Quote.class).blockFirst();
 
 	}
 

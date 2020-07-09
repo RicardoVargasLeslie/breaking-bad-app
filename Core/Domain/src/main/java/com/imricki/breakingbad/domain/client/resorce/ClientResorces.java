@@ -20,6 +20,8 @@ public class ClientResorces {
 
 	public static final String ALL_QUOTES = "/api/quotes";
 
+	public static final String QUOTES_BY_ID = "/api/quotes/";
+
 	public static final String RANDOM_QUOTE = "/api/quote/random";
 
 	public static final String ALL_DEATHS = "/api/deaths";
