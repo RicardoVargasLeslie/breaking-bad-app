@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.imricki.breakingbad.domain.client.resorce.ClientResorces;
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Death;
+import com.imricki.breakingbad.domain.dto.DeathCount;
 
 @Service
 public class DeathClient implements DeathService {
@@ -32,10 +33,10 @@ public class DeathClient implements DeathService {
 	}
 
 	@Override
-	public int deathCount() {
+	public DeathCount deathCount() {
 
 		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.DEATHS_COUNT).retrieve().bodyToFlux(Integer.class).blockFirst();
+				.uri(ClientResorces.DEATHS_COUNT).retrieve().bodyToFlux(DeathCount.class).blockFirst();
 	}
 
 }

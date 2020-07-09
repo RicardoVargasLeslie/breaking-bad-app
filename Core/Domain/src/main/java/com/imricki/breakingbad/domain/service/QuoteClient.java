@@ -38,10 +38,4 @@ public class QuoteClient implements QuoteService {
 
 	}
 
-	@Override
-	public Quote findBy(String name) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
