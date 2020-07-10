@@ -1,8 +1,8 @@
 package com.imricki.breakingbad.ui.model;
 
-public class QuoteItem {
+public class QuoteModel {
 
-	public QuoteItem() {
+	public QuoteModel() {
 
 	}
 

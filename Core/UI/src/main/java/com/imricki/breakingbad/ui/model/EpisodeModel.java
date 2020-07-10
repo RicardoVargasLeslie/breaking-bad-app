@@ -2,7 +2,7 @@ package com.imricki.breakingbad.ui.model;
 
 import java.util.ArrayList;
 
-public class EpisodeItem {
+public class EpisodeModel {
 
 	private int id;
 

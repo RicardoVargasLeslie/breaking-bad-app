@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.imricki.breakingbad.domain.client.resorce.ClientResorces;
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Quote;
+import com.imricki.breakingbad.domain.item.QuoteItem;
 
 @Service
 public class QuoteClient implements QuoteService {
@@ -24,10 +25,11 @@ public class QuoteClient implements QuoteService {
 	}
 
 	@Override
-	public Quote getRandom() {
+	public QuoteItem getRandom() {
 
-		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
+		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build()
+				.get().uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
+		return null;
 	}
 
 	@Override

@@ -4,7 +4,7 @@ import org.modelmapper.ModelMapper;
 
 import com.imricki.breakingbad.domain.dto.Quote;
 
-public final class MapperUtil implements Mapper<Object, Object> {
+public final class MapperUtil {
 
 	private ModelMapper modelMapper;
 

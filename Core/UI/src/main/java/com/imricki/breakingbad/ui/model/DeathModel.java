@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public class DeathItem {
+public class DeathModel {
 
 	private int id;
 	
