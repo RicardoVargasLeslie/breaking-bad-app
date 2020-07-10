@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import lombok.Data;
 
 @Data
-public class Character  {
+public class CharacterItem  {
 
 
 	private int id;

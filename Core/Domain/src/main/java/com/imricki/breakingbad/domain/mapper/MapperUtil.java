@@ -8,6 +8,8 @@ public final class MapperUtil implements Mapper<Object, Object> {
 
 	private ModelMapper modelMapper;
 
+	Quote quoteDto;
+
 	private MapperUtil() {
 
 		this.modelMapper = new ModelMapper();
@@ -15,15 +17,14 @@ public final class MapperUtil implements Mapper<Object, Object> {
 
 	@Override
 	public Object from(Object source) {
-
-		return this.modelMapper.map(source, Quote.class);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public Object to(Object source) {
-
-		return this.modelMapper.map(source, Quote.class);
-
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
