@@ -1,6 +1,5 @@
 package com.imricki.breakingbad.domain.client.resorce;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
@@ -12,8 +11,7 @@ import lombok.NoArgsConstructor;
 @PropertySource("classpath:application.properties")
 public class ClientResorceHandler {
 
-	@Value("${api.baseurl}")
-	public static final String BASE_URL = "";
+	public static final String BASE_URL = "https://www.breakingbadapi.com";
 
 	public static final String ALL_CHARACTERS = "/api/characters";
 

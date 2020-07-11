@@ -22,6 +22,12 @@ public class QuoteClient implements QuoteService {
 	@Autowired
 	private ClientBuilder clientBuilder;
 
+	String BASE_URL;
+
+	String ALL_QUOTES;
+
+	String RANDOM_QUOTE;
+
 	@Override
 	public List<QuoteItem> getAll() {
 
@@ -36,8 +42,8 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public QuoteItem getRandom() {
 
-		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorceHandler.BASE_URL).build()
-				.get().uri(ClientResorceHandler.RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
+		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorceHandler.BASE_URL)
+				.build().get().uri(ClientResorceHandler.RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
 
 		return ObjectMapperUtils.map(unmarshalledQuote, QuoteItem.class);
 	}
@@ -45,8 +51,9 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public QuoteItem findBy(int id) {
 
-		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorceHandler.BASE_URL).build()
-				.get().uri(ClientResorceHandler.QUOTES_BY_ID + id).retrieve().bodyToFlux(Quote.class).blockFirst();
+		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorceHandler.BASE_URL)
+				.build().get().uri(ClientResorceHandler.QUOTES_BY_ID + id).retrieve().bodyToFlux(Quote.class)
+				.blockFirst();
 
 		return ObjectMapperUtils.map(unmarshalledQuote, QuoteItem.class);
 
