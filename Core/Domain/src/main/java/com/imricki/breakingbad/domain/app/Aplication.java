@@ -1,5 +1,7 @@
 package com.imricki.breakingbad.domain.app;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,8 +46,8 @@ public class Aplication {
 // en realidad devuelves una lista de un elemento
 			System.err.println(q);
 			System.err.println(total);
-//			List<Quote> list = this.quote.getAll();
-//			list.forEach(System.out::println);
+			List<QuoteItem> list = this.quote.getAll();
+			list.forEach(System.out::println);
 
 		};
 	}

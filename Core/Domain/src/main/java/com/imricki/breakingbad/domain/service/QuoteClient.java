@@ -2,6 +2,7 @@ package com.imricki.breakingbad.domain.service;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +27,15 @@ public class QuoteClient implements QuoteService {
 	private ModelMapper modelMapper = new ModelMapper();
 
 	@Override
-	public List<Quote> getAll() {
+	public List<QuoteItem> getAll() {
 
-		return Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.ALL_QUOTES).retrieve().bodyToMono(Quote[].class).block());
+		List<Quote> unmarshalledList = Arrays
+				.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
+						.uri(ClientResorces.ALL_QUOTES).retrieve().bodyToMono(Quote[].class).block());
+
+		return unmarshalledList.stream().map(source -> this.modelMapper.map(unmarshalledList, QuoteItem.class))
+				.collect(Collectors.toList());
+
 	}
 
 	@Override
@@ -42,10 +48,12 @@ public class QuoteClient implements QuoteService {
 	}
 
 	@Override
-	public Quote findBy(int id) {
+	public QuoteItem findBy(int id) {
 
-		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.QUOTES_BY_ID + id).retrieve().bodyToFlux(Quote.class).blockFirst();
+		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build()
+				.get().uri(ClientResorces.QUOTES_BY_ID + id).retrieve().bodyToFlux(Quote.class).blockFirst();
+
+		return this.modelMapper.map(unmarshalledQuote, QuoteItem.class);
 
 	}
 
