@@ -2,6 +2,7 @@ package com.imricki.breakingbad.domain.client.resorce;
 
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
@@ -10,11 +11,12 @@ import lombok.NoArgsConstructor;
 
 @Configuration
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-@PropertySource("classpath:url.properties")
+@PropertySource("classpath:application.properties")
+@ConfigurationProperties(prefix = "api")
 public class ClientResorceHandler implements InitializingBean {
 
 	@Value("${api.baseurl}")
-	public static String BASE_URL;
+	public static final String BASE_URL = "";
 
 	public static String ALL_CHARACTERS = "/api/characters";
 
@@ -29,8 +31,9 @@ public class ClientResorceHandler implements InitializingBean {
 	public static String ALL_QUOTES;
 
 	public static String QUOTES_BY_ID = "/api/quotes/";
+
 	@Value("${api.random.quote}")
-	public static String RANDOM_QUOTE;
+	public static final String RANDOM_QUOTE = "";
 
 	public static String ALL_DEATHS = "/api/deaths";
 
