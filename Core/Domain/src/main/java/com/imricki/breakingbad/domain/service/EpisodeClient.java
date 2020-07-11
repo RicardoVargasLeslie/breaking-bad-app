@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.imricki.breakingbad.domain.client.resorce.ClientResorces;
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Episode;
+import com.imricki.breakingbad.domain.item.EpisodeItem;
+import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
 @Service
 public class EpisodeClient implements EpisodeService {
@@ -17,10 +19,13 @@ public class EpisodeClient implements EpisodeService {
 	private ClientBuilder clientBuilder;
 
 	@Override
-	public List<Episode> getAll() {
+	public List<EpisodeItem> getAll() {
 
-		return Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.ALL_EPISODES).retrieve().bodyToMono(Episode[].class).block());
+		List<Episode> unmarshalledList = Arrays
+				.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
+						.uri(ClientResorces.ALL_QUOTES).retrieve().bodyToMono(Episode[].class).block());
+
+		return ObjectMapperUtils.mapAll(unmarshalledList, EpisodeItem.class);
+
 	}
-
 }

@@ -10,6 +10,8 @@ import com.imricki.breakingbad.domain.client.resorce.ClientResorces;
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Death;
 import com.imricki.breakingbad.domain.dto.DeathCount;
+import com.imricki.breakingbad.domain.item.DeathItem;
+import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
 @Service
 public class DeathClient implements DeathService {
@@ -18,25 +20,28 @@ public class DeathClient implements DeathService {
 	private ClientBuilder clientBuilder;
 
 	@Override
-	public List<Death> getAll() {
+	public List<DeathItem> getAll() {
 
-		return Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.ALL_DEATHS).retrieve().bodyToMono(Death[].class).block());
+		List<Death> unmarshalledList = Arrays
+				.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
+						.uri(ClientResorces.ALL_DEATHS).retrieve().bodyToMono(Death[].class).block());
 
+		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
 	}
 
 	@Override
-	public Death getRandom() {
+	public DeathItem getRandom() {
 
-		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.RANDOM_DEATHS).retrieve().bodyToFlux(Death.class).blockFirst();
+		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build()
+				.get().uri(ClientResorces.RANDOM_DEATHS).retrieve().bodyToFlux(Death.class).blockFirst();
+
+		return ObjectMapperUtils.map(unmarshalledDeath, DeathItem.class);
 	}
 
 	@Override
 	public DeathCount deathCount() {
-
-		return this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-				.uri(ClientResorces.DEATHS_COUNT).retrieve().bodyToFlux(DeathCount.class).blockFirst();
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

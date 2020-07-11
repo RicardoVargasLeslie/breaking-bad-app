@@ -48,7 +48,7 @@ public class QuoteClient implements QuoteService {
 		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build()
 				.get().uri(ClientResorces.QUOTES_BY_ID + id).retrieve().bodyToFlux(Quote.class).blockFirst();
 
-		return this.modelMapper.map(unmarshalledQuote, QuoteItem.class);
+		return ObjectMapperUtils.map(unmarshalledQuote, QuoteItem.class);
 
 	}
 
