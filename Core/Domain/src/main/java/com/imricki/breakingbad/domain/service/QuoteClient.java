@@ -2,9 +2,7 @@ package com.imricki.breakingbad.domain.service;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +10,7 @@ import com.imricki.breakingbad.domain.client.resorce.ClientResorces;
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Quote;
 import com.imricki.breakingbad.domain.item.QuoteItem;
+import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -23,9 +22,6 @@ public class QuoteClient implements QuoteService {
 	@Autowired
 	private ClientBuilder clientBuilder;
 
-	// Refactor desacoplar esto de aqui y mirar initializacion
-	private ModelMapper modelMapper = new ModelMapper();
-
 	@Override
 	public List<QuoteItem> getAll() {
 
@@ -33,8 +29,7 @@ public class QuoteClient implements QuoteService {
 				.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
 						.uri(ClientResorces.ALL_QUOTES).retrieve().bodyToMono(Quote[].class).block());
 
-		return unmarshalledList.stream().map(source -> this.modelMapper.map(unmarshalledList, QuoteItem.class))
-				.collect(Collectors.toList());
+		return ObjectMapperUtils.mapAll(unmarshalledList, QuoteItem.class);
 
 	}
 
@@ -44,7 +39,7 @@ public class QuoteClient implements QuoteService {
 		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build()
 				.get().uri(ClientResorces.RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
 
-		return this.modelMapper.map(unmarshalledQuote, QuoteItem.class);
+		return ObjectMapperUtils.map(unmarshalledQuote, QuoteItem.class);
 	}
 
 	@Override
