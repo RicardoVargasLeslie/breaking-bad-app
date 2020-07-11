@@ -1,15 +1,10 @@
 package com.imricki.breakingbad.domain.client.resorce;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-@Configuration
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@PropertySource("classpath:application.properties")
-public class ClientResorceHandler {
+public final class ClientResorceHandler {
 
 	public static final String BASE_URL = "https://www.breakingbadapi.com";
 
