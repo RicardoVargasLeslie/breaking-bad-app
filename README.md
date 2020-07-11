@@ -40,28 +40,25 @@
 
 ![](C:/Users/Ric/Desktop/header.png)
 
-### :hammer:Built With:wrench:
-
-* [Spring Boot](https://spring.io/projects/spring-boot)
-* [Maven](https://maven.apache.org/)
-* [JavaFX](https://openjfx.io/)
-* [JSON](https://www.json.org/json-en.html)
-* [Eclipse](https://www.eclipse.org/ide/)
-* [API Documentation](https://breakingbadapi.com/documentation)
-
-## :checkered_flag:Getting Started:checkered_flag:
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ## Prerequisites:heavy_check_mark:
 
 Before you begin, ensure you have met the following requirements:
 
 
 * You have installed the latst version of `JDK8+` :white_check_mark:
+
 * You have a `Windows/Linux/Mac` machine. :white_check_mark:
+
 * You have read `https://breakingbadapi.com/documentation`.:white_check_mark:
+
+  
+
+## :checkered_flag:Getting Started:checkered_flag:
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+
 
 ## Installing Breaking Bad App:computer:
 
@@ -71,11 +68,31 @@ OS X - Linux - Windows
 npm install my-crazy-module --save
 ```
 
+
+
 ## Using Breaking Bad App:computer:
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
  please refer to the [Documentation](https://breakingbadapi.com/documentation)
+
+
+
+### :hammer:Built With:wrench:
+
+* [Spring Boot](https://spring.io/projects/spring-boot)
+
+* [Maven](https://maven.apache.org/)
+
+* [JavaFX](https://openjfx.io/)
+
+* [JSON](https://www.json.org/json-en.html)
+
+* [Eclipse](https://www.eclipse.org/ide/)
+
+* [API Documentation](https://breakingbadapi.com/documentation)
+
+  
 
 ## :clipboard:Release History:clipboard:
 
