@@ -1,4 +1,4 @@
-package com.imricki.breakingbad.domain.service.shared;
+package com.imricki.breakingbad.domain.service.comon;
 
 public interface RandomService<T> {
 
