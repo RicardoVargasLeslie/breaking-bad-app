@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.imricki.breakingbad.domain.dto.DeathCount;
-import com.imricki.breakingbad.domain.dto.Quote;
+import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.domain.service.CharacterClient;
 import com.imricki.breakingbad.domain.service.DeathClient;
 import com.imricki.breakingbad.domain.service.QuoteClient;
@@ -38,7 +38,7 @@ public class Aplication {
 	public CommandLineRunner run() throws Exception {
 		return args -> {
 
-			Quote q = this.quote.findBy(8);
+			QuoteItem q = this.quote.getRandom();
 
 			DeathCount total = this.death.deathCount();
 // en realidad devuelves una lista de un elemento
