@@ -23,7 +23,7 @@ public class CharacterClient implements CharacterService {
 
 		List<Character> unmarshalledList = Arrays
 				.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-						.uri(ClientResorces.ALL_CHARACTERS).retrieve().bodyToMono(Character[].class).block());
+						.uri(ClientResorces.QUOTES_BY_ID).retrieve().bodyToMono(Character[].class).block());
 
 		return ObjectMapperUtils.mapAll(unmarshalledList, CharacterItem.class);
 	}

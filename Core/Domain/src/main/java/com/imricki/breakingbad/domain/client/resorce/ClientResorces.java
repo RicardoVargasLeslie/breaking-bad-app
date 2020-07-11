@@ -1,29 +1,44 @@
 package com.imricki.breakingbad.domain.client.resorce;
 
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class ClientResorces {
+@Configuration
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
+@PropertySource("classpath:url.properties")
+public class ClientResorces implements InitializingBean {
 
-	public static final String BASE_URL = "https://www.breakingbadapi.com";
+	@Value("${api.baseurl}")
+	public static String BASE_URL;
 
-	public static final String ALL_CHARACTERS = "/api/characters";
+	public static String ALL_CHARACTERS = "/api/characters";
 
-	public static final String RANDOM_CHARACTER = "/api/character/random";
+	public static String RANDOM_CHARACTER = "/api/character/random";
 
-	public static final String RANDOM_DEATHS = "/api/deaths/random";
+	public static String RANDOM_DEATHS = "/api/deaths/random";
 
-	public static final String DEATHS_COUNT = "/api/death-count";
+	public static String DEATHS_COUNT = "/api/death-count";
 
-	public static final String ALL_EPISODES = "/api/episodes";
+	public static String ALL_EPISODES = "/api/episodes";
 
-	public static final String ALL_QUOTES = "/api/quotes";
+	public static String ALL_QUOTES;
 
-	public static final String QUOTES_BY_ID = "/api/quotes/";
+	public static String QUOTES_BY_ID = "/api/quotes/";
+	@Value("${api.random.quote}")
+	public static String RANDOM_QUOTE;
 
-	public static final String RANDOM_QUOTE = "/api/quote/random";
+	public static String ALL_DEATHS = "/api/deaths";
 
-	public static final String ALL_DEATHS = "/api/deaths";
+	@Override
+	public void afterPropertiesSet() throws Exception {
+
+		System.out.println("in afterPropertiesSet via @Value: " + ClientResorces.BASE_URL);
+
+	}
 
 }
