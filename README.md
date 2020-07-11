@@ -36,18 +36,17 @@
 
 
   <h2 align="center">Breaking Bad App</h2>
-
 > Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes. :speak_no_evil:
 
 ![](C:/Users/Ric/Desktop/header.png)
 
 ### :hammer:Built With:wrench:
 
-* [Spring Boot](https://getbootstrap.com)
-* [Maven](https://jquery.com)
-* [JavaFX]()
-* [JSON]()
-* [Eclipse]()
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [Maven](https://maven.apache.org/)
+* [JavaFX](https://openjfx.io/)
+* [JSON](https://www.json.org/json-en.html)
+* [Eclipse](https://www.eclipse.org/ide/)
 * [API Documentation](https://breakingbadapi.com/documentation)
 
 ## :checkered_flag:Getting Started:checkered_flag:
@@ -60,22 +59,16 @@ To get a local copy up and running follow these simple example steps.
 Before you begin, ensure you have met the following requirements:
 
 
-* You have installed the latst version of `<coding_language/dependency/requirement_1>` :white_check_mark:
-* You have a `<Windows/Linux/Mac>` machine. State which OS is supported/which is not.:white_check_mark:
-* You have read `<guide/link/documentation_related_to_project>`.:white_check_mark:
+* You have installed the latst version of `JDK8+` :white_check_mark:
+* You have a `Windows/Linux/Mac` machine. :white_check_mark:
+* You have read `https://breakingbadapi.com/documentation`.:white_check_mark:
 
 ## Installing Breaking Bad App:computer:
 
-OS X & Linux:
+OS X - Linux - Windows
 
 ```sh
 npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
 ```
 
 ## Using Breaking Bad App:computer:
@@ -86,31 +79,19 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ## :clipboard:Release History:clipboard:
 
-* 0.2.1
-  
-  * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-  * CHANGE: Remove `setDefaultXYZ()`
-  * ADD: Add `init()`
-* 0.1.1
-  
-  * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-  * The first proper release
-  * CHANGE: Rename `foo()` to `bar()`
 * 0.0.1
   
-  * Work in progress
+  * Work in progress,initial release
   
     
 
 ## :pencil2:Contributing to Breaking Bad App:pencil2:
-To contribute to <project_name>, follow these steps:
+To contribute to Breaking Bad App, follow these steps:
 
 1. Fork this repository.
-2. Create a branch: `git checkout -b <branch_name>`.
-3. Make your changes and commit them: `git commit -m '<commit_message>'`
-4. Push to the original branch: `git push origin <project_name>/<location>`
+2. Create a branch: `git checkout -b master`.
+3. Make your changes and commit them: `git commit -m 'this is a sample mesage'`
+4. Push to the original branch: `git push origin breaking-bad-app`
 5. Create the pull request.
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
@@ -123,7 +104,6 @@ If you want to contact me you can reach me at RicardoVargasLeslie@gmail.com.
 
 * [Breaking Bad API](https://www.breakingbadapi.com/):thumbsup:
 * [Tim Biles](@timbiles):thumbsup:
-* [Choose an Open Source License](https://choosealicense.com):thumbsup:
 
 ## License:scroll:
 
