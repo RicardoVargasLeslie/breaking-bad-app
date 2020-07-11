@@ -25,9 +25,9 @@ public class ClientResorceHandler {
 
 	public static final String ALL_EPISODES = "/api/episodes";
 
-	public static final String ALL_QUOTES;
+	public static final String ALL_QUOTES = "/api/quotes";
 
-	public static final String QUOTES_BY_ID = "/api/quotes/";
+	public static final String QUOTES_BY_ID = "";
 
 	public static final String RANDOM_QUOTE = "/api/quote/random";
 
