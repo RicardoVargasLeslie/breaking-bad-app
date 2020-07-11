@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.client.resorce.ClientResorceHandler;
@@ -22,11 +23,10 @@ public class QuoteClient implements QuoteService {
 	@Autowired
 	private ClientBuilder clientBuilder;
 
-	String BASE_URL;
-
-	String ALL_QUOTES;
-
-	String RANDOM_QUOTE;
+	@Value(value = "${api.baseurl}")
+	private static String BASE_URL;
+	@Value(value = "${api.random.quote}")
+	private static String RANDOM_QUOTE;
 
 	@Override
 	public List<QuoteItem> getAll() {
@@ -42,8 +42,8 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public QuoteItem getRandom() {
 
-		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorceHandler.BASE_URL)
-				.build().get().uri(ClientResorceHandler.RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
+		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(BASE_URL).build().get()
+				.uri(RANDOM_QUOTE).retrieve().bodyToFlux(Quote.class).blockFirst();
 
 		return ObjectMapperUtils.map(unmarshalledQuote, QuoteItem.class);
 	}
