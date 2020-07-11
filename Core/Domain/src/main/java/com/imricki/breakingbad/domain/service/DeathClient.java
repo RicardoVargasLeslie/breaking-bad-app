@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.imricki.breakingbad.domain.client.resorce.ClientResorces;
+import com.imricki.breakingbad.domain.client.resorce.ClientResorceHandler;
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Death;
 import com.imricki.breakingbad.domain.dto.DeathCount;
@@ -23,8 +23,8 @@ public class DeathClient implements DeathService {
 	public List<DeathItem> getAll() {
 
 		List<Death> unmarshalledList = Arrays
-				.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build().get()
-						.uri(ClientResorces.ALL_DEATHS).retrieve().bodyToMono(Death[].class).block());
+				.asList(this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorceHandler.BASE_URL).build().get()
+						.uri(ClientResorceHandler.ALL_DEATHS).retrieve().bodyToMono(Death[].class).block());
 
 		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
 	}
@@ -32,8 +32,8 @@ public class DeathClient implements DeathService {
 	@Override
 	public DeathItem getRandom() {
 
-		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorces.BASE_URL).build()
-				.get().uri(ClientResorces.RANDOM_DEATHS).retrieve().bodyToFlux(Death.class).blockFirst();
+		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(ClientResorceHandler.BASE_URL).build()
+				.get().uri(ClientResorceHandler.RANDOM_DEATHS).retrieve().bodyToFlux(Death.class).blockFirst();
 
 		return ObjectMapperUtils.map(unmarshalledDeath, DeathItem.class);
 	}

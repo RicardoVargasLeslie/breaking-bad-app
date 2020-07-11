@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Configuration
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 @PropertySource("classpath:url.properties")
-public class ClientResorces implements InitializingBean {
+public class ClientResorceHandler implements InitializingBean {
 
 	@Value("${api.baseurl}")
 	public static String BASE_URL;
@@ -37,7 +37,7 @@ public class ClientResorces implements InitializingBean {
 	@Override
 	public void afterPropertiesSet() throws Exception {
 
-		System.out.println("in afterPropertiesSet via @Value: " + ClientResorces.BASE_URL);
+		System.out.println("in afterPropertiesSet via @Value: " + ClientResorceHandler.BASE_URL);
 
 	}
 
