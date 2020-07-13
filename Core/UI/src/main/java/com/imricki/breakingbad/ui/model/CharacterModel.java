@@ -1,6 +1,8 @@
 package com.imricki.breakingbad.ui.model;
 
 import java.util.ArrayList;
+
+import javafx.beans.property.StringProperty;
 import lombok.Data;
 
 @Data
@@ -9,21 +11,21 @@ public class CharacterModel  {
 
 	private int id;
 
-	private String name;
+	private StringProperty name;
 
-	private String birthday;
+	private StringProperty birthday;
 
 	private ArrayList<String> occupation;
 
-	private String img;
+	private StringProperty img;
 
-	private String status;
+	private StringProperty status;
 
-	private String nickname;
+	private StringProperty nickname;
 
 	private ArrayList<Integer> appearance;
 
-	private String portrayed;
+	private StringProperty portrayed;
 
 	private ArrayList<String> category;
 

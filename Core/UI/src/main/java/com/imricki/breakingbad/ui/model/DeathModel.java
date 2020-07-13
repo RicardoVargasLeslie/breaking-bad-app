@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class DeathModel {
 
-	private int id;
+	private IntegerProperty id;
 	
 	private String death;
 	
@@ -18,10 +18,10 @@ public class DeathModel {
 	
 	private String lastWords;
 	
-	private int season;
+	private IntegerProperty season;
 	
-	private int episode;
+	private IntegerProperty episode;
 	
-	private int numberOfdeaths;
+	private IntegerProperty numberOfdeaths;
 
 }
