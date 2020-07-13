@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
@@ -13,26 +14,29 @@ import com.imricki.breakingbad.domain.dto.DeathCount;
 import com.imricki.breakingbad.domain.item.DeathItem;
 import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 @Service
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@ConfigurationProperties
 public class DeathClient implements DeathService {
 
 	@Autowired
 	private ClientBuilder clientBuilder;
-	
+
 	@Value(value = "${api.base.url}")
-	private  String BASE_URL;
+	private String BASE_URL;
 	@Value(value = "${api.random.death}")
-	private  String RANDOM_DEATH;
+	private String RANDOM_DEATH;
 	@Value(value = "${api.all.deaths}")
 	private String ALL_DEATHS;
-
 
 	@Override
 	public List<DeathItem> getAll() {
 
-		List<Death> unmarshalledList = Arrays
-				.asList(this.clientBuilder.getWebClientBuilder().baseUrl(BASE_URL).build().get()
-						.uri(ALL_DEATHS).retrieve().bodyToMono(Death[].class).block());
+		List<Death> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.BASE_URL)
+				.build().get().uri(this.ALL_DEATHS).retrieve().bodyToMono(Death[].class).block());
 
 		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
 	}
@@ -40,8 +44,8 @@ public class DeathClient implements DeathService {
 	@Override
 	public DeathItem getRandom() {
 
-		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(BASE_URL).build()
-				.get().uri(RANDOM_DEATH).retrieve().bodyToFlux(Death.class).blockFirst();
+		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(this.BASE_URL).build().get()
+				.uri(this.RANDOM_DEATH).retrieve().bodyToFlux(Death.class).blockFirst();
 
 		return ObjectMapperUtils.map(unmarshalledDeath, DeathItem.class);
 	}

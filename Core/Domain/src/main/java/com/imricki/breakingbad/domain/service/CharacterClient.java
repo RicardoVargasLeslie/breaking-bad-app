@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
@@ -12,7 +13,12 @@ import com.imricki.breakingbad.domain.dto.Character;
 import com.imricki.breakingbad.domain.item.CharacterItem;
 import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 @Service
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+@ConfigurationProperties
 public class CharacterClient implements CharacterService {
 
 	@Autowired
