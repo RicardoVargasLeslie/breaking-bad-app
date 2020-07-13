@@ -25,16 +25,16 @@ public class EpisodeClient implements EpisodeService {
 	private ClientBuilder clientBuilder;
 
 	@Value(value = "${api.base.url}")
-	private String BASE_URL;
+	private String baseUrl;
 
 	@Value(value = "${api.all.episodes}")
-	private String ALL_EPISODES;
+	private String allEpisodes;
 
 	@Override
 	public List<EpisodeItem> getAll() {
 
-		List<Episode> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.BASE_URL)
-				.build().get().uri(this.ALL_EPISODES).retrieve().bodyToMono(Episode[].class).block());
+		List<Episode> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
+				.build().get().uri(this.allEpisodes).retrieve().bodyToMono(Episode[].class).block());
 
 		return ObjectMapperUtils.mapAll(unmarshalledList, EpisodeItem.class);
 

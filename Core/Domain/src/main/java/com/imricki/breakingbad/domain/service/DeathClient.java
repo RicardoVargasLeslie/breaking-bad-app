@@ -26,17 +26,17 @@ public class DeathClient implements DeathService {
 	private ClientBuilder clientBuilder;
 
 	@Value(value = "${api.base.url}")
-	private String BASE_URL;
+	private String baseUrl;
 	@Value(value = "${api.random.death}")
-	private String RANDOM_DEATH;
+	private String randomDeath;
 	@Value(value = "${api.all.deaths}")
-	private String ALL_DEATHS;
+	private String allDeaths;
 
 	@Override
 	public List<DeathItem> getAll() {
 
-		List<Death> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.BASE_URL)
-				.build().get().uri(this.ALL_DEATHS).retrieve().bodyToMono(Death[].class).block());
+		List<Death> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
+				.build().get().uri(this.allDeaths).retrieve().bodyToMono(Death[].class).block());
 
 		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
 	}
@@ -44,8 +44,8 @@ public class DeathClient implements DeathService {
 	@Override
 	public DeathItem getRandom() {
 
-		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(this.BASE_URL).build().get()
-				.uri(this.RANDOM_DEATH).retrieve().bodyToFlux(Death.class).blockFirst();
+		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl).build().get()
+				.uri(this.randomDeath).retrieve().bodyToFlux(Death.class).blockFirst();
 
 		return ObjectMapperUtils.map(unmarshalledDeath, DeathItem.class);
 	}

@@ -25,19 +25,19 @@ public class CharacterClient implements CharacterService {
 	private ClientBuilder clientBuilder;
 
 	@Value(value = "${api.base.url}")
-	private String BASE_URL;
+	private String baseUrl;
 	@Value(value = "${api.random.character}")
-	private String RANDOM_CHARACTER;
+	private String randomCharacter;
 	@Value(value = "${api.all.characters}")
-	private String ALL_CHARACTERS;
+	private String allCharacters;
 	@Value(value = "${api.character.by.id}")
-	private String CHARACTER_BY_ID;
+	private String characterByid;
 
 	@Override
 	public List<CharacterItem> getAll() {
 
-		List<Character> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.BASE_URL)
-				.build().get().uri(this.ALL_CHARACTERS).retrieve().bodyToMono(Character[].class).block());
+		List<Character> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
+				.build().get().uri(this.allCharacters).retrieve().bodyToMono(Character[].class).block());
 
 		return ObjectMapperUtils.mapAll(unmarshalledList, CharacterItem.class);
 	}
@@ -45,8 +45,8 @@ public class CharacterClient implements CharacterService {
 	@Override
 	public CharacterItem getRandom() {
 
-		Character unmarshalledCharacter = this.clientBuilder.getWebClientBuilder().baseUrl(this.BASE_URL).build().get()
-				.uri(this.RANDOM_CHARACTER).retrieve().bodyToFlux(Character.class).blockFirst();
+		Character unmarshalledCharacter = this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl).build().get()
+				.uri(this.randomCharacter).retrieve().bodyToFlux(Character.class).blockFirst();
 
 		return ObjectMapperUtils.map(unmarshalledCharacter, CharacterItem.class);
 	}
