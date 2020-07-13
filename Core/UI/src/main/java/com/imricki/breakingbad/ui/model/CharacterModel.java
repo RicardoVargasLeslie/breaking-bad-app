@@ -19,8 +19,8 @@ public class CharacterModel {
 
 	private StringProperty birthday = new SimpleStringProperty(this, "birthday");
 
-	private ListProperty<String> occupation = new SimpleListProperty(this, "occupation",
-			FXCollections.observableArrayList());;
+	private ListProperty<String> occupation = new SimpleListProperty<>(this, "occupation",
+			FXCollections.observableArrayList());
 
 	private StringProperty img = new SimpleStringProperty(this, "img");
 
@@ -28,12 +28,12 @@ public class CharacterModel {
 
 	private StringProperty nickname = new SimpleStringProperty(this, "nickname");
 
-	private ListProperty<Integer> appearance = new SimpleListProperty(this, "appearance",
+	private ListProperty<String> appearance = new SimpleListProperty<>(this, "appearance",
 			FXCollections.observableArrayList());
 
 	private StringProperty portrayed = new SimpleStringProperty(this, "portrayed");
 
-	private ListProperty<String> category = new SimpleListProperty(this, "category",
+	private ListProperty<String> category = new SimpleListProperty<>(this, "category",
 			FXCollections.observableArrayList());
 
 	public IntegerProperty getId() {
@@ -92,14 +92,6 @@ public class CharacterModel {
 		this.nickname = nickname;
 	}
 
-	public ListProperty<Integer> getAppearance() {
-		return this.appearance;
-	}
-
-	public void setAppearance(ListProperty<Integer> appearance) {
-		this.appearance = appearance;
-	}
-
 	public StringProperty getPortrayed() {
 		return this.portrayed;
 	}
@@ -114,6 +106,14 @@ public class CharacterModel {
 
 	public void setCategory(ListProperty<String> category) {
 		this.category = category;
+	}
+
+	public ListProperty<String> getAppearance() {
+		return this.appearance;
+	}
+
+	public void setAppearance(ListProperty<String> appearance) {
+		this.appearance = appearance;
 	}
 
 }

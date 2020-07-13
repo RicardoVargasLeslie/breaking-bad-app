@@ -23,8 +23,8 @@ public class EpisodeModel {
 
 	private StringProperty air_date = new SimpleStringProperty(this, "air_date");
 
-	private ListProperty<String> characters = new SimpleListProperty<String>(this, "characters",
-			FXCollections.observableArrayList());;
+	private ListProperty<String> characters = new SimpleListProperty<>(this, "characters",
+			FXCollections.observableArrayList());
 
 	private StringProperty series = new SimpleStringProperty(this, "series");
 
