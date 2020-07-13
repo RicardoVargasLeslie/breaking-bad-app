@@ -1,5 +1,9 @@
 package com.imricki.breakingbad.ui.model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,20 +12,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class DeathModel {
 
-	private IntegerProperty id;
+	private IntegerProperty id = new SimpleIntegerProperty(this,"id");
 	
-	private String death;
+	private StringProperty death =new SimpleStringProperty(this,"quote_id");
 	
-	private String cause;
+	private StringProperty cause=new SimpleStringProperty(this,"quote_id");
 	
-	private String responsible;
+	private StringProperty responsible=new SimpleStringProperty(this,"quote_id");
 	
-	private String lastWords;
+	private StringProperty lastWords=new SimpleStringProperty(this,"quote_id");
 	
-	private IntegerProperty season;
+	private StringProperty season=new SimpleStringProperty(this,"quote_id");
 	
-	private IntegerProperty episode;
+	private IntegerProperty episode = new SimpleIntegerProperty(this,"id");
 	
-	private IntegerProperty numberOfdeaths;
+	private IntegerProperty numberOfdeaths = new SimpleIntegerProperty(this,"id");
 
 }
