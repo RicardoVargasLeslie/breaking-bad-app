@@ -46,8 +46,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## :checkered_flag:Getting Started:checkered_flag:
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To set up the App follow these steps:
 
 
 
@@ -63,7 +62,7 @@ cd breaking-bad-app
 
 
 
-## Using Breaking Bad App:computer:
+## Using Breaking B ad App:computer:
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -75,7 +74,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 *  [Spring Boot-v2.3.1.RELEASE](https://github.com/spring-projects/spring-boot/releases/tag/v2.3.1.RELEASE)
 
-* [Maven](https://maven.apache.org/)
+* [Maven -Version 3.6.3](https://maven.apache.org/)
 
 * [JavaFX -Version:14](https://openjfx.io/)
 
