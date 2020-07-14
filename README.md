@@ -22,15 +22,6 @@
     <a href="https://lgtm.com/projects/g/badges/shields/alerts/">
         <img src="https://img.shields.io/lgtm/alerts/g/badges/shields"
             alt="Total alerts"/></a>
-    <a href="https://github.com/badges/shields/compare/gh-pages...master">
-        <img src="https://img.shields.io/github/commits-since/badges/shields/gh-pages?label=commits%20to%20be%20deployed"
-            alt="commits to be deployed"></a>
-    <a href="https://discord.gg/HjJCwm5">
-        <img src="https://img.shields.io/discord/308323056592486420?logo=discord"
-            alt="chat on Discord"></a>
-    <a href="https://twitter.com/intent/follow?screen_name=shields_io">
-        <img src="https://img.shields.io/twitter/follow/shields_io?style=social&logo=twitter"
-            alt="follow on Twitter"></a>
 </p>
 
 
@@ -80,15 +71,13 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ### :hammer:Built With:wrench:
 
-* [Spring Boot](https://spring.io/projects/spring-boot)
+*  [Spring Boot-v2.3.1.RELEASE](https://github.com/spring-projects/spring-boot/releases/tag/v2.3.1.RELEASE)
 
 * [Maven](https://maven.apache.org/)
 
-* [JavaFX](https://openjfx.io/)
+* [JavaFX -Version:14](https://openjfx.io/)
 
-* [JSON](https://www.json.org/json-en.html)
-
-* [Eclipse](https://www.eclipse.org/ide/)
+* [Eclipse IDE for Enterprise Java Developer-Version: 2020-03 (4.15.0)](https://www.eclipse.org/ide/)
 
 * [API Documentation](https://breakingbadapi.com/documentation)
 
@@ -120,7 +109,7 @@ If you want to contact me you can reach me at RicardoVargasLeslie@gmail.com.
 ## Acknowledgements:open_hands:
 
 * [Breaking Bad API](https://www.breakingbadapi.com/):thumbsup:
-* [Tim Biles](@timbiles):thumbsup:
+* [Tim Biles](https://github.com/timbiles):thumbsup:
 
 ## License:scroll:
 
