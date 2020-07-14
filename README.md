@@ -60,12 +60,12 @@ To get a local copy up and running follow these simple example steps.
 
 
 
-## Installing Breaking Bad App:computer:
+## Running Breaking Bad App:computer:
 
 OS X - Linux - Windows
 
 ```sh
-npm install my-crazy-module --save
+./mvnw spring-boot:run
 ```
 
 
