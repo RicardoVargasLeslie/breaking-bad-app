@@ -28,8 +28,8 @@
 
   <h2 align="center">Breaking Bad App</h2>
 > Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes. :speak_no_evil:
-
-![](C:/Users/Ric/Desktop/header.png)
+>
+> 
 
 ## Prerequisites:heavy_check_mark:
 
@@ -51,11 +51,13 @@ To get a local copy up and running follow these simple example steps.
 
 
 
-## Running Breaking Bad App:computer:
+## Running *Breaking Bad App* Locally:computer:
 
 OS X - Linux - Windows
 
 ```sh
+git clone https://github.com/RicardoVargasLeslie/breaking-bad-app.git
+cd breaking-bad-app
 ./mvnw spring-boot:run
 ```
 
