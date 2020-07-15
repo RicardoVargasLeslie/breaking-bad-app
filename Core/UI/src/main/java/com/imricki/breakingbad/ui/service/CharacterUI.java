@@ -2,8 +2,11 @@ package com.imricki.breakingbad.ui.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.imricki.breakingbad.ui.model.CharacterModel;
 
+@Service
 public class CharacterUI implements CharacterService {
 
 	@Override
