@@ -1,4 +1,4 @@
-package com.imricki.breakingbad.domain.service.comon;
+package com.imricki.breakingbad.domain.service.shared;
 
 public interface FindService<T> {
 

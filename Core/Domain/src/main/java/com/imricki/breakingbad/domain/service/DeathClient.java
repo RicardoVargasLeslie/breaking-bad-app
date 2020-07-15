@@ -12,7 +12,7 @@ import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Death;
 import com.imricki.breakingbad.domain.dto.DeathCount;
 import com.imricki.breakingbad.domain.item.DeathItem;
-import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
+import com.imricki.breakingbad.util.mapper.ObjectMapperUtils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
