@@ -7,7 +7,7 @@
 		<artifactId>Core</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>Domain</artifactId>
+	 <artifactId>Domain</artifactId>
 	<name>Domain</name>
 	<description>Domain Module</description>
 
