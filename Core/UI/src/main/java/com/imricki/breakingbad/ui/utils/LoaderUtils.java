@@ -15,7 +15,7 @@ public class LoaderUtils {
 		LOGGER.setLevel(Level.SEVERE);
 	}
 
-	public static void viewLoader(String view, Object className) {
+	public static void loadView(String view, Object className) {
 
 		try {
 			if ((view != null) && (className != null)) {

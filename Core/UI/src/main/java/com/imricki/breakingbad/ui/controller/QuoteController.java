@@ -26,7 +26,7 @@ public class QuoteController implements Initializable {
 
 	public QuoteController() {
 
-		LoaderUtils.viewLoader("/fx/view.fxml", this);
+		LoaderUtils.loadView("/fx/view.fxml", this);
 	}
 
 	@Override
