@@ -1,26 +1,47 @@
 package com.imricki.breakingbad.ui.app;
 
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.stage.Stage;
 
 public class App extends Application {
 
-	// ConfigurableAplicationContext context;
-
-	ConfigurableApplicationContext context;
+	private ConfigurableApplicationContext applicationContext;
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
-		// TODO Auto-generated method stub
-
+	public void init() {
+		this.applicationContext = new SpringApplicationBuilder(Aplication.class).run();
 	}
 
 	@Override
-	public void init() throws Exception {
+	public void start(Stage stage) {
 
-		// this.context = new SpringApplicationBuilder().sources(Aplication.);
+		this.applicationContext.publishEvent(new StageReadyEvent(stage));
+	}
+
+	@Override
+	public void stop() {
+		this.applicationContext.close();
+		Platform.exit();
+	}
+
+	static class StageReadyEvent extends ApplicationEvent {
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public StageReadyEvent(Stage stage) {
+			super(stage);
+		}
+
+		public Stage getStage() {
+			return (Stage) this.getSource();
+		}
 	}
 
 }

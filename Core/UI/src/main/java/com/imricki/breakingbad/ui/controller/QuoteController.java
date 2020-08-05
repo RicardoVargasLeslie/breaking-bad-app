@@ -5,15 +5,14 @@ import java.util.ResourceBundle;
 
 import org.springframework.stereotype.Controller;
 
+import com.imricki.breakingbad.ui.utils.LoaderUtils;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
-import lombok.AccessLevel;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @Controller
 public class QuoteController implements Initializable {
 
@@ -24,6 +23,11 @@ public class QuoteController implements Initializable {
 	@Getter
 	@FXML
 	private Button buttonview;
+
+	public QuoteController() {
+
+		LoaderUtils.viewLoader("/fx/view.fxml", this);
+	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
