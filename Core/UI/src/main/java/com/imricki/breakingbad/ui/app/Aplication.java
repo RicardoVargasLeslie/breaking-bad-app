@@ -14,7 +14,7 @@ import javafx.application.Application;
 @SpringBootApplication(scanBasePackages = { "com" })
 public class Aplication {
 
-	private static final Logger log = LoggerFactory.getLogger(Aplication.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(Aplication.class);
 
 	@Autowired
 	private CharacterClient character;
@@ -26,10 +26,8 @@ public class Aplication {
 	private DeathClient death;
 
 	public static void main(String[] args) {
-		// SpringApplication.run(Aplication.class, args);
 
-		Application.launch(App.class, args);
-		// Application.launch(App.class, args);
+		Application.launch(FxAppication.class, args);
 	}
 
 //	@Bean
