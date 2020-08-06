@@ -3,7 +3,6 @@ package com.imricki.breakingbad.ui.app;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
-import com.imricki.breakingbad.ui.app.FxAppication.StageReadyEvent;
 import com.imricki.breakingbad.ui.controller.QuoteController;
 
 import javafx.scene.Scene;
