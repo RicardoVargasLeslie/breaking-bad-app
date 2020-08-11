@@ -29,6 +29,10 @@ public final class ObjectMapperUtils {
 	}
 
 	public static <S, D> D mapProperties(final S source, D destination) {
+
+		modelMapper = new ModelMapper();
+		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
+
 		modelMapper.map(source, destination);
 		return destination;
 	}

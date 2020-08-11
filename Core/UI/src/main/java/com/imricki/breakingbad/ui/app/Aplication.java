@@ -1,7 +1,5 @@
 package com.imricki.breakingbad.ui.app;
 
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,9 +49,12 @@ public class Aplication {
 
 			System.err.println(q);
 			System.err.println(total);
-			List<QuoteModel> list = this.uiservice.getAll();
+//			List<QuoteModel> list = this.uiservice.getAll();
 //			list.forEach(System.out::println);
 
+			QuoteModel m = this.uiservice.getRandom();
+
+			System.out.println(m);
 		};
 	}
 }

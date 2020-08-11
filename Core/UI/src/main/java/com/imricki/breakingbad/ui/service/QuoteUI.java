@@ -32,7 +32,13 @@ public class QuoteUI implements QuoteUIService {
 	@Override
 	public QuoteModel getRandom() {
 
-		return null;
+		QuoteModel model = new QuoteModel();
+
+		ObjectMapperUtils.mapProperties(this.service.getRandom(), model);
+		System.err.println(model.toString());
+
+		return model;
+
 	}
 
 	@Override
