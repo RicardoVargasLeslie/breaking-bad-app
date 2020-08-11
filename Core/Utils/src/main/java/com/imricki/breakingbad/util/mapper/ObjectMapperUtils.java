@@ -28,8 +28,9 @@ public final class ObjectMapperUtils {
 		return entityList.stream().map(entity -> map(entity, outCLass)).collect(Collectors.toList());
 	}
 
-	public static <S, D> D map(final S source, D destination) {
+	public static <S, D> D mapProperties(final S source, D destination) {
 		modelMapper.map(source, destination);
 		return destination;
 	}
+
 }

@@ -52,7 +52,7 @@ public class Aplication {
 			System.err.println(q);
 			System.err.println(total);
 			List<QuoteModel> list = this.uiservice.getAll();
-			list.forEach(System.out::println);
+//			list.forEach(System.out::println);
 
 		};
 	}

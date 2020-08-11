@@ -50,8 +50,8 @@ public class QuoteModel {
 
 	@Override
 	public String toString() {
-		return "QuoteModel [quote_id=" + this.quote_id + ", quote=" + this.quote + ", author=" + this.author
-				+ ", series=" + this.series + "]";
+		return "QuoteModel [quote_id=" + this.getQuote_id().get() + ", quote=" + this.getQuote().get() + ", author="
+				+ this.getAuthor().get() + ", series=" + this.getSeries().get() + "]";
 	}
 
 }
