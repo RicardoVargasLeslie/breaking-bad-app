@@ -20,7 +20,7 @@
 >
 > 
 
-## Prerequisites:heavy_check_mark:
+## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
@@ -33,13 +33,13 @@ Before you begin, ensure you have met the following requirements:
 
   
 
-## :checkered_flag:Getting Started:checkered_flag:
+## Getting Started
 
 To set up the App follow these steps:
 
 
 
-## Running *Breaking Bad App* Locally:computer:
+## Running *Breaking Bad App* Locally
 
 OS X - Linux - Windows
 
@@ -51,7 +51,7 @@ cd breaking-bad-app
 
 
 
-## Using Breaking Bad App:computer:
+## Using Breaking Bad App
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -59,7 +59,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 
 
-### :hammer:Built With:wrench:
+### :hammer:Built With
 
 *  [Spring Boot-v2.3.1.RELEASE](https://github.com/spring-projects/spring-boot/releases/tag/v2.3.1.RELEASE)
 
@@ -73,7 +73,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
   
 
-## :clipboard:Release History:clipboard:
+## :clipboard:Release History
 
 * 0.0.1
   
@@ -81,7 +81,7 @@ Use this space to show useful examples of how a project can be used. Additional 
   
     
 
-## :pencil2:Contributing to Breaking Bad App:pencil2:
+## :pencil2:Contributing to Breaking Bad App
 To contribute to Breaking Bad App, follow these steps:
 
 1. Fork this repository.
@@ -92,7 +92,7 @@ To contribute to Breaking Bad App, follow these steps:
 
 Alternatively see the GitHub documentation on [creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## :email:Contact Me :email:
+## :email:Contact Me 
 
 If you want to contact me you can reach me at RicardoVargasLeslie@gmail.com.
 
