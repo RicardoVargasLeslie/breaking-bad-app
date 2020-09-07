@@ -37,4 +37,9 @@ public final class ObjectMapperUtils {
 		return destination;
 	}
 
+	public static QuoteModel getQuoteModel(QuoteItem source, QuoteModel destination) {
+
+		modelMapper.addMapping(src -> src.getPerson().getFirstName(), (dest, v) -> dest.getCustomer().setName(v));
+
+	}
 }
