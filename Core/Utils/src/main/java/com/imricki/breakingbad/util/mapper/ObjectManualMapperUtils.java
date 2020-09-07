@@ -8,6 +8,8 @@ public final class ObjectManualMapperUtils {
 
 	public static Object from() {
 
+		QuoteModel model = new QuoteModel();
+
 		return null;
 	}
 
