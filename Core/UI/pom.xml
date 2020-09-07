@@ -12,12 +12,7 @@
 	<description>UI Module</description>
 
 	<dependencies>
-		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>Domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>provided</scope>
-		</dependency>
+	
 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
