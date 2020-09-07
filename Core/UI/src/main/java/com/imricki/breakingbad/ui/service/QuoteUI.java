@@ -34,8 +34,7 @@ public class QuoteUI implements QuoteUIService {
 
 		QuoteModel model = new QuoteModel();
 
-		ObjectMapperUtils.mapProperties(this.service.getRandom(), model);
-		System.err.println(model.toString());
+		QuoteMap map;
 
 		return model;
 
