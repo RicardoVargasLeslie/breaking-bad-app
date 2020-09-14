@@ -34,8 +34,6 @@ public class QuoteUI implements QuoteUIService {
 
 		QuoteModel model = new QuoteModel();
 
-		QuoteMap map;
-
 		return model;
 
 	}
