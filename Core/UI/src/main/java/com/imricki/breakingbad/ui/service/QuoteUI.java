@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.domain.service.QuoteClient;
 import com.imricki.breakingbad.ui.model.QuoteModel;
-import com.imricki.breakingbad.util.mapper.ObjectMapperUtils;
 
 @Service
 public class QuoteUI implements QuoteUIService {
