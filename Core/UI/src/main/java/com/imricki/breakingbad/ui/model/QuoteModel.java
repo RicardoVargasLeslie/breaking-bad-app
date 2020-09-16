@@ -1,5 +1,7 @@
 package com.imricki.breakingbad.ui.model;
 
+import com.imricki.breakingbad.domain.item.QuoteItem;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import lombok.AccessLevel;
@@ -54,4 +56,15 @@ public class QuoteModel {
 				+ this.getAuthor().get() + ", series=" + this.getSeries().get() + "]";
 	}
 
+	QuoteModel to(QuoteItem item) {
+
+		QuoteModel modelfx = new QuoteModel();
+
+		modelfx.setAuthor(new SimpleStringProperty(item.getAuthor()));
+		modelfx.setQuote(new SimpleStringProperty(item.getQuote()));
+		modelfx.setQuote_id(new SimpleStringProperty(item.getQuote_id() + ""));
+		modelfx.setSeries(new SimpleStringProperty(item.getSeries()));
+
+		return modelfx;
+	}
 }
