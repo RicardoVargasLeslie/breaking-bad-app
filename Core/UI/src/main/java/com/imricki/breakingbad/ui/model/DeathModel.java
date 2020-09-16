@@ -1,5 +1,7 @@
 package com.imricki.breakingbad.ui.model;
 
+import com.imricki.breakingbad.domain.item.DeathItem;
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -88,6 +90,27 @@ public class DeathModel {
 
 	public void setNumberOfdeaths(IntegerProperty numberOfdeaths) {
 		this.numberOfdeaths = numberOfdeaths;
+	}
+
+	public DeathModel toFxBean(DeathItem item) {
+
+		DeathModel modelfx = new DeathModel();
+
+		if (item == null) {
+
+			throw new NullPointerException("Null Item");
+		}
+
+		modelfx.setCause(new SimpleStringProperty(item.getCause()));
+		modelfx.setDeath(new SimpleStringProperty(item.getDeath()));
+		modelfx.setEpisode(new SimpleIntegerProperty(item.getEpisode()));
+		modelfx.setId(new SimpleIntegerProperty(item.getId()));
+		modelfx.setLastWords(new SimpleStringProperty(item.getLastWords()));
+		modelfx.setNumberOfdeaths(new SimpleIntegerProperty(item.getNumberOfdeaths()));
+		modelfx.setResponsible(new SimpleStringProperty(item.getResponsible()));
+		modelfx.setSeason(new SimpleStringProperty(item.getSeason() + ""));
+
+		return modelfx;
 	}
 
 }
