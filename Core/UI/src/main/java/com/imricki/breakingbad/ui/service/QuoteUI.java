@@ -34,8 +34,7 @@ public class QuoteUI implements QuoteUIService {
 	public QuoteModel getRandom() {
 
 		QuoteModel model = new QuoteModel();
-
-		return model;
+		return model.to(this.service.getRandom());
 
 	}
 
