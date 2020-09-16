@@ -1,4 +1,4 @@
-package com.imricki.breakingbad.util.mapper;
+package com.imricki.breakingbad.domain.mapper;
 
 import java.util.Collection;
 import java.util.List;

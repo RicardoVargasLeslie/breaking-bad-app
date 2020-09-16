@@ -20,12 +20,14 @@ public class QuoteUI implements QuoteUIService {
 
 		List<QuoteItem> QuoteItemList = this.service.getAll();
 
-		QuoteItemList.forEach(System.out::println);
+		List<QuoteModel> dddd = null;
 
-		List<QuoteModel> QuotemodelLis = ObjectMapperUtils.mapAll(QuoteItemList, QuoteModel.class);
-
-		QuotemodelLis.forEach(System.out::println);
-		return QuotemodelLis;
+//		QuoteItemList.forEach(System.out::println);
+//
+//		List<QuoteModel> QuotemodelLis = ObjectMapperUtils.mapAll(QuoteItemList, QuoteModel.class);
+//
+//		QuotemodelLis.forEach(System.out::println);
+		return dddd;
 	}
 
 	@Override
