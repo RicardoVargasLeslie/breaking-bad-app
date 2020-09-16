@@ -56,7 +56,7 @@ public class QuoteModel {
 				+ this.getAuthor().get() + ", series=" + this.getSeries().get() + "]";
 	}
 
-	public QuoteModel to(QuoteItem item) {
+	public QuoteModel toFxBean(QuoteItem item) {
 
 		QuoteModel modelfx = new QuoteModel();
 

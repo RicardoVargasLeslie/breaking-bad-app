@@ -7,7 +7,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.imricki.breakingbad.domain.dto.DeathCount;
 import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.domain.service.CharacterClient;
 import com.imricki.breakingbad.domain.service.DeathClient;
@@ -45,10 +44,6 @@ public class Aplication {
 
 			QuoteItem q = this.quote.getRandom();
 
-			DeathCount total = this.death.deathCount();
-
-			System.err.println(q);
-			System.err.println(total);
 //			List<QuoteModel> list = this.uiservice.getAll();
 //			list.forEach(System.out::println);
 
