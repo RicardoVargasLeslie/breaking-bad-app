@@ -41,7 +41,8 @@ public class QuoteUI implements QuoteUIService {
 	@Override
 	public QuoteModel findBy(int id) {
 
-		return null;
+		QuoteModel model = new QuoteModel();
+		return model.toFxBean(this.service.findBy(id));
 	}
 
 }

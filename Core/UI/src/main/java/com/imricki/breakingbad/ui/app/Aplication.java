@@ -44,12 +44,17 @@ public class Aplication {
 
 			QuoteItem q = this.quote.getRandom();
 
+//			DeathCount total = this.quote.ge
+
 //			List<QuoteModel> list = this.uiservice.getAll();
 //			list.forEach(System.out::println);
 
 			QuoteModel m = this.uiservice.getRandom();
 
+			QuoteModel mf = this.uiservice.findBy(2);
+
 			System.out.println(m);
+			System.err.println(mf);
 		};
 	}
 }
