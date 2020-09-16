@@ -90,6 +90,11 @@ public class EpisodeModel {
 
 		EpisodeModel modelfx = new EpisodeModel();
 
+		if (item == null) {
+
+			throw new NullPointerException("Null Item");
+		}
+
 		modelfx.setAir_date(new SimpleStringProperty(item.getAir_date()));
 		// modelfx.setCharacters(new SimpleStringProperty(item.get));
 		modelfx.setEpisode(new SimpleIntegerProperty(item.getSeason()));

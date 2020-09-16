@@ -60,6 +60,11 @@ public class QuoteModel {
 
 		QuoteModel modelfx = new QuoteModel();
 
+		if (item == null) {
+
+			throw new NullPointerException("Null Item");
+		}
+
 		modelfx.setAuthor(new SimpleStringProperty(item.getAuthor()));
 		modelfx.setQuote(new SimpleStringProperty(item.getQuote()));
 		modelfx.setQuote_id(new SimpleStringProperty(item.getQuote_id() + ""));
