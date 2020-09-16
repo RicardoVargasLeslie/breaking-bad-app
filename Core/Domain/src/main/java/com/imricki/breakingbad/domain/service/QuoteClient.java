@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Quote;
 import com.imricki.breakingbad.domain.item.QuoteItem;
-import com.imricki.breakingbad.util.mapper.ObjectMapperUtils;
+import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
