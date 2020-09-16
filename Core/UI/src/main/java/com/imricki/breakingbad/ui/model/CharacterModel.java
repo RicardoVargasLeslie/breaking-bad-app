@@ -1,5 +1,7 @@
 package com.imricki.breakingbad.ui.model;
 
+import com.imricki.breakingbad.domain.item.CharacterItem;
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -114,6 +116,29 @@ public class CharacterModel {
 
 	public void setAppearance(ListProperty<String> appearance) {
 		this.appearance = appearance;
+	}
+
+	public CharacterModel toFxBean(CharacterItem item) {
+
+		CharacterModel modelfx = new CharacterModel();
+
+		if (item == null) {
+
+			throw new NullPointerException("Null Item");
+		}
+
+		modelfx.setAppearance(new SimpleListProperty<>(FXCollections.observableArrayList()));
+		modelfx.setBirthday(new SimpleStringProperty());
+		modelfx.setCategory(new SimpleListProperty<>(FXCollections.observableArrayList()));
+		modelfx.setId(new SimpleIntegerProperty());
+		modelfx.setImg(new SimpleStringProperty());
+		modelfx.setName(new SimpleStringProperty());
+		modelfx.setNickname(new SimpleStringProperty());
+		modelfx.setOccupation(new SimpleListProperty<>(FXCollections.observableArrayList()));
+		modelfx.setPortrayed(new SimpleStringProperty());
+		modelfx.setStatus(new SimpleStringProperty());
+
+		return modelfx;
 	}
 
 }
