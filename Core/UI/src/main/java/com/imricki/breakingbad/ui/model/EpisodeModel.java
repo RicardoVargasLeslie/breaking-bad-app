@@ -95,8 +95,8 @@ public class EpisodeModel {
 			throw new NullPointerException("Null Item");
 		}
 
-		modelfx.setAir_date(new SimpleStringProperty(item.getAir_date()));
-		// modelfx.setCharacters(new SimpleStringProperty(item.get));
+		modelfx.setAir_date(new SimpleStringProperty(this, item.getAir_date()));
+		modelfx.setCharacters(new SimpleListProperty<>(FXCollections.observableArrayList()));
 		modelfx.setEpisode(new SimpleIntegerProperty(item.getSeason()));
 		modelfx.setId(new SimpleIntegerProperty(item.getId()));
 		modelfx.setSeason(new SimpleIntegerProperty(item.getSeason()));

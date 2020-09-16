@@ -65,10 +65,10 @@ public class QuoteModel {
 			throw new NullPointerException("Null Item");
 		}
 
-		modelfx.setAuthor(new SimpleStringProperty(item.getAuthor()));
-		modelfx.setQuote(new SimpleStringProperty(item.getQuote()));
-		modelfx.setQuote_id(new SimpleStringProperty(item.getQuote_id() + ""));
-		modelfx.setSeries(new SimpleStringProperty(item.getSeries()));
+		modelfx.setAuthor(new SimpleStringProperty(this, item.getAuthor()));
+		modelfx.setQuote(new SimpleStringProperty(this, item.getQuote()));
+		modelfx.setQuote_id(new SimpleStringProperty(this, item.getQuote_id() + ""));
+		modelfx.setSeries(new SimpleStringProperty(this, item.getSeries()));
 
 		return modelfx;
 	}
