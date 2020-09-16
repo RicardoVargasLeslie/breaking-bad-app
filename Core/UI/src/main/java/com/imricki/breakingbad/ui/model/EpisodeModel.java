@@ -1,5 +1,7 @@
 package com.imricki.breakingbad.ui.model;
 
+import com.imricki.breakingbad.domain.item.EpisodeItem;
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -82,6 +84,21 @@ public class EpisodeModel {
 
 	public void setSeries(StringProperty series) {
 		this.series = series;
+	}
+
+	public EpisodeModel toFxBean(EpisodeItem item) {
+
+		EpisodeModel modelfx = new EpisodeModel();
+
+		modelfx.setAir_date(new SimpleStringProperty(item.getAir_date()));
+		// modelfx.setCharacters(new SimpleStringProperty(item.get));
+		modelfx.setEpisode(new SimpleIntegerProperty(item.getSeason()));
+		modelfx.setId(new SimpleIntegerProperty(item.getId()));
+		modelfx.setSeason(new SimpleIntegerProperty(item.getSeason()));
+		modelfx.setSeries(new SimpleStringProperty(item.getSeries()));
+		modelfx.setTitle(new SimpleStringProperty(item.getTitle()));
+
+		return modelfx;
 	}
 
 }
