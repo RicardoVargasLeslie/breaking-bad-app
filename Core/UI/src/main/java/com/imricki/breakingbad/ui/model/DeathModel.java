@@ -127,4 +127,11 @@ public class DeathModel {
 		return modelfx;
 	}
 
+	@Override
+	public String toString() {
+		return "DeathModel [id=" + this.id + ", death=" + this.death + ", cause=" + this.cause + ", responsible="
+				+ this.responsible + ", lastWords=" + this.lastWords + ", season=" + this.season + ", episode="
+				+ this.episode + ", numberOfdeaths=" + this.numberOfdeaths + "]";
+	}
+
 }

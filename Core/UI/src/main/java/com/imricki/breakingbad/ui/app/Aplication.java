@@ -1,5 +1,7 @@
 package com.imricki.breakingbad.ui.app;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +13,9 @@ import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.domain.service.CharacterClient;
 import com.imricki.breakingbad.domain.service.DeathClient;
 import com.imricki.breakingbad.domain.service.QuoteClient;
+import com.imricki.breakingbad.ui.model.DeathModel;
 import com.imricki.breakingbad.ui.model.QuoteModel;
+import com.imricki.breakingbad.ui.service.DeathUI;
 import com.imricki.breakingbad.ui.service.QuoteUI;
 
 import javafx.application.Application;
@@ -33,6 +37,9 @@ public class Aplication {
 	@Autowired
 	private DeathClient death;
 
+	@Autowired
+	DeathUI deathUui;
+
 	public static void main(String[] args) {
 
 		Application.launch(FxAppication.class, args);
@@ -44,7 +51,7 @@ public class Aplication {
 
 			QuoteItem q = this.quote.getRandom();
 
-//			DeathCount total = this.quote.ge
+//			DeatDECount total = this.quote.ge
 
 //			List<QuoteModel> list = this.uiservice.getAll();
 //			list.forEach(System.out::println);
@@ -53,8 +60,13 @@ public class Aplication {
 
 			QuoteModel mf = this.uiservice.findBy(2);
 
-			System.out.println(m);
-			System.err.println(mf);
+			List<DeathModel> gg = this.deathUui.getAll();
+
+			for (int i = 0; i < gg.size(); i++) {
+
+				System.err.println(gg.get(2));
+			}
+
 		};
 	}
 }
