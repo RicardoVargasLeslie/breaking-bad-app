@@ -1,5 +1,6 @@
 package com.imricki.breakingbad.ui.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,16 +20,17 @@ public class DeathUI implements DeathUIService {
 	public List<DeathModel> getAll() {
 
 		List<DeathItem> itemList = this.service.getAll();
-		List<DeathModel> modelList;
+		List<DeathModel> modelList = new ArrayList<>();
 
-		for (DeathItem deathItem : itemList) {
+		for (DeathItem item : itemList) {
 
-			DeathModel m=new DeathModel(deathItem.getId(), deathItem.getDeath(), deathItem.getDeath(), deathItem.getResponsible(), deathItem.getLastWords(), deathItem.getSeason(), deathItem.getEpisode(), deathItem.getNumberOfdeaths())
+			DeathModel m = new DeathModel(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
+					item.getLastWords(), String.valueOf(item.getSeason()), item.getEpisode(), item.getNumberOfdeaths());
 
 			modelList.add(m);
 		}
 
-		return null;
+		return modelList;
 	}
 
 	@Override
