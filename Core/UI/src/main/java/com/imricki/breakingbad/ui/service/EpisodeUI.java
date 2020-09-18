@@ -9,7 +9,7 @@ import com.imricki.breakingbad.domain.service.EpisodeClient;
 import com.imricki.breakingbad.ui.model.EpisodeModel;
 
 @Service
-public class EpisodeUI implements EpisodesService {
+public class EpisodeUI implements EpisodeUIService {
 
 	@Autowired
 	private EpisodeClient service;

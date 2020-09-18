@@ -9,14 +9,14 @@ import com.imricki.breakingbad.domain.service.DeathClient;
 import com.imricki.breakingbad.ui.model.DeathModel;
 
 @Service
-public class DeathServiceUI implements DeathService {
+public class DeathUI implements DeathUIService {
 
 	@Autowired
 	private DeathClient service;
 
 	@Override
 	public List<DeathModel> getAll() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
