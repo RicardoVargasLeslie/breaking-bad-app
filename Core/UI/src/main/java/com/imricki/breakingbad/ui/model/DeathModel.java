@@ -6,10 +6,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class DeathModel {
 
 	private IntegerProperty id = new SimpleIntegerProperty(this, "id");
@@ -27,6 +24,23 @@ public class DeathModel {
 	private IntegerProperty episode = new SimpleIntegerProperty(this, "episode");
 
 	private IntegerProperty numberOfdeaths = new SimpleIntegerProperty(this, "numberOfdeaths");
+
+	public DeathModel() {
+
+	}
+
+	public DeathModel(int id, String death, String cause, String responsible, String lastWords, String season,
+			Integer episode, Integer numberOfdeaths) {
+
+		this.id = new SimpleIntegerProperty(id);
+		this.death = new SimpleStringProperty(death);
+		this.cause = new SimpleStringProperty(cause);
+		this.responsible = new SimpleStringProperty(responsible);
+		this.lastWords = new SimpleStringProperty(lastWords);
+		this.season = new SimpleStringProperty(season);
+		this.episode = new SimpleIntegerProperty(episode);
+		this.numberOfdeaths = new SimpleIntegerProperty(numberOfdeaths);
+	}
 
 	public IntegerProperty getId() {
 		return this.id;
