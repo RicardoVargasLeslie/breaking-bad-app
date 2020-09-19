@@ -1,9 +1,6 @@
 package com.imricki.breakingbad.ui.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.imricki.breakingbad.domain.item.DeathItem;
+import com.imricki.breakingbad.ui.dto.DeathDto;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -32,17 +29,16 @@ public class DeathModel {
 
 	}
 
-	public DeathModel(int id, String death, String cause, String responsible, String lastWords, String season,
-			Integer episode, Integer numberOfdeaths) {
+	public DeathModel(DeathDto dto) {
 
-		this.id = new SimpleIntegerProperty(id);
-		this.death = new SimpleStringProperty(death);
-		this.cause = new SimpleStringProperty(cause);
-		this.responsible = new SimpleStringProperty(responsible);
-		this.lastWords = new SimpleStringProperty(lastWords);
-		this.season = new SimpleStringProperty(season);
-		this.episode = new SimpleIntegerProperty(episode);
-		this.numberOfdeaths = new SimpleIntegerProperty(numberOfdeaths);
+		this.id = new SimpleIntegerProperty(dto.getId());
+		this.death = new SimpleStringProperty(dto.getDeath());
+		this.cause = new SimpleStringProperty(dto.getCause());
+		this.responsible = new SimpleStringProperty(dto.getResponsible());
+		this.lastWords = new SimpleStringProperty(dto.getLastWords());
+		this.season = new SimpleStringProperty(dto.getSeason());
+		this.episode = new SimpleIntegerProperty(dto.getEpisode());
+		this.numberOfdeaths = new SimpleIntegerProperty(dto.getNumberOfdeaths());
 	}
 
 	public IntegerProperty getId() {
@@ -130,20 +126,20 @@ public class DeathModel {
 //		return modelfx;
 //	}
 
-	public List<DeathModel> tofxList(List<DeathItem> itemList) {
-
-		List<DeathModel> modelList = new ArrayList<>();
-
-		for (DeathItem item : itemList) {
-
-			DeathModel m = new DeathModel(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
-					item.getLastWords(), String.valueOf(item.getSeason()), item.getEpisode(), item.getNumberOfdeaths());
-
-			modelList.add(m);
-		}
-
-		return modelList;
-	}
+//	public List<DeathModel> tofxList(List<DeathItem> itemList) {
+//
+//		List<DeathModel> modelList = new ArrayList<>();
+//
+//		for (DeathItem item : itemList) {
+//
+//			DeathModel m = new DeathModel(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
+//					item.getLastWords(), String.valueOf(item.getSeason()), item.getEpisode(), item.getNumberOfdeaths());
+//
+//			modelList.add(m);
+//		}
+//
+//		return modelList;
+//	}
 
 	@Override
 	public String toString() {

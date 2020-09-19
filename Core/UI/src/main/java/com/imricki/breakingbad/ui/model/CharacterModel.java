@@ -1,6 +1,6 @@
 package com.imricki.breakingbad.ui.model;
 
-import java.util.List;
+import com.imricki.breakingbad.ui.dto.CharacterDto;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
@@ -32,18 +32,17 @@ public class CharacterModel {
 
 	private ListProperty<String> category;
 
-	public CharacterModel(Integer id, String name, String birthday, List<String> occupation, String img, String status,
-			String nickname, List<String> appearance, String portrayed, List<String> category) {
+	public CharacterModel(CharacterDto dto) {
 
-		this.id = new SimpleIntegerProperty(id);
-		this.name = new SimpleStringProperty(name);
-		this.birthday = new SimpleStringProperty(birthday);
+		this.id = new SimpleIntegerProperty(dto.getId());
+		this.name = new SimpleStringProperty(dto.getName());
+		this.birthday = new SimpleStringProperty(dto.getBirthday());
 		this.occupation = new SimpleListProperty<>(this, "occupation", FXCollections.observableArrayList());
-		this.img = new SimpleStringProperty(img);
-		this.status = new SimpleStringProperty(status);
-		this.nickname = new SimpleStringProperty(nickname);
+		this.img = new SimpleStringProperty(dto.getImg());
+		this.status = new SimpleStringProperty(dto.getStatus());
+		this.nickname = new SimpleStringProperty(dto.getNickname());
 		this.appearance = new SimpleListProperty<>(this, "appearance", FXCollections.observableArrayList());
-		this.portrayed = new SimpleStringProperty(portrayed);
+		this.portrayed = new SimpleStringProperty(dto.getPortrayed());
 		this.category = new SimpleListProperty<>(this, "category", FXCollections.observableArrayList());
 	}
 

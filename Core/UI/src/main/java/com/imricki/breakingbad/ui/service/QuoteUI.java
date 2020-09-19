@@ -21,7 +21,7 @@ public class QuoteUI implements QuoteUIService {
 		List<QuoteItem> QuoteItemList = this.service.getAll();
 
 		List<QuoteModel> dddd = null;
-		;
+
 		return dddd;
 	}
 

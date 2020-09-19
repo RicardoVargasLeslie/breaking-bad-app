@@ -1,6 +1,6 @@
 package com.imricki.breakingbad.ui.model;
 
-import java.util.List;
+import com.imricki.breakingbad.ui.dto.EpisodeDto;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
@@ -26,22 +26,15 @@ public class EpisodeModel {
 
 	private StringProperty series;
 
-	public EpisodeModel(Integer id, String title, Integer season, Integer episode, String air_date,
-			List<String> characters, String series) {
+	public EpisodeModel(EpisodeDto dto) {
 
-		this.id = new SimpleIntegerProperty(id);
-
-		this.title = new SimpleStringProperty(title);
-
-		this.season = new SimpleIntegerProperty(season);
-
-		this.episode = new SimpleIntegerProperty(episode);
-
-		this.air_date = new SimpleStringProperty(air_date);
-
+		this.id = new SimpleIntegerProperty(dto.getId());
+		this.title = new SimpleStringProperty(dto.getTitle());
+		this.season = new SimpleIntegerProperty(dto.getSeason());
+		this.episode = new SimpleIntegerProperty(dto.getEpisode());
+		this.air_date = new SimpleStringProperty(dto.getAir_date());
 		this.characters = new SimpleListProperty<>(this, "characters", FXCollections.observableArrayList());
-
-		this.series = new SimpleStringProperty(series);
+		this.series = new SimpleStringProperty(dto.getSeries());
 	}
 
 	public IntegerProperty getId() {
@@ -99,25 +92,5 @@ public class EpisodeModel {
 	public void setSeries(StringProperty series) {
 		this.series = series;
 	}
-
-//	public static EpisodeModel toFxBean(EpisodeItem item) {
-//
-//		EpisodeModel modelfx = new EpisodeModel();
-//
-//		if (item == null) {
-//
-//			throw new NullPointerException("Null Item");
-//		}
-//
-//		modelfx.setAir_date(new SimpleStringProperty(item.getAir_date()));
-//		modelfx.setCharacters(new SimpleListProperty<>(FXCollections.observableArrayList()));
-//		modelfx.setEpisode(new SimpleIntegerProperty(item.getSeason()));
-//		modelfx.setId(new SimpleIntegerProperty(item.getId()));
-//		modelfx.setSeason(new SimpleIntegerProperty(item.getSeason()));
-//		modelfx.setSeries(new SimpleStringProperty(item.getSeries()));
-//		modelfx.setTitle(new SimpleStringProperty(item.getTitle()));
-//
-//		return modelfx;
-//	}
 
 }

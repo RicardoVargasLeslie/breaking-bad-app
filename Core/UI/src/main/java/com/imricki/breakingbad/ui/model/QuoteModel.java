@@ -1,5 +1,7 @@
 package com.imricki.breakingbad.ui.model;
 
+import com.imricki.breakingbad.ui.dto.QuoteDto;
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -15,12 +17,12 @@ public class QuoteModel {
 
 	private StringProperty series;
 
-	public QuoteModel(Integer quote_id, String quote, String author, String series) {
+	public QuoteModel(QuoteDto dto) {
 
-		this.quote_id = new SimpleIntegerProperty(quote_id);
-		this.quote = new SimpleStringProperty(quote);
-		this.author = new SimpleStringProperty(author);
-		this.series = new SimpleStringProperty(series);
+		this.quote_id = new SimpleIntegerProperty(dto.getQuote_id());
+		this.quote = new SimpleStringProperty(dto.getQuote());
+		this.author = new SimpleStringProperty(dto.getAuthor());
+		this.series = new SimpleStringProperty(dto.getSeries());
 
 	}
 

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.item.DeathItem;
 import com.imricki.breakingbad.domain.service.DeathClient;
+import com.imricki.breakingbad.ui.dto.DeathDto;
 import com.imricki.breakingbad.ui.model.DeathModel;
 
 @Service
@@ -28,8 +29,8 @@ public class DeathUI implements DeathUIService {
 
 		DeathItem item = this.service.getRandom();
 
-		return new DeathModel(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
-				item.getLastWords(), item.getLastWords(), item.getEpisode(), item.getNumberOfdeaths());
+		return new DeathModel(new DeathDto(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
+				item.getLastWords(), item.getLastWords(), item.getEpisode(), item.getNumberOfdeaths()));
 	}
 
 }
