@@ -25,9 +25,7 @@ public class DeathUI implements DeathUIService {
 	@Override
 	public DeathModel getRandom() {
 
-		DeathModel model = new DeathModel();
-
-		return model.toFxBean(this.service.getRandom());
+		return DeathModel.toFxBean(this.service.getRandom());
 	}
 
 }

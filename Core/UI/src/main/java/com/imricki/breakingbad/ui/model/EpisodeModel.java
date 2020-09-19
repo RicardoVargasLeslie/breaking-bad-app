@@ -1,6 +1,6 @@
 package com.imricki.breakingbad.ui.model;
 
-import com.imricki.breakingbad.domain.item.EpisodeItem;
+import java.util.List;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ListProperty;
@@ -9,26 +9,40 @@ import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class EpisodeModel {
 
-	private IntegerProperty id = new SimpleIntegerProperty(this, "id");
+	private IntegerProperty id;
 
-	private StringProperty title = new SimpleStringProperty(this, "title");
+	private StringProperty title;
 
-	private IntegerProperty season = new SimpleIntegerProperty(this, "season");
+	private IntegerProperty season;
 
-	private IntegerProperty episode = new SimpleIntegerProperty(this, "episode");
+	private IntegerProperty episode;
 
-	private StringProperty air_date = new SimpleStringProperty(this, "air_date");
+	private StringProperty air_date;
 
-	private ListProperty<String> characters = new SimpleListProperty<>(this, "characters",
-			FXCollections.observableArrayList());
+	private ListProperty<String> characters;
 
-	private StringProperty series = new SimpleStringProperty(this, "series");
+	private StringProperty series;
+
+	public EpisodeModel(Integer id, String title, Integer season, Integer episode, String air_date,
+			List<String> characters, String series) {
+
+		this.id = new SimpleIntegerProperty(id);
+
+		this.title = new SimpleStringProperty(title);
+
+		this.season = new SimpleIntegerProperty(season);
+
+		this.episode = new SimpleIntegerProperty(episode);
+
+		this.air_date = new SimpleStringProperty(air_date);
+
+		this.characters = new SimpleListProperty<>(this, "characters", FXCollections.observableArrayList());
+
+		this.series = new SimpleStringProperty(series);
+	}
 
 	public IntegerProperty getId() {
 		return this.id;
@@ -86,24 +100,24 @@ public class EpisodeModel {
 		this.series = series;
 	}
 
-	public EpisodeModel toFxBean(EpisodeItem item) {
-
-		EpisodeModel modelfx = new EpisodeModel();
-
-		if (item == null) {
-
-			throw new NullPointerException("Null Item");
-		}
-
-		modelfx.setAir_date(new SimpleStringProperty(this, item.getAir_date()));
-		modelfx.setCharacters(new SimpleListProperty<>(FXCollections.observableArrayList()));
-		modelfx.setEpisode(new SimpleIntegerProperty(item.getSeason()));
-		modelfx.setId(new SimpleIntegerProperty(item.getId()));
-		modelfx.setSeason(new SimpleIntegerProperty(item.getSeason()));
-		modelfx.setSeries(new SimpleStringProperty(item.getSeries()));
-		modelfx.setTitle(new SimpleStringProperty(item.getTitle()));
-
-		return modelfx;
-	}
+//	public static EpisodeModel toFxBean(EpisodeItem item) {
+//
+//		EpisodeModel modelfx = new EpisodeModel();
+//
+//		if (item == null) {
+//
+//			throw new NullPointerException("Null Item");
+//		}
+//
+//		modelfx.setAir_date(new SimpleStringProperty(item.getAir_date()));
+//		modelfx.setCharacters(new SimpleListProperty<>(FXCollections.observableArrayList()));
+//		modelfx.setEpisode(new SimpleIntegerProperty(item.getSeason()));
+//		modelfx.setId(new SimpleIntegerProperty(item.getId()));
+//		modelfx.setSeason(new SimpleIntegerProperty(item.getSeason()));
+//		modelfx.setSeries(new SimpleStringProperty(item.getSeries()));
+//		modelfx.setTitle(new SimpleStringProperty(item.getTitle()));
+//
+//		return modelfx;
+//	}
 
 }

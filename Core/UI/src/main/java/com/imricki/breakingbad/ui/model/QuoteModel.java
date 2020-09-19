@@ -1,22 +1,26 @@
 package com.imricki.breakingbad.ui.model;
 
-import com.imricki.breakingbad.domain.item.QuoteItem;
-
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public class QuoteModel {
 
-	private StringProperty quote_id = new SimpleStringProperty(this, "quote_id");
+	private StringProperty quote_id;
 
-	private StringProperty quote = new SimpleStringProperty(this, "quote");
+	private StringProperty quote;
 
-	private StringProperty author = new SimpleStringProperty(this, "author");
+	private StringProperty author;
 
-	private StringProperty series = new SimpleStringProperty(this, "series");
+	private StringProperty series;
+
+	public QuoteModel(String quote_id, String quote, String author, String series) {
+
+		this.quote_id = new SimpleStringProperty(quote_id);
+		this.quote = new SimpleStringProperty(quote);
+		this.author = new SimpleStringProperty(author);
+		this.series = new SimpleStringProperty(series);
+
+	}
 
 	public StringProperty getQuote_id() {
 		return this.quote_id;
@@ -56,20 +60,19 @@ public class QuoteModel {
 				+ this.getAuthor().get() + ", series=" + this.getSeries().get() + "]";
 	}
 
-	public QuoteModel toFxBean(QuoteItem item) {
-
-		QuoteModel modelfx = new QuoteModel();
-
-		if (item == null) {
-
-			throw new NullPointerException("Null Item");
-		}
-
-		modelfx.setAuthor(new SimpleStringProperty(this, item.getAuthor()));
-		modelfx.setQuote(new SimpleStringProperty(this, item.getQuote()));
-		modelfx.setQuote_id(new SimpleStringProperty(this, String.valueOf(item.getQuote_id())));
-		modelfx.setSeries(new SimpleStringProperty(this, item.getSeries()));
-
-		return modelfx;
-	}
+//	public static QuoteModel toFxBean(QuoteItem item) {
+//
+//		QuoteModel modelfx = new QuoteModel();
+//
+//		if (item == null) {
+//
+//			throw new NullPointerException("Null Item");
+//		}
+//
+//		modelfx.setAuthor(new SimpleStringProperty(item.getAuthor()));
+//		modelfx.setQuote(new SimpleStringProperty(item.getQuote()));
+//		modelfx.setQuote_id(new SimpleStringProperty(String.valueOf(item.getQuote_id())));
+//		modelfx.setSeries(new SimpleStringProperty(item.getSeries()));
+//		return modelfx;
+//	}
 }

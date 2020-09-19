@@ -12,21 +12,21 @@ import javafx.beans.property.StringProperty;
 
 public class DeathModel {
 
-	private IntegerProperty id = new SimpleIntegerProperty(this, "id");
+	private IntegerProperty id;
 
-	private StringProperty death = new SimpleStringProperty(this, "death");
+	private StringProperty death;
 
-	private StringProperty cause = new SimpleStringProperty(this, "cause");
+	private StringProperty cause;
 
-	private StringProperty responsible = new SimpleStringProperty(this, "responsible");
+	private StringProperty responsible;
 
-	private StringProperty lastWords = new SimpleStringProperty(this, "lastWords");
+	private StringProperty lastWords;
 
-	private StringProperty season = new SimpleStringProperty(this, "season");
+	private StringProperty season;
 
-	private IntegerProperty episode = new SimpleIntegerProperty(this, "episode");
+	private IntegerProperty episode;
 
-	private IntegerProperty numberOfdeaths = new SimpleIntegerProperty(this, "numberOfdeaths");
+	private IntegerProperty numberOfdeaths;
 
 	public DeathModel() {
 
@@ -109,26 +109,26 @@ public class DeathModel {
 		this.numberOfdeaths = numberOfdeaths;
 	}
 
-	public DeathModel toFxBean(DeathItem item) {
-
-		DeathModel modelfx = new DeathModel();
-
-		if (item == null) {
-
-			throw new NullPointerException("Null Item");
-		}
-
-		modelfx.setCause(new SimpleStringProperty(item.getCause()));
-		modelfx.setDeath(new SimpleStringProperty(item.getDeath()));
-		modelfx.setEpisode(new SimpleIntegerProperty(item.getEpisode()));
-		modelfx.setId(new SimpleIntegerProperty(item.getId()));
-		modelfx.setLastWords(new SimpleStringProperty(item.getLastWords()));
-		modelfx.setNumberOfdeaths(new SimpleIntegerProperty(item.getNumberOfdeaths()));
-		modelfx.setResponsible(new SimpleStringProperty(item.getResponsible()));
-		modelfx.setSeason(new SimpleStringProperty(String.valueOf(item.getSeason())));
-
-		return modelfx;
-	}
+//	public static DeathModel toFxBean(DeathItem item) {
+//
+//		DeathModel modelfx = new DeathModel();
+//
+//		if (item == null) {
+//
+//			throw new NullPointerException("Null Item");
+//		}
+//
+//		modelfx.setCause(new SimpleStringProperty(item.getCause()));
+//		modelfx.setDeath(new SimpleStringProperty(item.getDeath()));
+//		modelfx.setEpisode(new SimpleIntegerProperty(item.getEpisode()));
+//		modelfx.setId(new SimpleIntegerProperty(item.getId()));
+//		modelfx.setLastWords(new SimpleStringProperty(item.getLastWords()));
+//		modelfx.setNumberOfdeaths(new SimpleIntegerProperty(item.getNumberOfdeaths()));
+//		modelfx.setResponsible(new SimpleStringProperty(item.getResponsible()));
+//		modelfx.setSeason(new SimpleStringProperty(String.valueOf(item.getSeason())));
+//
+//		return modelfx;
+//	}
 
 	public List<DeathModel> tofxList(List<DeathItem> itemList) {
 
