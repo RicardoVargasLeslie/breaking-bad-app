@@ -11,22 +11,24 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.Tab;
 import javafx.scene.layout.BorderPane;
 import lombok.Getter;
-import lombok.Setter;
 
 @Controller
 public class MainController implements Initializable {
 
-	@Getter
-	@Setter
 	@FXML
+	@Getter
 	private BorderPane mainPane;
 
-	@Getter
 	@FXML
-	private TitledPane titledPane;
+	@Getter
+	private Tab tab1;
+
+	@FXML
+	@Getter
+	private Tab tab2;
 
 	private ObjectProperty<QuoteController> quoteController;
 
