@@ -8,15 +8,15 @@ import org.springframework.stereotype.Controller;
 import javafx.fxml.Initializable;
 
 @Controller
-public class CharacterController implements Initializable {
+public class DeathController implements Initializable {
 
-	public CharacterController() {
+	public DeathController() {
 
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
 
 	}
-
 }
