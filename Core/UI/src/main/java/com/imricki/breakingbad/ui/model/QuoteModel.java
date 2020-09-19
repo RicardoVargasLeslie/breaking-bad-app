@@ -1,5 +1,9 @@
 package com.imricki.breakingbad.ui.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.ui.dto.QuoteDto;
 
 import javafx.beans.property.IntegerProperty;
@@ -64,19 +68,19 @@ public class QuoteModel {
 				+ this.getAuthor().get() + ", series=" + this.getSeries().get() + "]";
 	}
 
-//	public static QuoteModel toFxBean(QuoteItem item) {
-//
-//		QuoteModel modelfx = new QuoteModel();
-//
-//		if (item == null) {
-//
-//			throw new NullPointerException("Null Item");
-//		}
-//
-//		modelfx.setAuthor(new SimpleStringProperty(item.getAuthor()));
-//		modelfx.setQuote(new SimpleStringProperty(item.getQuote()));
-//		modelfx.setQuote_id(new SimpleStringProperty(String.valueOf(item.getQuote_id())));
-//		modelfx.setSeries(new SimpleStringProperty(item.getSeries()));
-//		return modelfx;
-//	}
+	public static List<QuoteModel> tofxList(List<QuoteItem> itemList) {
+
+		List<QuoteModel> modelList = new ArrayList<>();
+
+		for (QuoteItem item : itemList) {
+
+			QuoteModel model = new QuoteModel(
+					new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
+
+			modelList.add(model);
+		}
+
+		return modelList;
+	}
+
 }

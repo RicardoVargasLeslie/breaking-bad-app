@@ -19,9 +19,7 @@ public class DeathUI implements DeathUIService {
 	@Override
 	public List<DeathModel> getAll() {
 
-		DeathModel model = new DeathModel();
-
-		return model.tofxList(this.service.getAll());
+		return DeathModel.tofxList(this.service.getAll());
 	}
 
 	@Override

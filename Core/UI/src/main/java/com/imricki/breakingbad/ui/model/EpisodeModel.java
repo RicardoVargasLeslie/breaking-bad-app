@@ -1,5 +1,9 @@
 package com.imricki.breakingbad.ui.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.imricki.breakingbad.domain.item.EpisodeItem;
 import com.imricki.breakingbad.ui.dto.EpisodeDto;
 
 import javafx.beans.property.IntegerProperty;
@@ -92,6 +96,21 @@ public class EpisodeModel {
 
 	public void setSeries(StringProperty series) {
 		this.series = series;
+	}
+
+	public static List<EpisodeModel> tofxList(List<EpisodeItem> itemList) {
+
+		List<EpisodeModel> modelList = new ArrayList<>();
+
+		for (EpisodeItem item : itemList) {
+
+			EpisodeModel model = new EpisodeModel(new EpisodeDto(item.getId(), item.getTitle(), item.getSeason(),
+					item.getEpisode(), item.getAir_date(), item.getCharacters(), item.getSeries()));
+
+			modelList.add(model);
+		}
+
+		return modelList;
 	}
 
 }

@@ -16,8 +16,8 @@ public class EpisodeUI implements EpisodeUIService {
 
 	@Override
 	public List<EpisodeModel> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return EpisodeModel.tofxList(this.service.getAll());
 	}
 
 }

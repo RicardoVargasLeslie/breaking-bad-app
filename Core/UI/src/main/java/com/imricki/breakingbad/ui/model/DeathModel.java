@@ -1,5 +1,9 @@
 package com.imricki.breakingbad.ui.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.imricki.breakingbad.domain.item.DeathItem;
 import com.imricki.breakingbad.ui.dto.DeathDto;
 
 import javafx.beans.property.IntegerProperty;
@@ -105,20 +109,21 @@ public class DeathModel {
 		this.numberOfdeaths = numberOfdeaths;
 	}
 
-//	public List<DeathModel> tofxList(List<DeathItem> itemList) {
-//
-//		List<DeathModel> modelList = new ArrayList<>();
-//
-//		for (DeathItem item : itemList) {
-//
-//			DeathModel m = new DeathModel(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
-//					item.getLastWords(), String.valueOf(item.getSeason()), item.getEpisode(), item.getNumberOfdeaths());
-//
-//			modelList.add(m);
-//		}
-//
-//		return modelList;
-//	}
+	public static List<DeathModel> tofxList(List<DeathItem> itemList) {
+
+		List<DeathModel> modelList = new ArrayList<>();
+
+		for (DeathItem item : itemList) {
+
+			DeathModel model = new DeathModel(new DeathDto(item.getId(), item.getDeath(), item.getCause(),
+					item.getResponsible(), item.getLastWords(), String.valueOf(item.getSeason()), item.getEpisode(),
+					item.getNumberOfdeaths()));
+
+			modelList.add(model);
+		}
+
+		return modelList;
+	}
 
 	@Override
 	public String toString() {

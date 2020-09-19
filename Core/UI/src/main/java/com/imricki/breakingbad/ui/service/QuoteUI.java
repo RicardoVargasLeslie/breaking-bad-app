@@ -19,11 +19,7 @@ public class QuoteUI implements QuoteUIService {
 	@Override
 	public List<QuoteModel> getAll() {
 
-		List<QuoteItem> QuoteItemList = this.service.getAll();
-
-		List<QuoteModel> dddd = null;
-
-		return dddd;
+		return QuoteModel.tofxList(this.service.getAll());
 	}
 
 	@Override
