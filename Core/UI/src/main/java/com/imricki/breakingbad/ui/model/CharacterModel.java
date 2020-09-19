@@ -128,15 +128,15 @@ public class CharacterModel {
 		}
 
 		modelfx.setAppearance(new SimpleListProperty<>(FXCollections.observableArrayList()));
-		modelfx.setBirthday(new SimpleStringProperty(this, null));
+		modelfx.setBirthday(new SimpleStringProperty(this, item.getBirthday()));
 		modelfx.setCategory(new SimpleListProperty<>(FXCollections.observableArrayList()));
-		modelfx.setId(new SimpleIntegerProperty(this, null));
-		modelfx.setImg(new SimpleStringProperty(this, null));
-		modelfx.setName(new SimpleStringProperty(this, null));
-		modelfx.setNickname(new SimpleStringProperty(this, null));
+		modelfx.setId(new SimpleIntegerProperty(this, String.valueOf(item.getCharId())));
+		modelfx.setImg(new SimpleStringProperty(this, item.getImg()));
+		modelfx.setName(new SimpleStringProperty(this, item.getName()));
+		modelfx.setNickname(new SimpleStringProperty(this, item.getNickname()));
 		modelfx.setOccupation(new SimpleListProperty<>(FXCollections.observableArrayList()));
-		modelfx.setPortrayed(new SimpleStringProperty(this, null));
-		modelfx.setStatus(new SimpleStringProperty(this, null));
+		modelfx.setPortrayed(new SimpleStringProperty(this, item.getPortrayed()));
+		modelfx.setStatus(new SimpleStringProperty(this, item.getStatus()));
 
 		return modelfx;
 	}

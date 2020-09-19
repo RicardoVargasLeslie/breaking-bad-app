@@ -64,7 +64,7 @@ public class Aplication {
 
 			for (int i = 0; i < gg.size(); i++) {
 
-				System.err.println(gg.get(2));
+				System.err.println(gg.get(i));
 			}
 
 		};
