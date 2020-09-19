@@ -126,27 +126,4 @@ public class CharacterModel {
 		this.appearance = appearance;
 	}
 
-//	public static CharacterModel toFxBean(CharacterItem item) {
-//
-//		CharacterModel modelfx = new CharacterModel();
-//
-//		if (item == null) {
-//
-//			throw new NullPointerException("Null Item");
-//		}
-//
-//		modelfx.setAppearance(new SimpleListProperty<>(FXCollections.observableArrayList()));
-//		modelfx.setBirthday(new SimpleStringProperty(item.getBirthday()));
-//		modelfx.setCategory(new SimpleListProperty<>(FXCollections.observableArrayList()));
-//		modelfx.setId(new SimpleIntegerProperty(item.getCharId()));
-//		modelfx.setImg(new SimpleStringProperty(item.getImg()));
-//		modelfx.setName(new SimpleStringProperty(item.getName()));
-//		modelfx.setNickname(new SimpleStringProperty(item.getNickname()));
-//		modelfx.setOccupation(new SimpleListProperty<>(FXCollections.observableArrayList()));
-//		modelfx.setPortrayed(new SimpleStringProperty(item.getPortrayed()));
-//		modelfx.setStatus(new SimpleStringProperty(item.getStatus()));
-//
-//		return modelfx;
-//	}
-
 }

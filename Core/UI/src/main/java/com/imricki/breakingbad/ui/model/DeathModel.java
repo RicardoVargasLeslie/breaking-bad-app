@@ -105,27 +105,6 @@ public class DeathModel {
 		this.numberOfdeaths = numberOfdeaths;
 	}
 
-//	public static DeathModel toFxBean(DeathItem item) {
-//
-//		DeathModel modelfx = new DeathModel();
-//
-//		if (item == null) {
-//
-//			throw new NullPointerException("Null Item");
-//		}
-//
-//		modelfx.setCause(new SimpleStringProperty(item.getCause()));
-//		modelfx.setDeath(new SimpleStringProperty(item.getDeath()));
-//		modelfx.setEpisode(new SimpleIntegerProperty(item.getEpisode()));
-//		modelfx.setId(new SimpleIntegerProperty(item.getId()));
-//		modelfx.setLastWords(new SimpleStringProperty(item.getLastWords()));
-//		modelfx.setNumberOfdeaths(new SimpleIntegerProperty(item.getNumberOfdeaths()));
-//		modelfx.setResponsible(new SimpleStringProperty(item.getResponsible()));
-//		modelfx.setSeason(new SimpleStringProperty(String.valueOf(item.getSeason())));
-//
-//		return modelfx;
-//	}
-
 //	public List<DeathModel> tofxList(List<DeathItem> itemList) {
 //
 //		List<DeathModel> modelList = new ArrayList<>();
