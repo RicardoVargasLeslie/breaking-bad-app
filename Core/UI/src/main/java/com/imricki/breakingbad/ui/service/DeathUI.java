@@ -1,12 +1,10 @@
 package com.imricki.breakingbad.ui.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.imricki.breakingbad.domain.item.DeathItem;
 import com.imricki.breakingbad.domain.service.DeathClient;
 import com.imricki.breakingbad.ui.model.DeathModel;
 
@@ -19,18 +17,9 @@ public class DeathUI implements DeathUIService {
 	@Override
 	public List<DeathModel> getAll() {
 
-		List<DeathItem> itemList = this.service.getAll();
-		List<DeathModel> modelList = new ArrayList<>();
+		DeathModel model = new DeathModel();
 
-		for (DeathItem item : itemList) {
-
-			DeathModel m = new DeathModel(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
-					item.getLastWords(), String.valueOf(item.getSeason()), item.getEpisode(), item.getNumberOfdeaths());
-
-			modelList.add(m);
-		}
-
-		return modelList;
+		return model.tofxList(this.service.getAll());
 	}
 
 	@Override

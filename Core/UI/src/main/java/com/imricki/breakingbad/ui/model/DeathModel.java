@@ -1,5 +1,8 @@
 package com.imricki.breakingbad.ui.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.imricki.breakingbad.domain.item.DeathItem;
 
 import javafx.beans.property.IntegerProperty;
@@ -125,6 +128,21 @@ public class DeathModel {
 		modelfx.setSeason(new SimpleStringProperty(String.valueOf(item.getSeason())));
 
 		return modelfx;
+	}
+
+	public List<DeathModel> tofxList(List<DeathItem> itemList) {
+
+		List<DeathModel> modelList = new ArrayList<>();
+
+		for (DeathItem item : itemList) {
+
+			DeathModel m = new DeathModel(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
+					item.getLastWords(), String.valueOf(item.getSeason()), item.getEpisode(), item.getNumberOfdeaths());
+
+			modelList.add(m);
+		}
+
+		return modelList;
 	}
 
 	@Override
