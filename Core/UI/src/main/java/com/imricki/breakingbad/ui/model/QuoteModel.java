@@ -72,13 +72,13 @@ public class QuoteModel {
 
 		List<QuoteModel> modelList = new ArrayList<>();
 
-		for (QuoteItem item : itemList) {
+		itemList.stream().forEach(item -> {
 
 			QuoteModel model = new QuoteModel(
 					new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
 
 			modelList.add(model);
-		}
+		});
 
 		return modelList;
 	}

@@ -113,14 +113,14 @@ public class DeathModel {
 
 		List<DeathModel> modelList = new ArrayList<>();
 
-		for (DeathItem item : itemList) {
+		itemList.stream().forEach(item -> {
 
 			DeathModel model = new DeathModel(new DeathDto(item.getId(), item.getDeath(), item.getCause(),
 					item.getResponsible(), item.getLastWords(), String.valueOf(item.getSeason()), item.getEpisode(),
 					item.getNumberOfdeaths()));
 
 			modelList.add(model);
-		}
+		});
 
 		return modelList;
 	}

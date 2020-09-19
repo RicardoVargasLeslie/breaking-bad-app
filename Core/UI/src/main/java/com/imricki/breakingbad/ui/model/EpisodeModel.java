@@ -102,13 +102,13 @@ public class EpisodeModel {
 
 		List<EpisodeModel> modelList = new ArrayList<>();
 
-		for (EpisodeItem item : itemList) {
+		itemList.stream().forEach(item -> {
 
 			EpisodeModel model = new EpisodeModel(new EpisodeDto(item.getId(), item.getTitle(), item.getSeason(),
 					item.getEpisode(), item.getAir_date(), item.getCharacters(), item.getSeries()));
 
 			modelList.add(model);
-		}
+		});
 
 		return modelList;
 	}
