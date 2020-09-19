@@ -34,16 +34,19 @@ public class CharacterModel {
 
 	public CharacterModel(CharacterDto dto) {
 
-		this.id = new SimpleIntegerProperty(dto.getId());
-		this.name = new SimpleStringProperty(dto.getName());
-		this.birthday = new SimpleStringProperty(dto.getBirthday());
-		this.occupation = new SimpleListProperty<>(this, "occupation", FXCollections.observableArrayList());
-		this.img = new SimpleStringProperty(dto.getImg());
-		this.status = new SimpleStringProperty(dto.getStatus());
-		this.nickname = new SimpleStringProperty(dto.getNickname());
-		this.appearance = new SimpleListProperty<>(this, "appearance", FXCollections.observableArrayList());
-		this.portrayed = new SimpleStringProperty(dto.getPortrayed());
-		this.category = new SimpleListProperty<>(this, "category", FXCollections.observableArrayList());
+		this.id = new SimpleIntegerProperty(this, "id", dto.getId());
+		this.name = new SimpleStringProperty(this, "name", dto.getName());
+		this.birthday = new SimpleStringProperty(this, "birthday", dto.getBirthday());
+		this.occupation = new SimpleListProperty<>(this, "occupation",
+				FXCollections.observableArrayList(dto.getOccupation()));
+		this.img = new SimpleStringProperty(this, "img", dto.getImg());
+		this.status = new SimpleStringProperty(this, "status", dto.getStatus());
+		this.nickname = new SimpleStringProperty(this, "nickname", dto.getNickname());
+		this.appearance = new SimpleListProperty<>(this, "appearance",
+				FXCollections.observableArrayList(dto.getAppearance()));
+		this.portrayed = new SimpleStringProperty(this, "portrayed", dto.getPortrayed());
+		this.category = new SimpleListProperty<>(this, "category",
+				FXCollections.observableArrayList(dto.getCategory()));
 	}
 
 	public IntegerProperty getId() {

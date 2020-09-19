@@ -28,13 +28,14 @@ public class EpisodeModel {
 
 	public EpisodeModel(EpisodeDto dto) {
 
-		this.id = new SimpleIntegerProperty(dto.getId());
-		this.title = new SimpleStringProperty(dto.getTitle());
-		this.season = new SimpleIntegerProperty(dto.getSeason());
-		this.episode = new SimpleIntegerProperty(dto.getEpisode());
-		this.air_date = new SimpleStringProperty(dto.getAir_date());
-		this.characters = new SimpleListProperty<>(this, "characters", FXCollections.observableArrayList());
-		this.series = new SimpleStringProperty(dto.getSeries());
+		this.id = new SimpleIntegerProperty(this, "id", dto.getId());
+		this.title = new SimpleStringProperty(this, "title", dto.getTitle());
+		this.season = new SimpleIntegerProperty(this, "season", dto.getSeason());
+		this.episode = new SimpleIntegerProperty(this, "episode", dto.getEpisode());
+		this.air_date = new SimpleStringProperty(this, "air_date", dto.getAir_date());
+		this.characters = new SimpleListProperty<>(this, "characters",
+				FXCollections.observableArrayList(dto.getCharacters()));
+		this.series = new SimpleStringProperty(this, "series", dto.getSeries());
 	}
 
 	public IntegerProperty getId() {
