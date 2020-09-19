@@ -122,7 +122,7 @@ public class DeathModel {
 		modelfx.setLastWords(new SimpleStringProperty(item.getLastWords()));
 		modelfx.setNumberOfdeaths(new SimpleIntegerProperty(item.getNumberOfdeaths()));
 		modelfx.setResponsible(new SimpleStringProperty(item.getResponsible()));
-		modelfx.setSeason(new SimpleStringProperty(item.getSeason() + ""));
+		modelfx.setSeason(new SimpleStringProperty(String.valueOf(item.getSeason())));
 
 		return modelfx;
 	}
