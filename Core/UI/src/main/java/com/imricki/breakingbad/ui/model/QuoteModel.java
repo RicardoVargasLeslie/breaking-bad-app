@@ -67,7 +67,7 @@ public class QuoteModel {
 
 		modelfx.setAuthor(new SimpleStringProperty(this, item.getAuthor()));
 		modelfx.setQuote(new SimpleStringProperty(this, item.getQuote()));
-		modelfx.setQuote_id(new SimpleStringProperty(this, item.getQuote_id() + ""));
+		modelfx.setQuote_id(new SimpleStringProperty(this, String.valueOf(item.getQuote_id())));
 		modelfx.setSeries(new SimpleStringProperty(this, item.getSeries()));
 
 		return modelfx;
