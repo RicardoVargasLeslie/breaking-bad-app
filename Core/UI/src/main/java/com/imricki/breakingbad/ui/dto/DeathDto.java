@@ -10,7 +10,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class DeathDto {
 
-	private int id;
+	private Integer id;
 	private String death;
 	private String cause;
 	private String responsible;

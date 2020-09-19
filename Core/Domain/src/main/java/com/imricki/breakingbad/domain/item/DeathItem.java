@@ -6,22 +6,22 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public class DeathItem   {
+public class DeathItem {
 
-	private int id;
-	
+	private Integer id;
+
 	private String death;
-	
+
 	private String cause;
-	
+
 	private String responsible;
-	
+
 	private String lastWords;
-	
+
 	private int season;
-	
+
 	private int episode;
-	
+
 	private int numberOfdeaths;
 
 }
