@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.imricki.breakingbad.domain.item.DeathItem;
 import com.imricki.breakingbad.domain.service.DeathClient;
 import com.imricki.breakingbad.ui.model.DeathModel;
 
@@ -25,7 +26,10 @@ public class DeathUI implements DeathUIService {
 	@Override
 	public DeathModel getRandom() {
 
-		return DeathModel.toFxBean(this.service.getRandom());
+		DeathItem item = this.service.getRandom();
+
+		return new DeathModel(item.getId(), item.getDeath(), item.getCause(), item.getResponsible(),
+				item.getLastWords(), item.getLastWords(), item.getEpisode(), item.getNumberOfdeaths());
 	}
 
 }

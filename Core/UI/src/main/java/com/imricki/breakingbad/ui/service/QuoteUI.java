@@ -21,28 +21,23 @@ public class QuoteUI implements QuoteUIService {
 		List<QuoteItem> QuoteItemList = this.service.getAll();
 
 		List<QuoteModel> dddd = null;
-
-//		QuoteItemList.forEach(System.out::println);
-//
-//		List<QuoteModel> QuotemodelLis = ObjectMapperUtils.mapAll(QuoteItemList, QuoteModel.class);
-//
-//		QuotemodelLis.forEach(System.out::println);
+		;
 		return dddd;
 	}
 
 	@Override
 	public QuoteModel getRandom() {
 
-		QuoteModel model = new QuoteModel();
-		return model.toFxBean(this.service.getRandom());
+		QuoteItem item = this.service.getRandom();
+		return new QuoteModel(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries());
 
 	}
 
 	@Override
 	public QuoteModel findBy(int id) {
 
-		QuoteModel model = new QuoteModel();
-		return model.toFxBean(this.service.findBy(id));
+		QuoteItem item = this.service.findBy(id);
+		return new QuoteModel(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries());
 	}
 
 }

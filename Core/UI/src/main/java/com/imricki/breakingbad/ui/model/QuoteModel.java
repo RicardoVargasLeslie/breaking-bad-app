@@ -1,11 +1,13 @@
 package com.imricki.breakingbad.ui.model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class QuoteModel {
 
-	private StringProperty quote_id;
+	private IntegerProperty quote_id;
 
 	private StringProperty quote;
 
@@ -13,20 +15,20 @@ public class QuoteModel {
 
 	private StringProperty series;
 
-	public QuoteModel(String quote_id, String quote, String author, String series) {
+	public QuoteModel(Integer quote_id, String quote, String author, String series) {
 
-		this.quote_id = new SimpleStringProperty(quote_id);
+		this.quote_id = new SimpleIntegerProperty(quote_id);
 		this.quote = new SimpleStringProperty(quote);
 		this.author = new SimpleStringProperty(author);
 		this.series = new SimpleStringProperty(series);
 
 	}
 
-	public StringProperty getQuote_id() {
+	public IntegerProperty getQuote_id() {
 		return this.quote_id;
 	}
 
-	public void setQuote_id(StringProperty quote_id) {
+	public void setQuote_id(IntegerProperty quote_id) {
 		this.quote_id = quote_id;
 	}
 
