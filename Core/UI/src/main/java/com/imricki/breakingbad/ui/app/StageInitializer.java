@@ -25,7 +25,7 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent> {
 	public void onApplicationEvent(StageReadyEvent event) {
 
 		this.stage = event.getStage();
-		this.stage.setScene(new Scene(this.controller.getMainPane()));
+		this.stage.setScene(new Scene(this.controller.getMainTab()));
 		this.stage.show();
 	}
 
