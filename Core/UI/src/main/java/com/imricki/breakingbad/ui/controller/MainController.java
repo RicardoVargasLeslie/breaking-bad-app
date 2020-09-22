@@ -17,6 +17,8 @@ public class MainController implements Initializable {
 	@FXML
 	private BorderPane manViewPane;
 
+	private QuoteController quoteController;
+
 	public MainController() {
 
 		LoaderUtils.loadView("/fx/mainView.fxml", this);
@@ -25,6 +27,8 @@ public class MainController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
+		this.quoteController = new QuoteController();
+		this.manViewPane.setCenter(this.quoteController.getQuotePane());
 	}
 
 	public BorderPane getManViewPane() {

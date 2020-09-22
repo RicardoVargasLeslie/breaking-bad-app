@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 @Component
 public class StageInitializer implements ApplicationListener<StageReadyEvent> {
 
-	private MainController controller = new MainController();
+	private MainController controller;
 
-	private Stage stage;
+	public static Stage primaryStage;
 	private Scene scene;
 
 	public StageInitializer() {
@@ -24,13 +24,10 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent> {
 	@Override
 	public void onApplicationEvent(StageReadyEvent event) {
 
-		this.stage = event.getStage();
-		this.stage.setScene(new Scene(this.controller.getManViewPane()));
-		this.stage.show();
-	}
-
-	public Stage getStage() {
-		return this.stage;
+		this.controller = new MainController();
+		primaryStage = event.getStage();
+		primaryStage.setScene(new Scene(this.controller.getManViewPane()));
+		primaryStage.show();
 	}
 
 	public void goTo(Parent root) {
