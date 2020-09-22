@@ -7,9 +7,10 @@ import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.utils.LoaderUtils;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 
 @Controller
@@ -18,8 +19,9 @@ public class MainController implements Initializable {
 	@FXML
 	private BorderPane manViewPane;
 
-	@FXML
-	private TabPane tabPane;
+	private MainController mainController;
+
+	private ObjectProperty<QuoteController> quoteController;
 
 	public MainController() {
 
@@ -33,8 +35,13 @@ public class MainController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		this.manViewPane.setCenter(this.tabPane);
+		this.quoteController = new SimpleObjectProperty<QuoteController>();
+	}
 
+	@FXML
+	private void initialize() {
+
+		this.quoteController.get().injectMainController(this.mainController);
 	}
 
 }

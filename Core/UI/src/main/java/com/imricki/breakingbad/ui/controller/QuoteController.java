@@ -5,14 +5,12 @@ import java.util.ResourceBundle;
 
 import org.springframework.stereotype.Controller;
 
-import com.imricki.breakingbad.ui.app.StageInitializer;
 import com.imricki.breakingbad.ui.utils.LoaderUtils;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.TabPane;
 import lombok.Getter;
 
 @Controller
@@ -20,25 +18,27 @@ public class QuoteController implements Initializable {
 
 	@Getter
 	@FXML
-	private BorderPane componentView;
+	private TabPane tabView;
 
-	StageInitializer init;
+	private MainController mainController = new MainController();
 
 	@Getter
 	@FXML
 	private Button buttonview;
 
-	public QuoteController(StageInitializer init) {
+	public QuoteController() {
 
-		this.init = init;
-
-		LoaderUtils.loadView("/fx/view.fxml", this);
+		LoaderUtils.loadView("/fx/tabview.fxml", this);
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		this.init.getStage().setScene(new Scene(this.componentView));
+		this.mainController.getManViewPane().setCenter(this.tabView);
+	}
+
+	public void injectMainController(MainController mainController) {
+		this.mainController = mainController;
 	}
 
 }
