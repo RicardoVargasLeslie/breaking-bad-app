@@ -10,25 +10,31 @@ import com.imricki.breakingbad.ui.utils.LoaderUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TabPane;
+import javafx.scene.layout.BorderPane;
 
 @Controller
 public class MainController implements Initializable {
 
 	@FXML
-	private TabPane mainTab;
+	private BorderPane manViewPane;
+
+	@FXML
+	private TabPane tabPane;
 
 	public MainController() {
 
-		LoaderUtils.loadView("/fx/view.fxml", this);
+		LoaderUtils.loadView("/fx/mainView.fxml", this);
+	}
+
+	public BorderPane getManViewPane() {
+		return this.manViewPane;
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-	}
+		this.manViewPane.setCenter(this.tabPane);
 
-	public TabPane getMainTab() {
-		return this.mainTab;
 	}
 
 }
