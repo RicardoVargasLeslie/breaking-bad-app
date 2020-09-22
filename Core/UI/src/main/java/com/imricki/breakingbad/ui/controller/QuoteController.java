@@ -11,13 +11,13 @@ import com.imricki.breakingbad.ui.utils.LoaderUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TabPane;
+import javafx.scene.control.TitledPane;
 
 @Controller
 public class QuoteController implements Initializable {
 
 	@FXML
-	private TabPane tabView;
+	private TitledPane quotePane;
 
 	@Autowired
 	private MainController mainController = new MainController();
@@ -29,15 +29,15 @@ public class QuoteController implements Initializable {
 
 		LoaderUtils.loadView("/fx/tabview.fxml", this);
 
-		this.mainController.getManViewPane().setCenter(this.getTabView());
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
+		this.mainController.getManViewPane().setCenter(this.getQuotePane());
 	}
 
-	public TabPane getTabView() {
-		return this.tabView;
+	public TitledPane getQuotePane() {
+		return this.quotePane;
 	}
 }
