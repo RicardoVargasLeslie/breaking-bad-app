@@ -11,11 +11,13 @@ import com.imricki.breakingbad.ui.utils.LoaderUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
+import lombok.Getter;
 
 @Controller
 public class MainController implements Initializable {
 
 	@FXML
+	@Getter
 	private BorderPane manViewPane;
 
 	@Autowired
@@ -33,7 +35,4 @@ public class MainController implements Initializable {
 		this.manViewPane.setCenter(this.quoteController.getQuotePane());
 	}
 
-	public BorderPane getManViewPane() {
-		return this.manViewPane;
-	}
 }
