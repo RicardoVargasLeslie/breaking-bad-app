@@ -3,7 +3,7 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 
-<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <tabs>
     <Tab fx:id="quoteTab" closable="false" text="Quote" />
     <Tab fx:id="characterTab" closable="false" text="Character" />

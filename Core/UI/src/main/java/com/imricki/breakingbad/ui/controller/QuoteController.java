@@ -9,7 +9,7 @@ import com.imricki.breakingbad.ui.utils.LoaderUtils;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.BorderPane;
 import lombok.Getter;
 
 @Controller
@@ -17,7 +17,7 @@ public class QuoteController implements Initializable {
 
 	@FXML
 	@Getter
-	private GridPane gridPane;
+	private BorderPane borderPane;
 
 	public QuoteController() {
 

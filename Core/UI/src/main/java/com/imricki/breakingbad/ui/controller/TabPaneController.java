@@ -57,7 +57,7 @@ public class TabPaneController implements Initializable {
 		this.deathController = new DeathController();
 		this.episodeController = new EpisodeController();
 		this.quoteController = new QuoteController();
-//		this.quoteTab.setContent(this.quoteController.getGridPane());
+		this.quoteTab.setContent(this.quoteController.getBorderPane());
 
 	}
 }
