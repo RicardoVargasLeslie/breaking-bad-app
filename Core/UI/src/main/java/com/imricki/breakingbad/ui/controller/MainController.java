@@ -49,7 +49,8 @@ public class MainController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 
 		this.menuController = new MenuController();
-		this.borderPane.setCenter(this.menuController.getMenuBar());
+		this.borderPane.setTop(this.menuController.getMenuBar());
+		this.borderPane.setCenter(this.tabPane);
 
 	}
 
