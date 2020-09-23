@@ -21,7 +21,7 @@ public class MenuController implements Initializable {
 
 	public MenuController() {
 
-		LoaderUtils.loadView("/fx/menu.fxml", this);
+		LoaderUtils.loadView("/fx/menuView.fxml", this);
 	}
 
 	@Override

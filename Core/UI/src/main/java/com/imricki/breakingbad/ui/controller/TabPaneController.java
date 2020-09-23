@@ -30,6 +30,6 @@ public class TabPaneController {
 
 	public TabPaneController() {
 
-		LoaderUtils.loadView("/fx/tabview.fxml", this);
+		LoaderUtils.loadView("/fx/tabPaneView.fxml", this);
 	}
 }

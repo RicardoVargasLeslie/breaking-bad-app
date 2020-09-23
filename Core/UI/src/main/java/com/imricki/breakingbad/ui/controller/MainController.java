@@ -10,8 +10,6 @@ import com.imricki.breakingbad.ui.utils.LoaderUtils;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import lombok.Getter;
 
@@ -23,22 +21,10 @@ public class MainController implements Initializable {
 	private BorderPane borderPane;
 
 	@Autowired
-	MenuController menuController;
+	private MenuController menuController;
 
-	@FXML
-	private TabPane tabPane;
-
-	@FXML
-	private Tab quoteTab;
-
-	@FXML
-	private Tab characterTab;
-
-	@FXML
-	private Tab episodeTab;
-
-	@FXML
-	private Tab deathTab;
+	@Autowired
+	private TabPaneController tabPaneController;
 
 	public MainController() {
 
@@ -50,7 +36,9 @@ public class MainController implements Initializable {
 
 		this.menuController = new MenuController();
 		this.borderPane.setTop(this.menuController.getMenuBar());
-		this.borderPane.setCenter(this.tabPane);
+
+		this.tabPaneController = new TabPaneController();
+		this.borderPane.setCenter(tabPaneController.getTabPane());
 
 	}
 
