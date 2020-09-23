@@ -38,7 +38,7 @@ public class MainController implements Initializable {
 		this.borderPane.setTop(this.menuController.getMenuBar());
 
 		this.tabPaneController = new TabPaneController();
-		this.borderPane.setCenter(tabPaneController.getTabPane());
+		this.borderPane.setCenter(this.tabPaneController.getTabPane());
 
 	}
 
