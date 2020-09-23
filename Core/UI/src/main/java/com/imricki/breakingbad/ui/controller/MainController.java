@@ -3,6 +3,7 @@ package com.imricki.breakingbad.ui.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.utils.LoaderUtils;
@@ -17,6 +18,7 @@ public class MainController implements Initializable {
 	@FXML
 	private BorderPane manViewPane;
 
+	@Autowired
 	private QuoteController quoteController;
 
 	public MainController() {
