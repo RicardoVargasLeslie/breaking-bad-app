@@ -68,7 +68,7 @@
    <bottom>
       <FlowPane hgap="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="75.0">
+            <Button mnemonicParsing="false">
                <graphic>
                   <ImageView fitHeight="31.0" fitWidth="39.0">
                      <image>
