@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
@@ -34,11 +33,10 @@
                 <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="138.20001220703125" minHeight="47.80002212524414" prefHeight="93.39999389648438" valignment="CENTER" vgrow="ALWAYS" />
-                <RowConstraints maxHeight="352.19997787475586" minHeight="261.79998779296875" prefHeight="306.6000061035156" valignment="BASELINE" vgrow="ALWAYS" />
+                <RowConstraints valignment="BASELINE" vgrow="ALWAYS" />
               </rowConstraints>
                <children>
-                  <VBox alignment="CENTER" prefHeight="214.0" prefWidth="292.0" spacing="20.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="BASELINE" GridPane.vgrow="ALWAYS">
+                  <VBox alignment="CENTER" spacing="20.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="BASELINE" GridPane.vgrow="ALWAYS">
                      <children>
                         <ImageView fx:id="authorImageView" fitHeight="104.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
                            <image>
@@ -56,7 +54,6 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </VBox>
-                  <HBox alignment="CENTER" spacing="20.0" GridPane.valignment="BASELINE" />
                </children>
             </GridPane>
          </items>
