@@ -10,14 +10,39 @@ import com.imricki.breakingbad.ui.utils.LoaderUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.BorderPane;
-import lombok.Getter;
 
 @Controller
 public class QuoteController implements Initializable {
 
 	@FXML
-	@Getter
 	private BorderPane borderPane;
+
+	@FXML
+	private TableView<?> tableView;
+
+	@FXML
+	private TableColumn<?, ?> idCol;
+
+	@FXML
+	private TableColumn<?, ?> quoteCol;
+
+	@FXML
+	private TableColumn<?, ?> authorCol;
+
+	@FXML
+	private TableColumn<?, ?> seriesCol;
+
+	@FXML
+	private ImageView authorImageView;
+
+	@FXML
+	private Label quote_idLabel;
+
+	@FXML
+	private Label quoteLabel;
+
+	@FXML
+	private Label seriesLabel;
 
 	public QuoteController() {
 
