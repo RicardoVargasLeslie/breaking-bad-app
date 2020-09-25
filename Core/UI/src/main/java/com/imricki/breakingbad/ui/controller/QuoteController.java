@@ -63,7 +63,7 @@ public class QuoteController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		// this.tableView.itemsProperty().bind();
+		this.tableView.itemsProperty().bind(this.service.getAll());
 
 		// set cell value factories
 		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());

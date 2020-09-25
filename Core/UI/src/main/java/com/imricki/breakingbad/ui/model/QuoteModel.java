@@ -1,13 +1,14 @@
 package com.imricki.breakingbad.ui.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.ui.dto.QuoteDto;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -68,9 +69,9 @@ public class QuoteModel {
 				+ this.getAuthor().get() + ", series=" + this.getSeries().get() + "]";
 	}
 
-	public static List<QuoteModel> tofxList(List<QuoteItem> itemList) {
+	public static ListProperty<QuoteModel> tofxList(List<QuoteItem> itemList) {
 
-		List<QuoteModel> modelList = new ArrayList<>();
+		ListProperty<QuoteModel> modelList = new SimpleListProperty<>();
 
 		itemList.stream().forEach(item -> {
 

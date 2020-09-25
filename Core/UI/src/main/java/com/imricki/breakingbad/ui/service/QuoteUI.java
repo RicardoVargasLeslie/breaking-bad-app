@@ -1,7 +1,5 @@
 package com.imricki.breakingbad.ui.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +8,8 @@ import com.imricki.breakingbad.domain.service.QuoteClient;
 import com.imricki.breakingbad.ui.dto.QuoteDto;
 import com.imricki.breakingbad.ui.model.QuoteModel;
 
+import javafx.beans.property.ListProperty;
+
 @Service
 public class QuoteUI implements QuoteUIService {
 
@@ -17,7 +17,7 @@ public class QuoteUI implements QuoteUIService {
 	private QuoteClient service;
 
 	@Override
-	public List<QuoteModel> getAll() {
+	public ListProperty<QuoteModel> getAll() {
 
 		return QuoteModel.tofxList(this.service.getAll());
 	}
