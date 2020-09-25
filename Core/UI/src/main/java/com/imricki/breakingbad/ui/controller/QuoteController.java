@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import com.imricki.breakingbad.ui.model.QuoteModel;
 import com.imricki.breakingbad.ui.utils.LoaderUtils;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -44,6 +46,8 @@ public class QuoteController implements Initializable {
 
 	@FXML
 	private Label quoteLabel, seriesLabel, quote_idLabel;
+
+	private ObjectProperty<QuoteModel> quoteFx = new SimpleObjectProperty<>();
 
 	public QuoteController() {
 
