@@ -32,7 +32,7 @@
 
 
 
-![domainModule](\img\domainModule.PNG)
+![domainModule](/img/domainModule.PNG)
 
 ## Prerequisites
 
