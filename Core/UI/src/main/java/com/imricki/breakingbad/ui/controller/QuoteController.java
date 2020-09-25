@@ -70,6 +70,8 @@ public class QuoteController implements Initializable {
 
 		SimpleListProperty<QuoteModel> fxlist = new SimpleListProperty<>(FXCollections.observableArrayList());
 
+		this.service.getAll();
+
 		fxlist.add(new QuoteModel(new QuoteDto(2, "ddd", "aaaa", "yyyy")));
 
 		this.tableView.itemsProperty().bind(fxlist);
