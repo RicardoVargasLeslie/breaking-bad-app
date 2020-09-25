@@ -72,6 +72,7 @@ public class QuoteModel {
 
 	public static ListProperty<QuoteModel> tofxList(List<QuoteItem> itemList) {
 
+		System.err.println("outtttttt");
 		ListProperty<QuoteModel> modelList = new SimpleListProperty<>(FXCollections.observableArrayList());
 
 		itemList.stream().forEach(item -> {
