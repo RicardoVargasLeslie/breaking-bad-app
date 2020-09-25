@@ -8,9 +8,9 @@
 
 
   <h2 align="center">Breaking Bad App</h2>
-> Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes. 
+> *Breaking Bad App*  is a  **GUI**  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes. 
 >
-> it itegrates Spring Boot with Javafx
+> it itegrates Spring Boot with **Javafx**
 
 
 
@@ -74,6 +74,8 @@ Use this space to show useful examples of how a project can be used. Additional 
  please refer to the [Documentation](https://breakingbadapi.com/documentation)
 
 
+
+[Api]: https://github.com/timbiles/Breaking-Bad--API	"dddd"
 
 ### :hammer:Built With
 
