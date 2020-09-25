@@ -11,6 +11,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
 
 public class QuoteModel {
 
@@ -71,7 +72,7 @@ public class QuoteModel {
 
 	public static ListProperty<QuoteModel> tofxList(List<QuoteItem> itemList) {
 
-		ListProperty<QuoteModel> modelList = new SimpleListProperty<>();
+		ListProperty<QuoteModel> modelList = new SimpleListProperty<>(FXCollections.observableArrayList());
 
 		itemList.stream().forEach(item -> {
 
@@ -79,6 +80,8 @@ public class QuoteModel {
 					new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
 
 			modelList.add(model);
+
+			System.err.println("Holaaa");
 		});
 
 		return modelList;
