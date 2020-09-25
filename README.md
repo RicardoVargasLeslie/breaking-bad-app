@@ -28,6 +28,12 @@ The **UI Module** contais all the visual componenets from **Javafx** that are in
 
 ## ![UIModule](/img/UIModule.PNG)
 
+## Big Picture
+
+
+
+![OnionArq](/img/OnionArq.png)
+
 
 
 ## Prerequisites
