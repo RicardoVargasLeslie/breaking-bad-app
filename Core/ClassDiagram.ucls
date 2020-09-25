@@ -1,6 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true">  
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.imricki.breakingbad.ui.app.StageInitializer" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/app/StageInitializer.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="60" width="251" x="443" y="195"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.imricki.breakingbad.ui.controller.TabPaneController" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/controller/TabPaneController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="144" width="232" x="123" y="357"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.imricki.breakingbad.ui.model.QuoteModel" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/model/QuoteModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="140" width="325" x="123" y="844"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.imricki.breakingbad.ui.dto.QuoteDto" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/dto/QuoteDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="239" x="483" y="842"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.imricki.breakingbad.ui.dto.EpisodeDto" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/dto/EpisodeDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="194" width="256" x="123" y="617"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.imricki.breakingbad.ui.app.StageReadyEvent" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/app/StageReadyEvent.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="60" width="182" x="434" y="86"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.imricki.breakingbad.ui.controller.MainController" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/controller/MainController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="60" width="212" x="141" y="187"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.imricki.breakingbad.ui.model.EpisodeModel" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/model/EpisodeModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="247" x="422" y="615"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.imricki.breakingbad.ui.controller.QuoteController" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/controller/QuoteController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="259" width="289" x="510" y="327"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.imricki.breakingbad.ui.app.Aplication" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/app/Aplication.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="60" width="182" x="156" y="86"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="com.imricki.breakingbad.ui.service.QuoteUI" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/service/QuoteUI.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1016" y="462"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="12" language="java" name="com.imricki.breakingbad.ui.service.QuoteUIService" project="UI" 
+    file="/UI/src/main/java/com/imricki/breakingbad/ui/service/QuoteUIService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="986" y="229"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <association id="13">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="14" name="controller"/>      
+      <multiplicity id="15" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="16">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <association id="17">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="18" name="tabPaneController"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="21" name="quoteController"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="24" name="service"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

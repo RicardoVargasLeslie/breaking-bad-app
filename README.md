@@ -2,16 +2,8 @@
     <img src="img/main.png"
         height="400" height="400">
 </p>
-<p align="center">
-    <a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
-        <img src="https://img.shields.io/github/contributors/badges/shields" /></a>
-    <a href="#backers" alt="Backers on Open Collective">
-        <img src="https://img.shields.io/opencollective/backers/shields" /></a>
-    <a href="#sponsors" alt="Sponsors on Open Collective">
-        <img src="https://img.shields.io/opencollective/sponsors/shields" /></a>
-    <a href="https://github.com/badges/shields/pulse" alt="Activity">
-        <img src="https://img.shields.io/github/commit-activity/m/badges/shields" /></a>
-</p>
+
+
 
 
 
@@ -19,10 +11,6 @@
 > Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes. 
 >
 > it itegrates Spring Boot with Javafx
->
-> 
-
-
 
 
 
@@ -30,9 +18,17 @@
 
 
 
-
+The **Domain module** contains all the **buissnes logic** to perform all the calls to the API
 
 ![domainModule](/img/domainModule.PNG)
+
+
+
+The **UI Module** contais all the visual componenets from **Javafx** that are injected in to the **Spring** context.
+
+## ![UIModule](/img/UIModule.PNG)
+
+
 
 ## Prerequisites
 
