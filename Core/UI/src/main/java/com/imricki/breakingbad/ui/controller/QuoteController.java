@@ -3,9 +3,11 @@ package com.imricki.breakingbad.ui.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.model.QuoteModel;
+import com.imricki.breakingbad.ui.service.QuoteUI;
 import com.imricki.breakingbad.ui.utils.LoaderUtils;
 
 import javafx.beans.property.ObjectProperty;
@@ -21,6 +23,9 @@ import lombok.Getter;
 
 @Controller
 public class QuoteController implements Initializable {
+
+	@Autowired
+	private QuoteUI service;
 
 	@FXML
 	@Getter
@@ -57,6 +62,8 @@ public class QuoteController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+
+		// this.tableView.itemsProperty().bind();
 
 		// set cell value factories
 		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());
