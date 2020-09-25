@@ -16,9 +16,23 @@
 
 
   <h2 align="center">Breaking Bad App</h2>
-> Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes. :speak_no_evil:
+> Breaking Bad App  is a  GUI  that allows the user to perform calls to the Breaking Bad API and retrieve information like caracters,episodes or quotes. 
+>
+> it itegrates Spring Boot with Javafx
 >
 > 
+
+
+
+
+
+## OverView
+
+
+
+
+
+![domainModule](\img\domainModule.PNG)
 
 ## Prerequisites
 
