@@ -1,14 +1,14 @@
 package com.imricki.breakingbad.ui.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.imricki.breakingbad.ui.utils.LoaderUtils;
-
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -47,7 +47,16 @@ public class TabPaneController implements Initializable {
 
 	public TabPaneController() {
 
-		LoaderUtils.loadView("/fx/paneView.fxml", this);
+		// LoaderUtils.loadView("/fx/paneView.fxml", this);
+
+		try {
+			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/paneView.fxml"));
+			loader.setController(this);
+			loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Override

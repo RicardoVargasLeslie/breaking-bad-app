@@ -18,7 +18,7 @@ public class LoaderUtils {
 	public static void loadView(String view, Object className) {
 
 		try {
-			if ((view != null) && (className != null)) {
+			if (view != null && className != null) {
 
 				FXMLLoader loader = new FXMLLoader(className.getClass().getResource(view));
 				loader.setController(className);
@@ -26,7 +26,7 @@ public class LoaderUtils {
 			}
 		} catch (IOException e) {
 
-			LOGGER.severe("Failed to load view: " + e.getMessage());
+			LOGGER.severe("Faileeeeeeeeeeeeeeeeeed to load view: " + e.getMessage());
 		}
 	}
 }
