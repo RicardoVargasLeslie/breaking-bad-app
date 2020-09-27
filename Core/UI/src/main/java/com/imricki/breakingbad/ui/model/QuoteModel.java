@@ -74,17 +74,18 @@ public class QuoteModel {
 
 		System.err.println("outtttttt");
 		ListProperty<QuoteModel> modelList = new SimpleListProperty<>(FXCollections.observableArrayList());
-
-		itemList.stream().forEach(item -> {
-
-			QuoteModel model = new QuoteModel(
-					new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
-
-			modelList.add(model);
-
-			System.err.println("Chocaaaaapic!");
-		});
-
+//
+//		itemList.stream().forEach(item -> {
+//
+//			QuoteModel model = new QuoteModel(
+//					new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
+//
+//			modelList.add(model);
+//
+//			System.err.println("Chocaaaaapic!");
+//		});
+//
+//		return modelList;
 		return modelList;
 	}
 

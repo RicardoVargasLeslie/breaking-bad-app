@@ -20,19 +20,19 @@ public class QuoteUI implements QuoteUIService {
 		return QuoteModel.tofxList(this.service.getAll());
 	}
 
-	@Override
-	public QuoteModel getRandom() {
-
-		QuoteItem item = this.service.getRandom();
-		return new QuoteModel(new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
-
-	}
-
-	@Override
-	public QuoteModel findBy(int id) {
-
-		QuoteItem item = this.service.findBy(id);
-		return new QuoteModel(new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
-	}
+//	@Override
+//	public QuoteModel getRandom() {
+//
+//		QuoteItem item = this.service.getRandom();
+//		return new QuoteModel(new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
+//
+//	}
+//
+//	@Override
+//	public QuoteModel findBy(int id) {
+//
+//		QuoteItem item = this.service.findBy(id);
+//		return new QuoteModel(new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
+//	}
 
 }
