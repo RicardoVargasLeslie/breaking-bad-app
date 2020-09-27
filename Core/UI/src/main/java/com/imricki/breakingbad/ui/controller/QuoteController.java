@@ -3,9 +3,9 @@ package com.imricki.breakingbad.ui.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.imricki.breakingbad.ui.dto.QuoteDto;
 import com.imricki.breakingbad.ui.model.QuoteModel;
 import com.imricki.breakingbad.ui.service.QuoteUI;
 import com.imricki.breakingbad.ui.utils.LoaderUtils;
@@ -25,7 +25,7 @@ import lombok.Getter;
 @Controller
 public class QuoteController implements Initializable {
 
-//	@Autowired
+	@Autowired
 	private QuoteUI service;
 
 	@FXML
@@ -53,17 +53,20 @@ public class QuoteController implements Initializable {
 	@FXML
 	private Label quoteLabel, seriesLabel, quote_idLabel;
 
+	ListProperty<QuoteModel> fxlist = new SimpleListProperty<>(FXCollections.observableArrayList());
+
 	public QuoteController() {
 
 		LoaderUtils.loadView("/fx/quoteView.fxml", this);
 
+		// this.fxlist = this.service.getAll();
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		ListProperty<QuoteModel> fxlist = new SimpleListProperty<>(FXCollections.observableArrayList());
-		fxlist.add(new QuoteModel(new QuoteDto(2, "ddd", "aaaa", "yyyy")));
+//		ListProperty<QuoteModel> fxlist = new SimpleListProperty<>(FXCollections.observableArrayList());
+//		fxlist.add(new QuoteModel(new QuoteDto(2, "ddd", "aaaa", "yyyy")));
 
 		// this.tableView.itemsProperty().bind(this.service.getAll());
 
@@ -74,7 +77,7 @@ public class QuoteController implements Initializable {
 //
 //		System.out.print(fxlist.toString());
 //
-		this.tableView.itemsProperty().bind(fxlist);
+//		this.tableView.itemsProperty().bind(fxlist);
 //		// set cell value
 ////		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());
 ////		this.quoteCol.setCellValueFactory(v -> v.getValue().getQuote());
