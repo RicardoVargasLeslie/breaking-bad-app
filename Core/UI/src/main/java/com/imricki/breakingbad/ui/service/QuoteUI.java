@@ -4,9 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.service.QuoteClient;
+import com.imricki.breakingbad.ui.dto.QuoteDto;
 import com.imricki.breakingbad.ui.model.QuoteModel;
 
 import javafx.beans.property.ListProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
 
 @Service
 public class QuoteUI implements QuoteUIService {
@@ -17,7 +20,12 @@ public class QuoteUI implements QuoteUIService {
 	@Override
 	public ListProperty<QuoteModel> getAll() {
 
-		return QuoteModel.tofxList(this.service.getAll());
+		ListProperty<QuoteModel> list = new SimpleListProperty<QuoteModel>(FXCollections.observableArrayList());
+
+		list.add(new QuoteModel(new QuoteDto(3, "dfffff", "fffff", "yyuu")));
+
+		return list;
+		// return QuoteModel.tofxList(this.service.getAll());
 	}
 
 //	@Override

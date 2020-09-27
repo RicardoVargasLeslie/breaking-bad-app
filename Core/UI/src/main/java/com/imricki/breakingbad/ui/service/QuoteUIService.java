@@ -1,11 +1,11 @@
 package com.imricki.breakingbad.ui.service;
 
-import com.imricki.breakingbad.ui.model.QuoteModel;
+import java.util.List;
 
-import javafx.beans.property.ListProperty;
+import com.imricki.breakingbad.ui.model.QuoteModel;
 
 public interface QuoteUIService {
 
-	public ListProperty<QuoteModel> getAll();
+	public List<QuoteModel> getAll();
 
 }
