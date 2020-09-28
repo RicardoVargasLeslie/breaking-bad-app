@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.model.QuoteModel;
@@ -25,6 +26,7 @@ import lombok.Getter;
 @Controller
 public class QuoteController implements Initializable {
 
+	@Autowired
 	private QuoteUI service;
 
 	@FXML
