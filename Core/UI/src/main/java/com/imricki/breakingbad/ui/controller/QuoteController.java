@@ -78,13 +78,13 @@ public class QuoteController implements Initializable {
 
 //		ListProperty<QuoteModel> fxlist = new SimpleListProperty<>(FXCollections.observableArrayList());
 //		fxlist.add(new QuoteModel(new QuoteDto(2, "ddd", "aaaa", "yyyy")));
-
-		ListProperty<QuoteModel> list = new SimpleListProperty<QuoteModel>();
-
-		if (this.service.getAll() == null) {
-
-			System.out.println("Nuuuuuuuuuuuuul");
-		}
+//
+//		ListProperty<QuoteModel> list = new SimpleListProperty<QuoteModel>();
+//
+//		if (this.service.getAll() == null) {
+//
+//			System.out.println("Nuuuuuuuuuuuuul");
+//		}
 //		this.tableView.itemsProperty().bind(this.service.getAll());
 
 //		ListProperty<QuoteModel> fxlist = new SimpleListProperty<>(FXCollections.observableArrayList());
