@@ -83,7 +83,7 @@ public class QuoteController implements Initializable {
 
 		if (this.service.getAll() == null) {
 
-			System.err.println("Nuuuuuuuuuuuuul");
+			System.out.println("Nuuuuuuuuuuuuul");
 		}
 //		this.tableView.itemsProperty().bind(this.service.getAll());
 
