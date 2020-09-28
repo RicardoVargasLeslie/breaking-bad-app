@@ -20,12 +20,19 @@ public class QuoteUI implements QuoteUIService {
 	@Override
 	public ListProperty<QuoteModel> getAll() {
 
+//		ListProperty<QuoteModel> list = new SimpleListProperty<>(FXCollections.observableArrayList());
+//
+//		list.add(new QuoteModel(new QuoteDto(3, "dfffff", "fffff", "yyuu")));
+//
+//		return list;
+
 		ListProperty<QuoteModel> list = new SimpleListProperty<>(FXCollections.observableArrayList());
 
-		list.add(new QuoteModel(new QuoteDto(3, "dfffff", "fffff", "yyuu")));
+		list.add(new QuoteModel(new QuoteDto(33, "hola", "rtr", "gif")));
+
+//		return QuoteModel.tofxList(this.service.getAll());
 
 		return list;
-		// return QuoteModel.tofxList(this.service.getAll());
 	}
 
 //	@Override

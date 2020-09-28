@@ -1,7 +1,5 @@
 package com.imricki.breakingbad.ui.app;
 
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.imricki.breakingbad.ui.model.DeathModel;
-import com.imricki.breakingbad.ui.service.DeathUI;
+import com.imricki.breakingbad.ui.service.QuoteUI;
 
 import javafx.application.Application;
 
@@ -32,7 +29,7 @@ public class Aplication {
 //	private DeathClient death;
 
 	@Autowired
-	private DeathUI deathUui;
+	private QuoteUI quoteUI;
 
 	public static void main(String[] args) {
 
@@ -54,12 +51,12 @@ public class Aplication {
 //
 //			QuoteModel mf = this.uiservice.findBy(2);
 
-			List<DeathModel> gg = this.deathUui.getAll();
-
-			for (int i = 0; i < gg.size(); i++) {
-
-				System.err.println(gg.get(i));
-			}
+//			ListProperty<QuoteModel> gg = this.quoteUI.getAll();
+//
+//			for (int i = 0; i < gg.size(); i++) {
+//
+//				System.err.println(gg.get(i));
+//			}
 
 		};
 	}
