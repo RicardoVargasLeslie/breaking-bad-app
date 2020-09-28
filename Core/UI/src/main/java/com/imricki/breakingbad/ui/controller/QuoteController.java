@@ -66,7 +66,7 @@ public class QuoteController implements Initializable {
 
 			loader.load();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 	}
