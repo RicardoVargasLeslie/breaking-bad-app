@@ -6,6 +6,6 @@ import javafx.beans.property.ListProperty;
 
 public interface QuoteUIService {
 
-	public ListProperty<QuoteModel> getAll();
+	ListProperty<QuoteModel> getAll();
 
 }

@@ -40,24 +40,9 @@ public class Aplication {
 	public CommandLineRunner run() throws Exception {
 		return args -> {
 
-//			QuoteItem q = this.quote.getRandom();
-
-//			DeatDECount total = this.quote.ge
-
-//			List<QuoteModel> list = this.uiservice.getAll();
-//			list.forEach(System.out::println);
-
-//			QuoteModel m = this.uiservice.getRandom();
+//			ListProperty<QuoteModel> list = this.quoteUI.getAll();
 //
-//			QuoteModel mf = this.uiservice.findBy(2);
-
-//			ListProperty<QuoteModel> gg = this.quoteUI.getAll();
-//
-//			for (int i = 0; i < gg.size(); i++) {
-//
-//				System.err.println(gg.get(i));
-//			}
-
+//			System.err.println(list.toString());
 		};
 	}
 }

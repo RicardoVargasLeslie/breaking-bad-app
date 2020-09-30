@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.model.QuoteModel;
+import com.imricki.breakingbad.ui.service.QuoteUI;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,8 +23,8 @@ import lombok.Getter;
 @Controller
 public class QuoteController implements Initializable {
 
-//	@Autowired
-//	private QuoteUI service;
+	@Autowired
+	private QuoteUI service = new QuoteUI();
 
 	@FXML
 	@Getter
@@ -73,9 +75,14 @@ public class QuoteController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-//		ListProperty<QuoteModel> fxlist = new SimpleListProperty<>(FXCollections.observableArrayList());
-//
-//		this.service.getAll().stream().forEach(e -> e.toString());
+		this.tableView.itemsProperty().bind(this.service.getAll());
+
+		// set cell value
+		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());
+		this.quoteCol.setCellValueFactory(v -> v.getValue().getQuote());
+		this.authorCol.setCellValueFactory(v -> v.getValue().getAuthor());
+		this.seriesCol.setCellValueFactory(v -> v.getValue().getSeries());
+
 	}
 
 //	@Override
