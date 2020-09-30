@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.model.QuoteModel;
@@ -23,8 +24,9 @@ import lombok.Getter;
 @Controller
 public class QuoteController implements Initializable {
 
+	@Lazy
 	@Autowired
-	private QuoteUI service = new QuoteUI();
+	private QuoteUI service;
 
 	@FXML
 	@Getter
@@ -52,14 +54,6 @@ public class QuoteController implements Initializable {
 	private Label quoteLabel, seriesLabel, quote_idLabel;
 
 	public QuoteController() {
-//		ListProperty<QuoteModel> fxlist = new SimpleListProperty<>(FXCollections.observableArrayList());
-//
-//		fxlist = this.service.getAll();
-//
-//		for (int i = 0; i < fxlist.size(); i++) {
-//
-//			System.err.println(fxlist.get(i));
-//		}
 
 		try {
 			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
