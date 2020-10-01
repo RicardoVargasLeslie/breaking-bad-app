@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import javafx.fxml.FXML;
@@ -33,16 +32,12 @@ public class TabPaneController implements Initializable {
 	@FXML
 	private Tab episodeTab;
 
-	@Autowired
 	private CharacterController characterController;
 
-	@Autowired
 	private DeathController deathController;
 
-	@Autowired
 	private EpisodeController episodeController;
 
-	@Autowired
 	private QuoteController quoteController;
 
 	public TabPaneController() {
