@@ -1,21 +1,18 @@
 package com.imricki.breakingbad.ui.service;
 
-import org.springframework.context.annotation.Lazy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.imricki.breakingbad.ui.dto.QuoteDto;
+import com.imricki.breakingbad.domain.service.QuoteClient;
 import com.imricki.breakingbad.ui.model.QuoteModel;
 
 import javafx.beans.property.ListProperty;
-import javafx.beans.property.SimpleListProperty;
-import javafx.collections.FXCollections;
 
-@Lazy
 @Service
 public class QuoteUI implements QuoteUIService {
 
-//	@Autowired
-//	private QuoteClient service;
+	@Autowired
+	private QuoteClient service;
 
 	@Override
 	public ListProperty<QuoteModel> getAll() {
@@ -26,13 +23,13 @@ public class QuoteUI implements QuoteUIService {
 //
 //		return list;
 
-		ListProperty<QuoteModel> list = new SimpleListProperty<>(FXCollections.observableArrayList());
+//		ListProperty<QuoteModel> list = new SimpleListProperty<>(FXCollections.observableArrayList());
+//
+//		list.add(new QuoteModel(new QuoteDto(33, "hola", "rtr", "gif")));
 
-		list.add(new QuoteModel(new QuoteDto(33, "hola", "rtr", "gif")));
+		return QuoteModel.tofxList(this.service.getAll());
 
-//		return QuoteModel.tofxList(this.service.getAll());
-
-		return list;
+		// return list;
 	}
 
 //	@Override
