@@ -31,7 +31,9 @@ public class QuoteUI implements QuoteUIService {
 //
 //		list.add(new QuoteModel(new QuoteDto(33, "hola", "rtr", "gif")));
 
-		return QuoteModel.tofxList(this.service.getAll());
+		// return QuoteModel.tofxList(this.service.getAll());
+
+		return null;
 
 		// return list;
 	}

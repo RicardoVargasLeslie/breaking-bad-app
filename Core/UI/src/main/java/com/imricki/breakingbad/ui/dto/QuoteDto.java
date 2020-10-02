@@ -18,4 +18,7 @@ public class QuoteDto {
 
 	private String series;
 
+	public QuoteDto() {
+
+	}
 }
