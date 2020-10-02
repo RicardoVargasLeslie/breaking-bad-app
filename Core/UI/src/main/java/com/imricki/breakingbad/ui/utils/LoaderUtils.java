@@ -26,7 +26,7 @@ public class LoaderUtils {
 			}
 		} catch (IOException e) {
 
-			LOGGER.severe("Faileeeeeeeeeeeeeeeeeed to load view: " + e.getMessage());
+			LOGGER.severe("Faileeeeeeeeeeeeeeeeeed to load view: " + e.getStackTrace().toString());
 		}
 	}
 }

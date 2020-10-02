@@ -24,7 +24,7 @@ public class QuoteController implements Initializable {
 
 	// look at this
 	// @Autowired
-	private QuoteUI service;
+	private QuoteUI UIservice;
 
 	@FXML
 	@Getter
@@ -53,29 +53,30 @@ public class QuoteController implements Initializable {
 
 	public QuoteController() {
 
-		this.service = new QuoteUI();
+		this.UIservice = new QuoteUI();
 
+		// LoaderUtils.loadView("/fx/quoteView.fxml", this);
+
+		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
+		loader.setController(this);
 		try {
-			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
-			loader.setController(this);
-
 			loader.load();
-
 		} catch (IOException e) {
-
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		if (!this.service.getAll().isEmpty()) {
+//		if (!this.service.getAll().isEmpty()) {
+//
+//			System.err.println("Not empty");
+//		}
 
-			System.err.println("Not empty");
-		}
-
-		this.tableView.itemsProperty().bind(this.service.getAll());
+		this.tableView.itemsProperty().bind(this.UIservice.getAll());
 
 //		// set cell value
 		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());

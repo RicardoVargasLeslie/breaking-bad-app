@@ -2,6 +2,9 @@ package com.imricki.breakingbad.ui.model;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.ui.dto.QuoteDto;
 
@@ -13,6 +16,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 
+@Component
 public class QuoteModel {
 
 	private IntegerProperty quote_id;
@@ -23,6 +27,7 @@ public class QuoteModel {
 
 	private StringProperty series;
 
+	@Autowired
 	public QuoteModel(QuoteDto dto) {
 
 		this.quote_id = new SimpleIntegerProperty(dto.getQuote_id());
@@ -74,7 +79,6 @@ public class QuoteModel {
 
 		ListProperty<QuoteModel> modelList = new SimpleListProperty<>(FXCollections.observableArrayList());
 
-//		modelList.add(new QuoteModel(new QuoteDto(22, "eeee", "rrr", "rrrr")));
 		itemList.stream().forEach(item -> {
 
 			QuoteModel model = new QuoteModel(
@@ -82,10 +86,8 @@ public class QuoteModel {
 
 			modelList.add(model);
 
-			System.err.println("Chocaaaaapic!");
 		});
-//
-//		return modelList;
+
 		return modelList;
 	}
 

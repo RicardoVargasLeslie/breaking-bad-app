@@ -11,6 +11,10 @@ import javafx.beans.property.ListProperty;
 @Service
 public class QuoteUI implements QuoteUIService {
 
+	public QuoteUI() {
+
+	}
+
 	@Autowired
 	private QuoteClient service;
 
