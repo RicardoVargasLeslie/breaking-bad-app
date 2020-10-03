@@ -11,31 +11,14 @@ import javafx.beans.property.ListProperty;
 @Service
 public class QuoteUI implements QuoteUIService {
 
-	public QuoteUI() {
-
-	}
-
 	@Autowired
 	private QuoteClient service;
 
 	@Override
 	public ListProperty<QuoteModel> getAll() {
 
-//		ListProperty<QuoteModel> list = new SimpleListProperty<>(FXCollections.observableArrayList());
-//
-//		list.add(new QuoteModel(new QuoteDto(3, "dfffff", "fffff", "yyuu")));
-//
-//		return list;
-
-//		ListProperty<QuoteModel> list = new SimpleListProperty<>(FXCollections.observableArrayList());
-//
-//		list.add(new QuoteModel(new QuoteDto(33, "hola", "rtr", "gif")));
-
-		// return QuoteModel.tofxList(this.service.getAll());
-
 		return null;
 
-		// return list;
 	}
 
 //	@Override

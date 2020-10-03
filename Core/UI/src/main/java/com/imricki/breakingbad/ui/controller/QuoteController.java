@@ -55,14 +55,12 @@ public class QuoteController implements Initializable {
 
 		this.UIservice = new QuoteUI();
 
-		// LoaderUtils.loadView("/fx/quoteView.fxml", this);
-
 		FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
 		loader.setController(this);
 		try {
 			loader.load();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -70,11 +68,6 @@ public class QuoteController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-
-//		if (!this.service.getAll().isEmpty()) {
-//
-//			System.err.println("Not empty");
-//		}
 
 		this.tableView.itemsProperty().bind(this.UIservice.getAll());
 
