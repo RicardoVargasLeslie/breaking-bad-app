@@ -13,21 +13,6 @@ public class Aplication {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Aplication.class);
 
-//	@Autowired
-//	private CharacterClient character;
-//
-//	@Autowired
-//	QuoteUI uiservice;
-//
-//	@Autowired
-//	private QuoteClient quote;
-//
-//	@Autowired
-//	private DeathClient death;
-
-//	@Autowired
-//	private QuoteUI quoteUI;
-
 	public static void main(String[] args) {
 
 		Application.launch(FxAppication.class, args);
