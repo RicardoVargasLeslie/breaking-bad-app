@@ -2,8 +2,6 @@ package com.imricki.breakingbad.ui.model;
 
 import java.util.List;
 
-import org.springframework.stereotype.Component;
-
 import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.ui.dto.QuoteDto;
 
@@ -15,7 +13,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 
-@Component
 public class QuoteModel {
 
 	private IntegerProperty quote_id;
