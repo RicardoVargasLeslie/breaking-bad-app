@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.model.QuoteModel;
@@ -23,8 +25,9 @@ import lombok.Getter;
 public class QuoteController implements Initializable {
 
 	// look at this
-	// @Autowired
-	private QuoteUI UIservice = new QuoteUI();
+	@Autowired
+	@Lazy
+	private QuoteUI UIservice;
 
 	@FXML
 	@Getter
@@ -66,6 +69,10 @@ public class QuoteController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+
+		this.UIservice = new QuoteUI();
+
+		this.UIservice.getAll().forEach(System.out::println);
 
 		// this.tableView.itemsProperty().bind(this.UIservice.getAll());
 
