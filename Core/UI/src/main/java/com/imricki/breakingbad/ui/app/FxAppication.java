@@ -1,5 +1,6 @@
 package com.imricki.breakingbad.ui.app;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -7,6 +8,7 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 
+@SpringBootApplication(scanBasePackages = { "com" })
 public class FxAppication extends Application {
 
 	private ConfigurableApplicationContext applicationContext;

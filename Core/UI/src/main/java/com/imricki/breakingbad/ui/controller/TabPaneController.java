@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import javafx.fxml.FXML;
@@ -33,20 +32,16 @@ public class TabPaneController implements Initializable {
 	@FXML
 	private Tab episodeTab;
 
-	@Autowired
 	private CharacterController characterController;
 
-	@Autowired
 	private DeathController deathController;
 
-	@Autowired
 	private EpisodeController episodeController;
 
-	@Autowired
 	private QuoteController quoteController;
 
 	public TabPaneController() {
-
+		this.quoteController = new QuoteController();
 		// LoaderUtils.loadView("/fx/paneView.fxml", this);
 
 		try {
@@ -54,7 +49,7 @@ public class TabPaneController implements Initializable {
 			loader.setController(this);
 			loader.load();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 	}
@@ -65,7 +60,6 @@ public class TabPaneController implements Initializable {
 //		this.characterController = new CharacterController();
 //		this.deathController = new DeathController();
 //		this.episodeController = new EpisodeController();
-		this.quoteController = new QuoteController();
 		this.quoteTab.setContent(this.quoteController.getBorderPane());
 
 	}
