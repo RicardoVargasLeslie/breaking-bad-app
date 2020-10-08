@@ -18,7 +18,7 @@
 
 
 
-The **Domain module** contains all the **buissnes logic** to perform all the calls to the API
+The **Domain module** contains all the **buissnes logic** to perform all the calls to the API.
 
 ![domainModule](/img/domainModule.PNG)
 
@@ -114,11 +114,6 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 If you want to contact me you can reach me at RicardoVargasLeslie@gmail.com.
 
-## Acknowledgements:open_hands:
 
-* [Breaking Bad API](https://www.breakingbadapi.com/):thumbsup:
-* [Tim Biles](https://github.com/timbiles):thumbsup:
-
-## License:scroll:
 
 This project uses the following license: [Apache License 2.0](<link>).
