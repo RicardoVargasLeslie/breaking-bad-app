@@ -1,5 +1,6 @@
 package com.imricki.breakingbad.ui.service;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.ui.dto.QuoteDto;
@@ -10,6 +11,7 @@ import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 
 @Service
+@Lazy
 public class QuoteUI implements QuoteUIService {
 
 //	@Autowired

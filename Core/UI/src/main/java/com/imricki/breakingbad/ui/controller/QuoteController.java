@@ -25,7 +25,6 @@ public class QuoteController implements Initializable {
 
 	private static final Logger LOGGER = Logger.getLogger(QuoteController.class.getName());
 
-	// look at this
 //	@Autowired
 	private QuoteUI UIservice;
 
@@ -72,7 +71,7 @@ public class QuoteController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		this.UIservice = new QuoteUI();
+//		this.UIservice = new QuoteUI();
 
 		System.out.println(this.UIservice.hola());
 
