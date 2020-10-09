@@ -13,9 +13,11 @@ import javafx.fxml.Initializable;
 @Controller
 public class DeathController implements Initializable {
 
-	private static final Logger LOGGER = Logger.getLogger(CharacterController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DeathController.class.getName());
 
 	public DeathController() {
+
+		LOGGER.info("Obj Constructor");
 
 		try {
 			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/"));

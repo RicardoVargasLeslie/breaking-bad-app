@@ -23,7 +23,8 @@ import lombok.Getter;
 @Controller
 public class QuoteController implements Initializable {
 
-	private static final Logger LOGGER = Logger.getLogger(MainController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(QuoteController.class.getName());
+
 	// look at this
 //	@Autowired
 	private QuoteUI UIservice;
@@ -54,6 +55,8 @@ public class QuoteController implements Initializable {
 	private Label quoteLabel, seriesLabel, quote_idLabel;
 
 	public QuoteController() {
+
+		LOGGER.info("Obj Constructor");
 
 		try {
 			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));

@@ -46,6 +46,8 @@ public class TabPaneController implements Initializable {
 	public TabPaneController() {
 		this.quoteController = new QuoteController();
 
+		LOGGER.info("Obj Constructor");
+
 		try {
 			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/paneView.fxml"));
 			loader.setController(this);

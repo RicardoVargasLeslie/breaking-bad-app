@@ -17,6 +17,8 @@ public class EpisodeController implements Initializable {
 
 	public EpisodeController() {
 
+		LOGGER.info("Obj Constructor");
+
 		try {
 			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/"));
 			loader.setController(this);

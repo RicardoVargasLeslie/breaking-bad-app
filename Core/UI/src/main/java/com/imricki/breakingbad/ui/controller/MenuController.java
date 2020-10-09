@@ -1,6 +1,7 @@
 package com.imricki.breakingbad.ui.controller;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import org.springframework.stereotype.Controller;
 
@@ -16,9 +17,11 @@ public class MenuController {
 	@Getter
 	private MenuBar menuBar;
 
-	private static final Logger LOGGER = Logger.getLogger(StringToLocaldDateConverter.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MenuController.class.getName());
 
 	public MenuController() {
+
+		LOGGER.info("Obj Constructor");
 
 		try {
 			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/"));
