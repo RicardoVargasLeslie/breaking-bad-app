@@ -1,10 +1,11 @@
 package com.imricki.breakingbad.ui.controller;
 
+import java.io.IOException;
+
 import org.springframework.stereotype.Controller;
 
-import com.imricki.breakingbad.ui.utils.LoaderUtils;
-
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.MenuBar;
 import lombok.Getter;
 
@@ -17,7 +18,14 @@ public class MenuController {
 
 	public MenuController() {
 
-		LoaderUtils.loadView("/fx/menuView.fxml", this);
+		try {
+			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
+			loader.setController(this);
+			loader.load();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
 	}
 
 }
