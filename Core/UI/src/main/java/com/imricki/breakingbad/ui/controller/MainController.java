@@ -2,6 +2,7 @@ package com.imricki.breakingbad.ui.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,8 @@ import lombok.Getter;
 
 @Controller
 public class MainController implements Initializable {
+
+	private static final Logger LOGGER = Logger.getLogger(MainController.class.getName());
 
 	@FXML
 	@Getter

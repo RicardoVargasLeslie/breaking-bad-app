@@ -16,6 +16,8 @@ public class MenuController {
 	@Getter
 	private MenuBar menuBar;
 
+	private static final Logger LOGGER = Logger.getLogger(StringToLocaldDateConverter.class.getName());
+
 	public MenuController() {
 
 		try {

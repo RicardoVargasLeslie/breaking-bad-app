@@ -3,6 +3,7 @@ package com.imricki.breakingbad.ui.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 import org.springframework.stereotype.Controller;
 
@@ -22,6 +23,7 @@ import lombok.Getter;
 @Controller
 public class QuoteController implements Initializable {
 
+	private static final Logger LOGGER = Logger.getLogger(MainController.class.getName());
 	// look at this
 //	@Autowired
 	private QuoteUI UIservice;
