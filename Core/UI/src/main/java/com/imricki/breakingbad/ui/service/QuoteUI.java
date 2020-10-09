@@ -7,6 +7,7 @@ import com.imricki.breakingbad.ui.model.QuoteModel;
 
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
 
 @Service
 public class QuoteUI implements QuoteUIService {
@@ -19,7 +20,7 @@ public class QuoteUI implements QuoteUIService {
 
 		System.err.println("Holaaaaaaaaaaaaa getAll");
 
-		ListProperty<QuoteModel> list = new SimpleListProperty<>();
+		ListProperty<QuoteModel> list = new SimpleListProperty<>(FXCollections.observableArrayList());
 
 		list.add(new QuoteModel(new QuoteDto(3, "rrr", "ggg", "ffff")));
 

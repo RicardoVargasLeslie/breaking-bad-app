@@ -1,13 +1,11 @@
 package com.imricki.breakingbad.ui.controller;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 import org.springframework.stereotype.Controller;
 
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
 @Controller
@@ -19,14 +17,14 @@ public class DeathController implements Initializable {
 
 		LOGGER.info("Obj Constructor");
 
-		try {
-			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/"));
-			loader.setController(this);
-			loader.load();
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
+//		try {
+//			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/"));
+//			loader.setController(this);
+//			loader.load();
+//		} catch (IOException e) {
+//
+//			e.printStackTrace();
+//		}
 	}
 
 	@Override
