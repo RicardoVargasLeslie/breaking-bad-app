@@ -71,19 +71,19 @@ public class QuoteController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		this.UIservice = new QuoteUI();
-
-		System.out.println(this.UIservice.hola());
-
-		System.err.println(this.UIservice.getAll());
-
-		this.tableView.itemsProperty().bind(this.UIservice.getAll());
-
-//		// set cell value
-		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());
-		this.quoteCol.setCellValueFactory(v -> v.getValue().getQuote());
-		this.authorCol.setCellValueFactory(v -> v.getValue().getAuthor());
-		this.seriesCol.setCellValueFactory(v -> v.getValue().getSeries());
+//		this.UIservice = new QuoteUI();
+//
+//		System.out.println(this.UIservice.hola());
+//
+//		System.err.println(this.UIservice.getAll());
+//
+//		this.tableView.itemsProperty().bind(this.UIservice.getAll());
+//
+////		// set cell value
+//		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());
+//		this.quoteCol.setCellValueFactory(v -> v.getValue().getQuote());
+//		this.authorCol.setCellValueFactory(v -> v.getValue().getAuthor());
+//		this.seriesCol.setCellValueFactory(v -> v.getValue().getSeries());
 
 	}
 
