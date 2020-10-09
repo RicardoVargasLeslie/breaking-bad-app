@@ -15,7 +15,7 @@ public class CharacterController implements Initializable {
 	public CharacterController() {
 
 		try {
-			FXMLLoader loader = new FXMLLoader(this.getClass().getResource(""));
+			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/"));
 			loader.setController(this);
 			loader.load();
 		} catch (IOException e) {

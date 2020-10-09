@@ -15,7 +15,7 @@ public class DeathController implements Initializable {
 	public DeathController() {
 
 		try {
-			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
+			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/"));
 			loader.setController(this);
 			loader.load();
 		} catch (IOException e) {

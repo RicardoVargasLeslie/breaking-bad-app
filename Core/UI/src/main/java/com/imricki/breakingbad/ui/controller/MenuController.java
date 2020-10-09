@@ -19,7 +19,7 @@ public class MenuController {
 	public MenuController() {
 
 		try {
-			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
+			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/"));
 			loader.setController(this);
 			loader.load();
 		} catch (IOException e) {
