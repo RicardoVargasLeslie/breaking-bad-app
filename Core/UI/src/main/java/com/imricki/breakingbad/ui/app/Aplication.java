@@ -28,7 +28,7 @@ public class Aplication {
 	public CommandLineRunner run() throws Exception {
 		return args -> {
 
-			this.client.getAll().forEach(e -> System.out.println(e));
+//			this.client.getAll().forEach(e -> System.out.println(e));
 
 		};
 	}

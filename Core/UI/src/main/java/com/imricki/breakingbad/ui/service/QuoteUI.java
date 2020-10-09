@@ -1,9 +1,12 @@
 package com.imricki.breakingbad.ui.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.domain.service.QuoteClient;
 import com.imricki.breakingbad.ui.dto.QuoteDto;
 import com.imricki.breakingbad.ui.model.QuoteModel;
@@ -17,28 +20,22 @@ import javafx.collections.FXCollections;
 public class QuoteUI implements QuoteUIService {
 
 	@Autowired
-	private QuoteClient service = new QuoteClient();
+	private QuoteClient service;
 
 	@Override
 	public ListProperty<QuoteModel> getAll() {
 
-		System.err.println("Holaaaaaaaaaaaaa getAll");
+		List<QuoteItem> items = this.service.getAll();
 
-		ListProperty<QuoteModel> list = new SimpleListProperty<>(FXCollections.observableArrayList());
+		ListProperty<QuoteModel> properties = new SimpleListProperty<>(FXCollections.observableArrayList());
 
-		list.add(new QuoteModel(new QuoteDto(3, "rrr", "ggg", "ffff")));
+		for (QuoteItem item : items) {
 
-//		list.forEach(System.out::println);
+			properties.add(new QuoteModel(
+					new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries())));
+		}
+		return properties;
 
-		this.service.getAll().forEach(e -> System.err.println(e));
-
-		return list;
-
-	}
-
-	public String hola() {
-
-		return "pepe";
 	}
 
 //	@Override
