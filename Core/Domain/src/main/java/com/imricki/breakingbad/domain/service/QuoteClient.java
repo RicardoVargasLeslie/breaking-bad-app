@@ -13,11 +13,7 @@ import com.imricki.breakingbad.domain.dto.Quote;
 import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
-
 @Service
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @ConfigurationProperties
 public class QuoteClient implements QuoteService {
 
@@ -36,10 +32,17 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public List<QuoteItem> getAll() {
 
+		System.err.println("Get all de la llamadaa");
+
 		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
 				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
 
-		return ObjectMapperUtils.mapAll(unmarshalledList, QuoteItem.class);
+		for (Quote quote : unmarshalledList) {
+
+			System.out.println(quote.toString());
+		}
+
+		return null;
 
 	}
 
