@@ -71,7 +71,9 @@ public class QuoteController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-//		this.UIservice = new QuoteUI();
+		this.UIservice = new QuoteUI();
+
+		this.UIservice.getAll().forEach(e -> System.err.println(e.toString()));
 //
 //		System.out.println(this.UIservice.hola());
 //

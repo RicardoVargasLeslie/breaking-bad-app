@@ -1,11 +1,13 @@
 package com.imricki.breakingbad.domain.service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
@@ -15,6 +17,7 @@ import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
 @Service
 @ConfigurationProperties
+@Lazy
 public class QuoteClient implements QuoteService {
 
 	@Autowired
@@ -34,6 +37,8 @@ public class QuoteClient implements QuoteService {
 
 		System.err.println("Get all de la llamadaa");
 
+		List<QuoteItem> list = new ArrayList<>();
+
 		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
 				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
 
@@ -42,7 +47,12 @@ public class QuoteClient implements QuoteService {
 			System.out.println(quote.toString());
 		}
 
-		return null;
+		for (Quote quote : unmarshalledList) {
+
+			list.add(new QuoteItem(quote.getQuote_id(), quote.getQuote(), quote.getAuthor(), quote.getAuthor()));
+		}
+
+		return list;
 
 	}
 

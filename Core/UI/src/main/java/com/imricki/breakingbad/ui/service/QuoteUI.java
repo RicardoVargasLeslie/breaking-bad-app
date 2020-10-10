@@ -16,11 +16,11 @@ import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 
 @Service
-@Lazy
 public class QuoteUI implements QuoteUIService {
 
 	@Autowired
-	private QuoteClient service;
+	@Lazy
+	private QuoteClient service = new QuoteClient();
 
 	@Override
 	public ListProperty<QuoteModel> getAll() {
