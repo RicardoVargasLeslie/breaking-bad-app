@@ -3,7 +3,6 @@ package com.imricki.breakingbad.ui.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.item.QuoteItem;
@@ -19,7 +18,6 @@ import javafx.collections.FXCollections;
 public class QuoteUI implements QuoteUIService {
 
 	@Autowired
-	@Lazy
 	private QuoteClient service = new QuoteClient();
 
 	@Override
