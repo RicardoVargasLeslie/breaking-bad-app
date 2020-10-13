@@ -1,6 +1,5 @@
 package com.imricki.breakingbad.domain.service;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -31,27 +30,14 @@ public class QuoteClient implements QuoteService {
 	private String quoteByid;
 
 	@Override
-	public List<QuoteItem> getAll() {
+	public List<Quote> getAll() {
 
 		System.err.println("Get all de la llamadaa");
-
-		List<QuoteItem> list = new ArrayList<>();
 
 		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
 				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
 
-		for (Quote quote : unmarshalledList) {
-
-			System.out.println(quote.toString());
-		}
-
-		for (Quote quote : unmarshalledList) {
-
-			list.add(new QuoteItem(quote.getQuote_id(), quote.getQuote(), quote.getAuthor(), quote.getAuthor()));
-		}
-
-		return list;
-
+		return unmarshalledList;
 	}
 
 	@Override
