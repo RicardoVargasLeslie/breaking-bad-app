@@ -73,8 +73,10 @@ public class QuoteController implements Initializable {
 
 		this.UIservice = new QuoteUI();
 
-		this.UIservice.getAll().forEach(e -> System.err.println(e.toString()));
-//
+		LOGGER.info("initialize------------>Controller");
+
+		this.UIservice.getAll();
+		LOGGER.info("Called GetAll from------------>UIservice");
 //		System.out.println(this.UIservice.hola());
 //
 //		System.err.println(this.UIservice.getAll());
