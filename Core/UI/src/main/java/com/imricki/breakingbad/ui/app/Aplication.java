@@ -13,9 +13,6 @@ public class Aplication {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(Aplication.class);
 
-//	@Autowired
-//	QuoteClient client;
-
 	public static void main(String[] args) {
 
 		Application.launch(FxAppication.class, args);
@@ -24,8 +21,6 @@ public class Aplication {
 	@Bean
 	public CommandLineRunner run() throws Exception {
 		return args -> {
-
-//			this.client.getAll().forEach(e -> System.out.println(e));
 
 		};
 	}
