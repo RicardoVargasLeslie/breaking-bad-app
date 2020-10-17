@@ -1,5 +1,6 @@
 package com.imricki.breakingbad.domain.service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -51,7 +52,8 @@ public class QuoteClient implements QuoteService {
 //		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
 //				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
 
-		return null;
+		List<QuoteItem> items = new ArrayList<QuoteItem>();
+		return ObjectMapperUtils.mapAll(quotes, QuoteItem.class);
 	}
 
 	@Override
