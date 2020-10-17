@@ -34,6 +34,8 @@ public class QuoteClient implements QuoteService {
 
 		System.err.println("Get all de la llamadaa");
 
+		// TODO hay que chequear por que la llamada esta devolviendo null
+
 		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
 				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
 
