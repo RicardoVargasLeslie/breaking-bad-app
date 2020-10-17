@@ -54,7 +54,7 @@ public class QuoteController implements Initializable {
 
 	public QuoteController() {
 
-		LOGGER.info("Obj Constructor");
+
 
 		try {
 			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
@@ -71,16 +71,7 @@ public class QuoteController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 
 		this.UIservice = new QuoteUI();
-
-		LOGGER.info("initialize------------>Controller");
-
-		this.UIservice.getAll();
 		LOGGER.info("Called GetAll from------------>UIservice");
-
-		System.err.println("Piveee");
-
-		this.UIservice.getAll().forEach(e -> System.out.println(e.toString()));
-
 		this.tableView.itemsProperty().bind(this.UIservice.getAll());
 
 		// set cell value

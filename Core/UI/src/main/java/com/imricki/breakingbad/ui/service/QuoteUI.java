@@ -3,7 +3,6 @@ package com.imricki.breakingbad.ui.service;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.item.QuoteItem;
@@ -20,8 +19,8 @@ public class QuoteUI implements QuoteUIService {
 
 	private static final Logger LOGGER = Logger.getLogger(QuoteUI.class.getName());
 
-	@Autowired
-	private QuoteClient service;
+	//	@Autowired
+	private QuoteClient service=new QuoteClient();
 
 	@Override
 	public ListProperty<QuoteModel> getAll() {

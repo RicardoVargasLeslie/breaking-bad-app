@@ -17,8 +17,7 @@ import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 @ConfigurationProperties
 public class QuoteClient implements QuoteService {
 
-//	@Autowired
-//	private ClientBuilder clientBuilder;
+	private RestTemplate restTemplate = new RestTemplate();
 
 	@Value(value = "${api.base.url}")
 	private String baseUrl;
@@ -32,16 +31,11 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public List<QuoteItem> getAll() {
 
-		RestTemplate restTemplate = new RestTemplate();
-
-		ResponseEntity<Quote[]> response = restTemplate.getForEntity("https://www.breakingbadapi.com/api/quotes",
+		ResponseEntity<Quote[]> response = this.restTemplate.getForEntity("https://www.breakingbadapi.com/api/quotes",
 				Quote[].class);
 		Quote[] Quote = response.getBody();
 
 		List<Quote> quotes = Arrays.asList(Quote);
-
-//		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
-//				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
 
 		return ObjectMapperUtils.mapAll(quotes, QuoteItem.class);
 	}
