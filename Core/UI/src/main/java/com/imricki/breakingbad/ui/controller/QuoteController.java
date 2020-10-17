@@ -77,6 +77,11 @@ public class QuoteController implements Initializable {
 
 		this.UIservice.getAll();
 		LOGGER.info("Called GetAll from------------>UIservice");
+
+		System.err.println("Piveee");
+
+		this.UIservice.getAll().forEach(e -> System.out.println(e.toString()));
+
 //		System.out.println(this.UIservice.hola());
 //
 //		System.err.println(this.UIservice.getAll());
