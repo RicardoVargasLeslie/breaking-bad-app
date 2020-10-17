@@ -1,5 +1,6 @@
 package com.imricki.breakingbad.domain.service;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,10 +44,14 @@ public class QuoteClient implements QuoteService {
 				Quote[].class);
 		Quote[] Quote = response.getBody();
 
+		List<Quote> quotes = Arrays.asList(Quote);
+
+		quotes.forEach(e -> System.out.print(e));
+
 //		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
 //				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
 
-		return unmarshalledList;
+		return null;
 	}
 
 	@Override
