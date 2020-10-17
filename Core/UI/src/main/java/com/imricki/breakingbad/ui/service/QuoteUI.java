@@ -27,17 +27,19 @@ public class QuoteUI implements QuoteUIService {
 	public ListProperty<QuoteModel> getAll() {
 
 		LOGGER.info("Called GetAll from------------>QuoteUI");
+		ListProperty<QuoteModel> fxList = new SimpleListProperty<>(FXCollections.observableArrayList());
+		List<QuoteItem> itemsList = this.service.getAll();
 
-		ListProperty<QuoteModel> properties = new SimpleListProperty<>(FXCollections.observableArrayList());
-		List<QuoteItem> items = this.service.getAll();
+		itemsList.forEach(item -> {
 
-		for (QuoteItem item : items) {
+			fxList.add(new QuoteModel(new QuoteDto(
+					item.getQuote_id(),
+					item.getQuote(),
+					item.getAuthor(),
+					item.getSeries())));
+		});
 
-			properties.add(new QuoteModel(
-					new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries())));
-		}
-		return properties;
-
+		return fxList;
 	}
 
 }

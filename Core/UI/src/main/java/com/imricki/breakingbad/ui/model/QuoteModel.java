@@ -1,17 +1,11 @@
 package com.imricki.breakingbad.ui.model;
 
-import java.util.List;
-
-import com.imricki.breakingbad.domain.item.QuoteItem;
 import com.imricki.breakingbad.ui.dto.QuoteDto;
 
 import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.ListProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.collections.FXCollections;
 
 public class QuoteModel {
 
@@ -68,25 +62,6 @@ public class QuoteModel {
 	public String toString() {
 		return "QuoteModel [quote_id=" + this.getQuote_id().get() + ", quote=" + this.getQuote().get() + ", author="
 				+ this.getAuthor().get() + ", series=" + this.getSeries().get() + "]";
-	}
-
-	public static ListProperty<QuoteModel> tofxList(List<QuoteItem> itemList) {
-
-		ListProperty<QuoteModel> modelList = new SimpleListProperty<>(FXCollections.observableArrayList());
-
-//		modelList.add(new QuoteModel(new QuoteDto(22, "eeee", "rrr", "rrrr")));
-		itemList.stream().forEach(item -> {
-
-			QuoteModel model = new QuoteModel(
-					new QuoteDto(item.getQuote_id(), item.getQuote(), item.getAuthor(), item.getSeries()));
-
-			modelList.add(model);
-
-			System.err.println("Chocaaaaapic!");
-		});
-//
-//		return modelList;
-		return modelList;
 	}
 
 }
