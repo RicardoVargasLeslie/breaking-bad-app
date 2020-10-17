@@ -1,12 +1,13 @@
 package com.imricki.breakingbad.domain.service;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
 import com.imricki.breakingbad.domain.dto.Quote;
@@ -30,14 +31,19 @@ public class QuoteClient implements QuoteService {
 	private String quoteByid;
 
 	@Override
-	public List<Quote> getAll() {
+	public List<QuoteItem> getAll() {
 
 		System.err.println("Get all de la llamadaa");
 
 		// TODO hay que chequear por que la llamada esta devolviendo null
 
-		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
-				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
+		RestTemplate restTemplate = new RestTemplate();
+
+		ResponseEntity<Quote[]> response = restTemplate.getForEntity("http://localhost:8080/employees/", Quote[].class);
+		Quote[] Quote = response.getBody();
+
+//		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
+//				.build().get().uri(this.allQuotes).retrieve().bodyToMono(Quote[].class).block());
 
 		return unmarshalledList;
 	}
