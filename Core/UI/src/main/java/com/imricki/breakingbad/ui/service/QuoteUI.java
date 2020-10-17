@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.item.QuoteItem;
@@ -17,7 +16,6 @@ import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
 
 @Service
-@Lazy
 public class QuoteUI implements QuoteUIService {
 
 	private static final Logger LOGGER = Logger.getLogger(QuoteUI.class.getName());

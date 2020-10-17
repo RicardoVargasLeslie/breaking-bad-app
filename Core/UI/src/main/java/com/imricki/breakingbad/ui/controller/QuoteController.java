@@ -5,8 +5,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.model.QuoteModel;
@@ -27,8 +25,6 @@ public class QuoteController implements Initializable {
 
 	private static final Logger LOGGER = Logger.getLogger(QuoteController.class.getName());
 
-	@Autowired
-	@Lazy
 	private QuoteUI UIservice;
 
 	@FXML
@@ -74,7 +70,7 @@ public class QuoteController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-//		this.UIservice = new QuoteUI();
+		this.UIservice = new QuoteUI();
 
 		LOGGER.info("initialize------------>Controller");
 
