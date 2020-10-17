@@ -39,7 +39,8 @@ public class QuoteClient implements QuoteService {
 
 		RestTemplate restTemplate = new RestTemplate();
 
-		ResponseEntity<Quote[]> response = restTemplate.getForEntity("http://localhost:8080/employees/", Quote[].class);
+		ResponseEntity<Quote[]> response = restTemplate.getForEntity("https://www.breakingbadapi.com/api/quotes",
+				Quote[].class);
 		Quote[] Quote = response.getBody();
 
 //		List<Quote> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
