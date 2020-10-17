@@ -86,7 +86,7 @@ public class QuoteController implements Initializable {
 //
 //		System.err.println(this.UIservice.getAll());
 //
-//		this.tableView.itemsProperty().bind(this.UIservice.getAll());
+		this.tableView.itemsProperty().bind(this.UIservice.getAll());
 //
 ////		// set cell value
 		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());
