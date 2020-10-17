@@ -5,6 +5,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.model.QuoteModel;
@@ -25,7 +27,8 @@ public class QuoteController implements Initializable {
 
 	private static final Logger LOGGER = Logger.getLogger(QuoteController.class.getName());
 
-//	@Autowired getting NP
+	@Autowired
+	@Lazy
 	private QuoteUI UIservice;
 
 	@FXML
@@ -71,7 +74,7 @@ public class QuoteController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		this.UIservice = new QuoteUI();
+//		this.UIservice = new QuoteUI();
 
 		LOGGER.info("initialize------------>Controller");
 
@@ -82,13 +85,9 @@ public class QuoteController implements Initializable {
 
 		this.UIservice.getAll().forEach(e -> System.out.println(e.toString()));
 
-//		System.out.println(this.UIservice.hola());
-//
-//		System.err.println(this.UIservice.getAll());
-//
 		this.tableView.itemsProperty().bind(this.UIservice.getAll());
-//
-////		// set cell value
+
+		// set cell value
 		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());
 		this.quoteCol.setCellValueFactory(v -> v.getValue().getQuote());
 		this.authorCol.setCellValueFactory(v -> v.getValue().getAuthor());
