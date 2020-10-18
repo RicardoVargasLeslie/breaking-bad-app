@@ -1,6 +1,5 @@
 package com.imricki.breakingbad.domain.service;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,10 +8,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.clientbuilder.ClientBuilder;
-import com.imricki.breakingbad.domain.dto.Death;
 import com.imricki.breakingbad.domain.dto.DeathCount;
 import com.imricki.breakingbad.domain.item.DeathItem;
-import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -25,8 +22,6 @@ public class DeathClient implements DeathService {
 	@Autowired
 	private ClientBuilder clientBuilder;
 
-	@Value(value = "${api.base.url}")
-	private String baseUrl;
 	@Value(value = "${api.random.death}")
 	private String randomDeath;
 	@Value(value = "${api.all.deaths}")
@@ -35,19 +30,21 @@ public class DeathClient implements DeathService {
 	@Override
 	public List<DeathItem> getAll() {
 
-		List<Death> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
-				.build().get().uri(this.allDeaths).retrieve().bodyToMono(Death[].class).block());
+//		List<Death> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
+//				.build().get().uri(this.allDeaths).retrieve().bodyToMono(Death[].class).block());
 
-		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
+//		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
+		return null;
 	}
 
 	@Override
 	public DeathItem getRandom() {
 
-		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl).build().get()
-				.uri(this.randomDeath).retrieve().bodyToFlux(Death.class).blockFirst();
-
-		return ObjectMapperUtils.map(unmarshalledDeath, DeathItem.class);
+//		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl).build().get()
+//				.uri(this.randomDeath).retrieve().bodyToFlux(Death.class).blockFirst();
+//
+//		return ObjectMapperUtils.map(unmarshalledDeath, DeathItem.class);
+		return null;
 	}
 
 	@Override

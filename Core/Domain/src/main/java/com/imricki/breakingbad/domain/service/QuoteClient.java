@@ -19,8 +19,6 @@ public class QuoteClient implements QuoteService {
 
 	private RestTemplate restTemplate = new RestTemplate();
 
-	@Value(value = "${api.base.url}")
-	private String baseUrl;
 	@Value(value = "${api.random.quote}")
 	private String randomQuote;
 	@Value(value = "${api.all.quotes}")
