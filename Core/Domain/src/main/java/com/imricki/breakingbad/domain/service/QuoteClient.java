@@ -33,11 +33,11 @@ public class QuoteClient implements QuoteService {
 
 		ResponseEntity<Quote[]> response = this.restTemplate.getForEntity("https://www.breakingbadapi.com/api/quotes",
 				Quote[].class);
-		Quote[] Quote = response.getBody();
+		Quote[] quoteArray = response.getBody();
 
-		List<Quote> quotes = Arrays.asList(Quote);
+		List<Quote> quoteList = Arrays.asList(quoteArray);
 
-		return ObjectMapperUtils.mapAll(quotes, QuoteItem.class);
+		return ObjectMapperUtils.mapAll(quoteList, QuoteItem.class);
 	}
 
 	@Override
