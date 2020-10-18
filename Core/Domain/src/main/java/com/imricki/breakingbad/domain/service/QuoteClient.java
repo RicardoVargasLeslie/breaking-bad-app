@@ -31,8 +31,7 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public List<QuoteItem> getAll() {
 
-		ResponseEntity<Quote[]> response = this.restTemplate.getForEntity("https://www.breakingbadapi.com/api/quotes",
-				Quote[].class);
+		ResponseEntity<Quote[]> response = this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
 		Quote[] quoteArray = response.getBody();
 
 		List<Quote> quoteList = Arrays.asList(quoteArray);
@@ -43,19 +42,12 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public QuoteItem getRandom() {
 
-//		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl).build().get()
-//				.uri(this.randomQuote).retrieve().bodyToFlux(Quote.class).blockFirst();
-//
 		return null;
 	}
 
 	@Override
 	public QuoteItem findBy(int id) {
 
-//		Quote unmarshalledQuote = this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl).build().get()
-//				.uri(this.quoteByid + id).retrieve().bodyToFlux(Quote.class).blockFirst();
-//
-//		return ObjectMapperUtils.map(unmarshalledQuote, QuoteItem.class);
 		return null;
 
 	}

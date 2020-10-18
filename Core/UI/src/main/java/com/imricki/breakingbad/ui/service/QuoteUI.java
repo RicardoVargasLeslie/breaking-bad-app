@@ -20,7 +20,7 @@ public class QuoteUI implements QuoteUIService {
 	private static final Logger LOGGER = Logger.getLogger(QuoteUI.class.getName());
 
 	//	@Autowired
-	private QuoteClient service=new QuoteClient();
+	private QuoteClient service =new QuoteClient();
 
 	@Override
 	public ListProperty<QuoteModel> getAll() {
