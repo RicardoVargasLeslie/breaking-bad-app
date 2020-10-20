@@ -1,8 +1,11 @@
 package com.imricki.breakingbad.domain.clientbuilder;
 
+import java.time.Duration;
+
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.client.RestTemplate;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -12,9 +15,12 @@ import lombok.NoArgsConstructor;
 public class ClientBuilder {
 
 	@Bean
-	public WebClient.Builder getWebClientBuilder() {
+	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 
-		return WebClient.builder();
+		return builder
+				.setConnectTimeout(Duration.ofMillis(3000))
+				.setReadTimeout(Duration.ofMillis(3000))
+				.build();
 	}
 
 }

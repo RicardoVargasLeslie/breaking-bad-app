@@ -3,6 +3,7 @@ package com.imricki.breakingbad.domain.service;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,8 @@ import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 @ConfigurationProperties
 public class QuoteClient implements QuoteService {
 
-	private RestTemplate restTemplate = new RestTemplate();
+	@Autowired
+	private RestTemplate restTemplate;
 
 	@Value(value = "${api.random.quote}")
 	private String randomQuote;

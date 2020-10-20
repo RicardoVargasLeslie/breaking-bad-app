@@ -1,6 +1,5 @@
 package com.imricki.breakingbad.ui.controller;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
@@ -9,9 +8,9 @@ import org.springframework.stereotype.Controller;
 
 import com.imricki.breakingbad.ui.model.QuoteModel;
 import com.imricki.breakingbad.ui.service.QuoteUI;
+import com.imricki.breakingbad.ui.utils.LoaderUtils;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -54,16 +53,16 @@ public class QuoteController implements Initializable {
 
 	public QuoteController() {
 
+		LoaderUtils.loadView("/fx/quoteView.fxml", this);
 
-
-		try {
-			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
-			loader.setController(this);
-			loader.load();
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
+		//		try {
+		//			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
+		//			loader.setController(this);
+		//			loader.load();
+		//		} catch (IOException e) {
+		//
+		//			e.printStackTrace();
+		//		}
 
 	}
 
