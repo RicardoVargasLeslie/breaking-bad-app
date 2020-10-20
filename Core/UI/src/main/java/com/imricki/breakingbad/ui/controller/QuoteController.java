@@ -55,14 +55,7 @@ public class QuoteController implements Initializable {
 
 		LoaderUtils.loadView("/fx/quoteView.fxml", this);
 
-		//		try {
-		//			FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fx/quoteView.fxml"));
-		//			loader.setController(this);
-		//			loader.load();
-		//		} catch (IOException e) {
-		//
-		//			e.printStackTrace();
-		//		}
+
 
 	}
 
