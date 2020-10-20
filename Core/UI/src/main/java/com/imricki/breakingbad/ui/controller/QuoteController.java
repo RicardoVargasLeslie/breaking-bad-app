@@ -55,8 +55,6 @@ public class QuoteController implements Initializable {
 
 		LoaderUtils.loadView("/fx/quoteView.fxml", this);
 
-
-
 	}
 
 	@Override
@@ -65,7 +63,6 @@ public class QuoteController implements Initializable {
 		this.UIservice = new QuoteUI();
 		LOGGER.info("Called GetAll from------------>UIservice");
 		this.tableView.itemsProperty().bind(this.UIservice.getAll());
-
 		// set cell value
 		this.idCol.setCellValueFactory(v -> v.getValue().getQuote_id());
 		this.quoteCol.setCellValueFactory(v -> v.getValue().getQuote());

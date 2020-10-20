@@ -25,19 +25,15 @@ public class QuoteUI implements QuoteUIService {
 	@Override
 	public ListProperty<QuoteModel> getAll() {
 
-		LOGGER.info("Called GetAll from------------>QuoteUI");
 		ListProperty<QuoteModel> fxList = new SimpleListProperty<>(FXCollections.observableArrayList());
 		List<QuoteItem> itemsList = this.service.getAll();
-
 		itemsList.forEach(item -> {
-
 			fxList.add(new QuoteModel(new QuoteDto(
 					item.getQuote_id(),
 					item.getQuote(),
 					item.getAuthor(),
 					item.getSeries())));
 		});
-
 		return fxList;
 	}
 

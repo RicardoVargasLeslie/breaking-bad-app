@@ -11,6 +11,9 @@ public final class ObjectMapperUtils {
 
 	private static ModelMapper modelMapper;
 
+	private  ObjectMapperUtils() {
+
+	}
 	static {
 		modelMapper = new ModelMapper();
 		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
@@ -22,15 +25,6 @@ public final class ObjectMapperUtils {
 
 	public static <D, T> List<D> mapAll(final Collection<T> entityList, Class<D> outCLass) {
 		return entityList.stream().map(entity -> map(entity, outCLass)).collect(Collectors.toList());
-	}
-
-	public static <S, D> D mapProperties(final S source, D destination) {
-
-		modelMapper = new ModelMapper();
-		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
-
-		modelMapper.map(source, destination);
-		return destination;
 	}
 
 }
