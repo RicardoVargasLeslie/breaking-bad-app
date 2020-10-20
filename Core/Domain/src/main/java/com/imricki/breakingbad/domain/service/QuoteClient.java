@@ -31,7 +31,8 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public List<QuoteItem> getAll() {
 
-		ResponseEntity<Quote[]> response = this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
+		ResponseEntity<Quote[]> response =
+				this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
 		Quote[] quoteArray = response.getBody();
 
 		List<Quote> quoteList = Arrays.asList(quoteArray);
@@ -42,13 +43,22 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public QuoteItem getRandom() {
 
-		return null;
+
+		ResponseEntity<Quote> response =
+				this.restTemplate.getForEntity(this.randomQuote, Quote.class);
+
+		return ObjectMapperUtils.map(response.getBody(), QuoteItem.class);
 	}
 
 	@Override
 	public QuoteItem findBy(int id) {
 
-		return null;
+
+		ResponseEntity<Quote> response =
+				this.restTemplate.getForEntity(this.quoteByid, Quote.class);
+
+
+		return ObjectMapperUtils.map(response.getBody(), QuoteItem.class);
 
 	}
 
