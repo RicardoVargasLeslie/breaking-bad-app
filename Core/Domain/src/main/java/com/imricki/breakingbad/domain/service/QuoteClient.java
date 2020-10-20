@@ -34,32 +34,24 @@ public class QuoteClient implements QuoteService {
 		ResponseEntity<Quote[]> response =
 				this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
 		Quote[] quoteArray = response.getBody();
-
 		List<Quote> quoteList = Arrays.asList(quoteArray);
-
 		return ObjectMapperUtils.mapAll(quoteList, QuoteItem.class);
 	}
 
 	@Override
 	public QuoteItem getRandom() {
 
-
 		ResponseEntity<Quote> response =
 				this.restTemplate.getForEntity(this.randomQuote, Quote.class);
-
 		return ObjectMapperUtils.map(response.getBody(), QuoteItem.class);
 	}
 
 	@Override
 	public QuoteItem findBy(int id) {
 
-
 		ResponseEntity<Quote> response =
 				this.restTemplate.getForEntity(this.quoteByid, Quote.class);
-
-
 		return ObjectMapperUtils.map(response.getBody(), QuoteItem.class);
-
 	}
 
 }
