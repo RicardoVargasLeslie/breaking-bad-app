@@ -34,6 +34,8 @@ public class QuoteUI implements QuoteUIService {
 					item.getAuthor(),
 					item.getSeries())));
 		});
+
+		fxList.forEach(e-> System.out.println(e.toString()));
 		return fxList;
 	}
 

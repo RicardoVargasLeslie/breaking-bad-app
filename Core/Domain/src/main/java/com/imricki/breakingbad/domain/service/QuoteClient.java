@@ -35,6 +35,8 @@ public class QuoteClient implements QuoteService {
 				this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
 		Quote[] quoteArray = response.getBody();
 		List<Quote> quoteList = Arrays.asList(quoteArray);
+
+		quoteList.forEach(e-> System.out.println(e.toString()));
 		return ObjectMapperUtils.mapAll(quoteList, QuoteItem.class);
 	}
 
