@@ -3,6 +3,8 @@ package com.imricki.breakingbad.domain.service;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -19,7 +21,7 @@ import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 public class QuoteClient implements QuoteService {
 
 	@Autowired
-	private RestTemplate restTemplate;
+	private RestTemplate restTemplate=new RestTemplate();
 
 	@Value(value = "${api.random.quote}")
 	private String randomQuote;
@@ -28,12 +30,18 @@ public class QuoteClient implements QuoteService {
 	@Value(value = "${api.quote.by.id}")
 	private String quoteByid;
 
+	@PostConstruct
 	@Override
 	public List<QuoteItem> getAll() {
 
-		ResponseEntity<Quote[]> response =
-				this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
+		//		ResponseEntity<Quote[]> response =
+		//				this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
+		//		Quote[] quoteArray = response.getBody();
+		//		List<Quote> quoteList = Arrays.asList(quoteArray);
+
+		ResponseEntity<Quote[]> response = this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
 		Quote[] quoteArray = response.getBody();
+
 		List<Quote> quoteList = Arrays.asList(quoteArray);
 
 		quoteList.forEach(e-> System.out.println(e.toString()));
