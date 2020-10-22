@@ -35,8 +35,6 @@ public class QuoteUI implements QuoteUIService {
 					item.getAuthor(),
 					item.getSeries())));
 		});
-
-		fxList.forEach(e-> System.out.println(e.toString()));
 		return fxList;
 	}
 
@@ -50,7 +48,7 @@ public class QuoteUI implements QuoteUIService {
 	public QuoteModel findBy(int id) {
 
 		return ObjectMapperUtils.map(this.client.findBy(id), QuoteModel.class);
-	};
+	}
 }
 
 
