@@ -17,7 +17,7 @@ import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 public class QuoteClient implements QuoteService {
 
 	@Autowired
-	private RestTemplate restTemplate=new RestTemplate();
+	private RestTemplate restTemplate = new RestTemplate();
 
 	//@Value(value = "${api.random.quote}")
 	private String randomQuote="https://www.breakingbadapi.com/api/quote/random";
@@ -30,7 +30,8 @@ public class QuoteClient implements QuoteService {
 	@Override
 	public List<QuoteItem> getAll() {
 
-		ResponseEntity<Quote[]> response = this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
+		ResponseEntity<Quote[]> response =
+				this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
 		Quote[] quoteArray = response.getBody();
 
 		List<Quote> quoteList = Arrays.asList(quoteArray);
