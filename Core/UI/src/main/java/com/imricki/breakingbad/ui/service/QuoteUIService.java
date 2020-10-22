@@ -1,14 +1,11 @@
 package com.imricki.breakingbad.ui.service;
 
-import org.springframework.stereotype.Service;
-
+import com.imricki.breakingbad.domain.service.shared.BaseService;
+import com.imricki.breakingbad.domain.service.shared.FindService;
+import com.imricki.breakingbad.domain.service.shared.RandomService;
 import com.imricki.breakingbad.ui.model.QuoteModel;
 
-import javafx.beans.property.ListProperty;
 
-@Service
-interface QuoteUIService {
-
-	ListProperty<QuoteModel> getAll();
+interface QuoteUIService extends BaseService<QuoteModel>, RandomService<QuoteModel>, FindService<QuoteModel>{
 
 }

@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 import org.springframework.stereotype.Service;
 
 import com.imricki.breakingbad.domain.item.QuoteItem;
+import com.imricki.breakingbad.domain.mapper.ObjectMapperUtils;
 import com.imricki.breakingbad.domain.service.QuoteClient;
 import com.imricki.breakingbad.ui.dto.QuoteDto;
 import com.imricki.breakingbad.ui.model.QuoteModel;
@@ -39,5 +40,18 @@ public class QuoteUI implements QuoteUIService {
 		return fxList;
 	}
 
+	@Override
+	public QuoteModel getRandom() {
 
+		return ObjectMapperUtils.map(this.client.getRandom(), QuoteModel.class);
+	}
+
+	@Override
+	public QuoteModel findBy(int id) {
+
+		return  ObjectMapperUtils.map(this.client.findBy(id), QuoteModel.class);
+	};
 }
+
+
+
