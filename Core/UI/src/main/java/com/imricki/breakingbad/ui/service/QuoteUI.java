@@ -19,14 +19,14 @@ public class QuoteUI implements QuoteUIService {
 
 	private static final Logger LOGGER = Logger.getLogger(QuoteUI.class.getName());
 
-	//	@Autowired
-	private QuoteClient service =new QuoteClient();
+
+	private QuoteClient client = new QuoteClient();
 
 	@Override
 	public ListProperty<QuoteModel> getAll() {
 
 		ListProperty<QuoteModel> fxList = new SimpleListProperty<>(FXCollections.observableArrayList());
-		List<QuoteItem> itemsList = this.service.getAll();
+		List<QuoteItem> itemsList = this.client.getAll();
 		itemsList.forEach(item -> {
 			fxList.add(new QuoteModel(new QuoteDto(
 					item.getQuote_id(),
@@ -38,5 +38,6 @@ public class QuoteUI implements QuoteUIService {
 		fxList.forEach(e-> System.out.println(e.toString()));
 		return fxList;
 	}
+
 
 }
