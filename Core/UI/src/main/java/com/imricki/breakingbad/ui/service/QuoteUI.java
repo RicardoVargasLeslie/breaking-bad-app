@@ -49,7 +49,7 @@ public class QuoteUI implements QuoteUIService {
 	@Override
 	public QuoteModel findBy(int id) {
 
-		return  ObjectMapperUtils.map(this.client.findBy(id), QuoteModel.class);
+		return ObjectMapperUtils.map(this.client.findBy(id), QuoteModel.class);
 	};
 }
 

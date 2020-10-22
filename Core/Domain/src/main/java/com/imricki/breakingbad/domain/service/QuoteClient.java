@@ -33,11 +33,7 @@ public class QuoteClient implements QuoteService {
 		ResponseEntity<Quote[]> response =
 				this.restTemplate.getForEntity(this.allQuotes, Quote[].class);
 		Quote[] quoteArray = response.getBody();
-
-		List<Quote> quoteList = Arrays.asList(quoteArray);
-
-		quoteList.forEach(e-> System.out.println(e.toString()));
-		return ObjectMapperUtils.mapAll(quoteList, QuoteItem.class);
+		return ObjectMapperUtils.mapAll(Arrays.asList(quoteArray), QuoteItem.class);
 	}
 
 	@Override
