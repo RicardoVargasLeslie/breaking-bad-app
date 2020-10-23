@@ -14,8 +14,6 @@ public class Aplication {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Aplication.class);
 
 	public static void main(String[] args) {
-
-
 		Application.launch(FxAppication.class, args);
 	}
 
