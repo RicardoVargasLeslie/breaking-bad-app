@@ -26,16 +26,16 @@ public class QuoteUI implements QuoteUIService {
 	@Override
 	public ListProperty<QuoteModel> getAll() {
 
-		ListProperty<QuoteModel> fxList = new SimpleListProperty<>(FXCollections.observableArrayList());
-		List<QuoteItem> itemsList = this.client.getAll();
-		itemsList.forEach(item -> {
-			fxList.add(new QuoteModel(new QuoteDto(
-					item.getQuote_id(),
-					item.getQuote(),
-					item.getAuthor(),
-					item.getSeries())));
-		});
-		return fxList;
+		ListProperty<QuoteModel> models = new SimpleListProperty<>(FXCollections.observableArrayList());
+		List<QuoteItem> items = this.client.getAll();
+		items.forEach(item ->
+		models.add(new QuoteModel(new QuoteDto(
+				item.getQuote_id(),
+				item.getQuote(),
+				item.getAuthor(),
+				item.getSeries())))
+				);
+		return models;
 	}
 
 	@Override
