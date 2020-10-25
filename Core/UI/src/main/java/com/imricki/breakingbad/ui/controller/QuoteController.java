@@ -1,9 +1,14 @@
 package com.imricki.breakingbad.ui.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Controller;
 
@@ -77,6 +82,31 @@ public class QuoteController implements Initializable {
 		this.quoteCol.setCellValueFactory(v -> v.getValue().getQuote());
 		this.authorCol.setCellValueFactory(v -> v.getValue().getAuthor());
 		this.seriesCol.setCellValueFactory(v -> v.getValue().getSeries());
+
+		//
+		//		List<String> lines1 = this.leerLineaALinea(new File("datos.csv"), Charset.forName("UTF-8"));
+		//		lines1.stream().forEach(l -> {
+		//
+		//	l.split(regex)
+		//			String [] parts = l.split(",");
+		//			String username = parts[0];
+		//			String password = parts[1];
+		//			System.out.println("Usuario: " + parts[0] + " / Contraseña: " + parts[1]);
+		//		});
+
+		//	    stringList.forEach(s -> System.out.println(s));
+
+		List<String> lines1 = this.leerLineaALinea(new File("datos.csv"), StandardCharsets.UTF_8);
+		lines1.stream().map(e -> e.split(",")).collect(Collectors.toList());
+
+
 	}
+
+	private List<String> leerLineaALinea(File file, Charset forName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 
 }
