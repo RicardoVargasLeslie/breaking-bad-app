@@ -30,13 +30,11 @@ public class DeathClient implements DeathService {
 	@Override
 	public List<DeathItem> getAll() {
 
-
 		return null;
 	}
 
 	@Override
 	public DeathItem getRandom() {
-
 
 		return null;
 	}
