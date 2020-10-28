@@ -41,6 +41,7 @@ public class DeathClient implements DeathService {
 
 	@Override
 	public DeathCount deathCount() {
+
 		return null;
 	}
 
