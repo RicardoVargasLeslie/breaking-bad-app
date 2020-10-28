@@ -30,10 +30,7 @@ public class DeathClient implements DeathService {
 	@Override
 	public List<DeathItem> getAll() {
 
-		//		List<Death> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
-		//				.build().get().uri(this.allDeaths).retrieve().bodyToMono(Death[].class).block());
 
-		//		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
 		return null;
 	}
 
