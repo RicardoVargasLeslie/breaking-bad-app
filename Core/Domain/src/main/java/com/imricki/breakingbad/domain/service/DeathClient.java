@@ -30,26 +30,22 @@ public class DeathClient implements DeathService {
 	@Override
 	public List<DeathItem> getAll() {
 
-//		List<Death> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
-//				.build().get().uri(this.allDeaths).retrieve().bodyToMono(Death[].class).block());
+		//		List<Death> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
+		//				.build().get().uri(this.allDeaths).retrieve().bodyToMono(Death[].class).block());
 
-//		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
+		//		return ObjectMapperUtils.mapAll(unmarshalledList, DeathItem.class);
 		return null;
 	}
 
 	@Override
 	public DeathItem getRandom() {
 
-//		Death unmarshalledDeath = this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl).build().get()
-//				.uri(this.randomDeath).retrieve().bodyToFlux(Death.class).blockFirst();
-//
-//		return ObjectMapperUtils.map(unmarshalledDeath, DeathItem.class);
+
 		return null;
 	}
 
 	@Override
 	public DeathCount deathCount() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
