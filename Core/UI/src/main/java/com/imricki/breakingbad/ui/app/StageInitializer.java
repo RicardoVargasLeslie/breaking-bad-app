@@ -19,9 +19,7 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent> {
 
 	private Scene scene;
 
-	public StageInitializer() {
-
-	}
+	public StageInitializer() {	}
 
 	@Override
 	public void onApplicationEvent(StageReadyEvent event) {

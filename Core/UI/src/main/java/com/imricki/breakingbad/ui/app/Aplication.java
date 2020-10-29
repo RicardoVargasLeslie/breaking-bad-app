@@ -21,13 +21,6 @@ public class Aplication {
 	public CommandLineRunner run() throws Exception {
 		return args -> {
 
-			//			RestTemplate restTemplate = new RestTemplate();
-			//
-			//			ResponseEntity<Quote[]> response = restTemplate.getForEntity("https://www.breakingbadapi.com/api/quotes",
-			//					Quote[].class);
-			//			Quote[] Quote = response.getBody();
-			//
-			//			List<Quote> quotes = Arrays.asList(Quote);
 
 		};
 	}

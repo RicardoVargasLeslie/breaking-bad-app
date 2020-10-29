@@ -17,7 +17,6 @@ public class CharacterController implements Initializable {
 
 		LOGGER.info("Obj Constructor");
 
-
 	}
 
 	@Override
