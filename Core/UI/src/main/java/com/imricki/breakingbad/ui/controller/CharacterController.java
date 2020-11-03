@@ -9,12 +9,4 @@ public class CharacterController  {
 
 	private static final Logger LOGGER = Logger.getLogger(CharacterController.class.getName());
 
-	public CharacterController() {
-
-
-
-	}
-
-
-
 }
