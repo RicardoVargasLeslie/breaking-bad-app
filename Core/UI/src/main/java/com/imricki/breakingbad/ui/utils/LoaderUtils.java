@@ -1,7 +1,6 @@
 package com.imricki.breakingbad.ui.utils;
 
 import java.io.IOException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javafx.fxml.FXMLLoader;
@@ -12,7 +11,7 @@ public class LoaderUtils {
 
 	private LoaderUtils() {
 
-		LOGGER.setLevel(Level.SEVERE);
+		//		LOGGER.setLevel(Level.SEVERE);
 	}
 
 	public static void loadView(String view, Object className) {

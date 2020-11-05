@@ -44,7 +44,7 @@ public class TabPaneController implements Initializable {
 	private QuoteController quoteController;
 
 	public TabPaneController() {
-		this.quoteController = new QuoteController();
+
 
 		LOGGER.info("Obj Constructor");
 
@@ -61,10 +61,13 @@ public class TabPaneController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-//		this.characterController = new CharacterController();
-//		this.deathController = new DeathController();
-//		this.episodeController = new EpisodeController();
-		this.quoteTab.setContent(this.quoteController.getBorderPane());
+		//		this.characterController = new CharacterController();
+		//		this.quoteTab.setContent(null);
+		//		this.deathController = new DeathController();
+		//		this.quoteTab.setContent(null);
+		//		this.episodeController = new EpisodeController();
+		//		this.quoteTab.setContent(this.quoteController.getBorderPane());
+
 
 	}
 }
