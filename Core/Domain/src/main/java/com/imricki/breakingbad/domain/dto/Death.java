@@ -19,29 +19,28 @@ public class Death implements Serializable {
 	@Getter(value = AccessLevel.NONE)
 	@Setter(value = AccessLevel.NONE)
 	private static final long serialVersionUID = 1L;
-	
+
 	@JsonProperty("death_id")
 	private int id;
-	
+
 	@JsonProperty("death")
 	private String death;
-	
+
 	@JsonProperty("cause")
 	private String cause;
-	
+
 	@JsonProperty("responsible")
 	private String responsible;
-	
+
 	@JsonProperty("last_words")
 	private String lastWords;
-	
+
 	@JsonProperty("season")
 	private int season;
-	
+
 	@JsonProperty("episode")
 	private int episode;
-	
+
 	@JsonProperty("number_of_deaths")
 	private int numberOfdeaths;
-
 }

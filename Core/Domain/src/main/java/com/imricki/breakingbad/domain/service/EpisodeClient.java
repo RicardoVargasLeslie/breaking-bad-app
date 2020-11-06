@@ -27,12 +27,6 @@ public class EpisodeClient implements EpisodeService {
 	@Override
 	public List<EpisodeItem> getAll() {
 
-//		List<Episode> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
-//				.build().get().uri(this.allEpisodes).retrieve().bodyToMono(Episode[].class).block());
-//
-//		return ObjectMapperUtils.mapAll(unmarshalledList, EpisodeItem.class);
-
 		return null;
-
 	}
 }
