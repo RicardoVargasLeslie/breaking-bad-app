@@ -31,10 +31,7 @@ public class CharacterClient implements CharacterService {
 	@Override
 	public List<CharacterItem> getAll() {
 
-//		List<Character> unmarshalledList = Arrays.asList(this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl)
-//				.build().get().uri(this.allCharacters).retrieve().bodyToMono(Character[].class).block());
-//
-//		return ObjectMapperUtils.mapAll(unmarshalledList, CharacterItem.class);
+
 
 		return null;
 	}
@@ -42,10 +39,7 @@ public class CharacterClient implements CharacterService {
 	@Override
 	public CharacterItem getRandom() {
 
-//		Character unmarshalledCharacter = this.clientBuilder.getWebClientBuilder().baseUrl(this.baseUrl).build().get()
-//				.uri(this.randomCharacter).retrieve().bodyToFlux(Character.class).blockFirst();
-//
-//		return ObjectMapperUtils.map(unmarshalledCharacter, CharacterItem.class);
+
 
 		return null;
 	}
