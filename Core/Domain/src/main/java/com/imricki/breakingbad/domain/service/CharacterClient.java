@@ -31,15 +31,11 @@ public class CharacterClient implements CharacterService {
 	@Override
 	public List<CharacterItem> getAll() {
 
-
-
 		return null;
 	}
 
 	@Override
 	public CharacterItem getRandom() {
-
-
 
 		return null;
 	}
