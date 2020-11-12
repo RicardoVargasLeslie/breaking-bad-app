@@ -61,12 +61,12 @@ public class TabPaneController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		//		this.characterController = new CharacterController();
-		//		this.quoteTab.setContent(null);
-		//		this.deathController = new DeathController();
-		//		this.quoteTab.setContent(null);
-		//		this.episodeController = new EpisodeController();
-		//		this.quoteTab.setContent(this.quoteController.getBorderPane());
+		this.characterController = new CharacterController();
+		this.quoteTab.setContent(null);
+		this.deathController = new DeathController();
+		this.quoteTab.setContent(null);
+		this.episodeController = new EpisodeController();
+		this.quoteTab.setContent(this.quoteController.getBorderPane());
 
 
 	}
